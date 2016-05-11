@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a3c5eeeb55f94602ae5851191df7b7e0" Name="Diagram1" ZoomLevel="100" ShowGrid="true" DisplayType="true">
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_UserAdresses" Width="1.5" PointX="20" PointY="0.5" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_UserCategories" Width="1.5" PointX="15.5" PointY="11.625" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Users" Width="1.5" PointX="17.75" PointY="10.375" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_UsersData" Width="1.5" PointX="20" PointY="13.5" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_AvailabilityTypes" Width="1.5" PointX="13.25" PointY="31.625" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Brands" Width="1.5" PointX="11" PointY="22.375" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_CardTypes" Width="1.5" PointX="20.75" PointY="16.625" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Categories" Width="1.5" PointX="2.75" PointY="20.75" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Colors" Width="1.5" PointX="7.25" PointY="31" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_CouponProducts" Width="1.5" PointX="17.75" PointY="21.625" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Coupons" Width="1.5" PointX="13.25" PointY="24.75" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_DiscountRanges" Width="1.5" PointX="17.75" PointY="48.875" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_DiscountRules" Width="1.5" PointX="17.75" PointY="25.125" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_GuestOrders" Width="1.5" PointX="22.75" PointY="5.875" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Highlights" Width="1.5" PointX="17.75" PointY="46.375" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Icons" Width="1.5" PointX="20.5" PointY="19.625" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_OrderDetails" Width="1.5" PointX="22.75" PointY="22.875" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Orders" Width="1.5" PointX="20.5" PointY="4.25" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ProductDownloads" Width="1.5" PointX="17.75" PointY="59" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ProductIcons" Width="1.5" PointX="22.75" PointY="27.75" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ProductImages" Width="1.5" PointX="17.75" PointY="52.125" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ProductLocks" Width="1.5" PointX="17.75" PointY="55.875" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ProductModels" Width="1.5" PointX="10.25" PointY="30.125" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Products" Width="1.5" PointX="15.5" PointY="21" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ProductTypes" Width="1.5" PointX="10.25" PointY="26.125" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ProductVideos" Width="1.5" PointX="17.75" PointY="42.25" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Ratings" Width="1.5" PointX="17.75" PointY="18.75" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Reviews" Width="1.5" PointX="20" PointY="26" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Sections" Width="1.5" PointX="0.5" PointY="21" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ShipmentCompanies" Width="1.5" PointX="20.5" PointY="33.625" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_ShipmentTypes" Width="1.5" PointX="18.25" PointY="5.875" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Sizes" Width="1.5" PointX="7.25" PointY="27.25" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_SubCategories" Width="1.5" PointX="5" PointY="32.375" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_TempCart" Width="1.5" PointX="17.75" PointY="16" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Trackings" Width="1.5" PointX="20.5" PointY="23.25" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_Units" Width="1.5" PointX="7.25" PointY="23.25" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_UserCardDetails" Width="1.5" PointX="23" PointY="13" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_UserCart" Width="1.5" PointX="20.75" PointY="30.625" />
+        <EntityTypeShape EntityType="ShoppingCartModel.SC_UserOrders" Width="1.5" PointX="22.75" PointY="9.5" />
+        <AssociationConnector Association="ShoppingCartModel.FK_UserAdresses_Users" />
+        <AssociationConnector Association="ShoppingCartModel.FK_Users_UserCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Reviews_Users" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_UserCardDetails_Users" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_UserCart_Users" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_UserOrders_Users" />
+        <AssociationConnector Association="ShoppingCartModel.FK_UsersData_Users" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_AvailabilityTypes" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Coupons_SC_Brands" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_DiscountRules_SC_Brands" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_Brands" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_UserCardDetails_SC_CardTypes" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Categories_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Colors_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Coupons_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_DiscountRules_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductModels_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductTypes_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Sizes_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_SubCategories_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Units_SC_Categories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Colors_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Colors_SC_SubCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_Colors" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_CouponProducts_SC_Coupons" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_CouponProducts_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Coupons_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Coupons_SC_SubCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_DiscountRanges_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_DiscountRules_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_DiscountRules_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_DiscountRules_SC_SubCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_GuestOrders_SC_Orders" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Highlights_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductIcons_SC_Icons" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_OrderDetails_SC_Orders" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_OrderDetails_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_OrderDetails_SC_ShipmentCompanies" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_OrderDetails_SC_Trackings" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Orders_SC_ShipmentTypes" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_UserOrders_SC_Orders" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductDownloads_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductIcons_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductImages_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductLocks_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductModels_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductModels_SC_SubCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_ProductModels" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_ProductTypes" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_Sizes" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_SubCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Products_SC_Units" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductVideos_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Ratings_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Reviews_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_TempCart_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_UserCart_SC_Products" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductTypes_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_ProductTypes_SC_SubCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Reviews_SC_Ratings" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Sizes_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Units_SC_Sections" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Sizes_SC_SubCategories" />
+        <AssociationConnector Association="ShoppingCartModel.FK_SC_Units_SC_SubCategories" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

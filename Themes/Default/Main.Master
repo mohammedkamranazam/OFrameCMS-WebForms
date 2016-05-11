@@ -1,0 +1,118 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/AppCode/Helpers/Themes/MainMasterPage.cs" Inherits="OWDARO.Themes.MainMasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="~/favicon.ico" runat="server" />
+    <link rel="Shortcut Icon" type="image/x-icon" href="~/favicon.ico" runat="server" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <OWD:WebmasterComponent runat="server" />
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Styles.Render(string.Format("~/Theme{0}", OWDARO.AppConfig.MainTheme)) %>
+    </asp:PlaceHolder>
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Scripts.Render(string.Format("~/Script{0}", OWDARO.AppConfig.MainTheme)) %>
+    </asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+        <div class="HeaderContainer">
+            <div class="Header">
+                <asp:HyperLink runat="server" NavigateUrl="~/Default.aspx" CssClass="Logo">
+                    <asp:Image runat="server" ID="LogoImage" />
+                </asp:HyperLink>
+                <h1 class="HeaderTitle">
+                    <asp:Literal runat="server" ID="HeaderTitleLiteral" />
+                    <span>
+                        <asp:Literal runat="server" ID="HeaderTagLineLiteral" />
+                    </span>
+                </h1>
+                <OWD:PageShareComponent runat="server" />
+                <div class="Clear"></div>
+            </div>
+        </div>
+        <div class="MenuContainer">
+            <OWD:ResponsiveMenuComponent runat="server" />
+        </div>
+        <asp:ContentPlaceHolder ID="SliderPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="ContentContainer">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:ContentPlaceHolder ID="BottomPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="FooterContainer">
+            <div class="Footer">
+                <div class="grid1">
+                    <div class="FooterSection">
+                        <%= OWDARO.AppConfig.ReceiptAddress %>
+                    </div>
+                </div>
+                <div class="grid1">
+                    <div class="FooterSection">
+                        <OWD:LoginStatus runat="server" CssClass="LoginStatus" />
+                    </div>
+                </div>
+                <div class="grid1">
+                    <div class="FooterSection">
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                <OWD:ProductsCartPopUpComponent runat="server" ShowAddToCartButton="false" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+                <div class="grid1">
+                    <div class="FooterSection">
+                        <h3>Subscribe</h3>
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                <OWD:SubscribeComponent runat="server" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+                <div class="Clear"></div>
+                <a href="#" class="scrollup">
+                    <asp:Image runat="server" ImageUrl="~/Themes/Default/Graphics/icon/totop.png" />
+                </a>
+            </div>
+        </div>
+        <div class="CopyRightContainer">
+            <div class="CopyRight">
+                Copyright &copy; <%= DateTime.Now.Year %> | Engineered By <a href="http://owdaro.com" title="OWDARO Official Website">OWDARO</a>
+            </div>
+        </div>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" DynamicLayout="true" DisplayAfter="0">
+            <ProgressTemplate>
+                <div class="spinner" style="z-index: 99999999; position: absolute;"></div>
+                <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; overflow: hidden; background: white; opacity: 0.5; z-index: 9999999;">
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <asp:AlwaysVisibleControlExtender ID="UpdateProgress1_AlwaysVisibleControlExtender"
+            runat="server" Enabled="True" HorizontalSide="Center" TargetControlID="UpdateProgress1"
+            VerticalSide="Middle" UseAnimation="True">
+        </asp:AlwaysVisibleControlExtender>
+        <script type="text/javascript">
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+            prm.add_endRequest(function (s, e) {
+                ReInitialize();
+            });
+        </script>
+
+        <%= string.Format("{0}", OWDARO.AppConfig.GoogleAnalyticsCode) %>
+
+        <%= string.Format("{0}", OWDARO.AppConfig.MicrosoftApplicationInsightScript) %>
+        <asp:HiddenField runat="server" ClientIDMode="Static" ID="_TextTruncateCountHiddenField__" Value="500" />
+    </form>
+</body>
+</html>

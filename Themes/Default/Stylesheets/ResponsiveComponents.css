@@ -1,0 +1,558 @@
+﻿
+@media (max-width:1200px) {
+    body {
+        /*background: red;*/
+    }
+
+    .ContentContainer {
+        width: 95%;
+    }
+
+    .FooterContainer .Footer {
+        width: 100%;
+    }
+
+    .Content {
+        width: 100%;
+    }
+
+    .SideBarLeft {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .ContentMiddle {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #accordian {
+        width: 100%;
+    }
+
+    .Posts {
+        width: 100%;
+    }
+
+    .AlbumsComponent {
+        width: 100%;
+    }
+
+    .EventDetailsDiv {
+        width: 900px;
+    }
+
+        .EventDetailsDiv .EventContent {
+            width: 700px;
+            height: auto;
+        }
+
+        .EventDetailsDiv .InfoDiv {
+            width: 850px;
+        }
+
+    .VideoDiv {
+        width: 100%;
+    }
+
+    .RelatedVideosDiv {
+        float: none;
+        width: 100%;
+    }
+
+
+    .AudioDiv {
+        width: 100%;
+    }
+
+    .RelatedAudiosDiv {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width:979px) {
+    body {
+        /*background: blue;*/
+    }
+
+    .EventListDiv {
+        width: 715px;
+    }
+
+        .EventListDiv .EventListItemDiv {
+            width: 715px;
+            height: 200px;
+        }
+
+            .EventListDiv .EventListItemDiv div.EventListItemContent {
+                height: 170px;
+            }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent img.EventItemImage {
+                    width: 170px;
+                    height: 170px;
+                }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv {
+                    width: 530px;
+                }
+
+    .EventDetailsDiv {
+        width: 700px;
+    }
+
+        .EventDetailsDiv .EventContent {
+            width: 500px;
+            height: auto;
+        }
+
+        .EventDetailsDiv .InfoDiv {
+            width: 700px;
+            height: auto;
+        }
+
+            .EventDetailsDiv .InfoDiv .ScheduleDiv {
+                float: none;
+                margin: 5px auto;
+            }
+
+            .EventDetailsDiv .InfoDiv .LocationDiv {
+                float: none;
+                margin: 5px auto;
+            }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv {
+                float: none;
+                margin: 5px auto;
+            }
+}
+
+@media (max-width:768px) {
+    body {
+        /*background: orange;*/
+    }
+
+    .column_left, .column_right, .grid3, .grid2, .grid1, .grid1-5, .grid1-3, .grid4 {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0px;
+    }
+
+    .HeaderContainer .Header .Logo {
+        float: none;
+        margin: 10px auto;
+        margin-bottom: 0px;
+        display: table;
+    }
+
+    .HeaderContainer .Header h1.HeaderTitle {
+        display: block;
+        float: none;
+        text-align: center;
+        margin: 0px;
+    }
+
+        .HeaderContainer .Header h1.HeaderTitle span {
+            text-align: center;
+        }
+
+    .FooterContainer {
+        padding: 10px 0px 10px 0px;
+    }
+
+    /*.FooterContainer .Footer .FooterSection {
+            width: 90%;
+            float: none;
+            margin: 0 auto;
+        }*/
+
+    #ShareSocial {
+        margin: 10px auto;
+        float: none;
+        display: table;
+    }
+
+    .LocaleDropDownList {
+        height: 40px;
+        width: 100%;
+        float: none;
+    }
+
+    .EventListDiv {
+        width: 440px;
+    }
+
+        .EventListDiv .EventListItemDiv {
+            width: 440px;
+            height: 472px;
+        }
+
+            .EventListDiv .EventListItemDiv div.EventListItemContent {
+                height: 370px;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent a {
+                }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent img.EventItemImage {
+                    width: 170px;
+                    height: 170px;
+                    float: none;
+                    margin: 0 auto;
+                }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv {
+                    width: 440px;
+                    float: none;
+                }
+
+                    .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h1.Title {
+                        padding: 5px;
+                    }
+
+                    .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h3.SubTitle {
+                        padding: 5px;
+                    }
+
+                    .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv p.ShortDescription {
+                        padding: 5px;
+                    }
+
+            .EventListDiv .EventListItemDiv div.Schedule {
+                height: 92px;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule span.ScheduleSpan {
+                    float: none;
+                    display: block;
+                    border-bottom: 1px solid rgba(0,0,0,0.2);
+                    text-align: center;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.PastEvents {
+                    float: left;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.RegistrationRequired {
+                    float: left;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule a.ReadMoreAnchor {
+                }
+
+
+    .EventDetailsDiv {
+        width: 430px;
+    }
+
+        .EventDetailsDiv a.FancyBox {
+            float: none;
+            margin: 0 auto;
+        }
+
+        .EventDetailsDiv .EventContent {
+            width: 400px;
+            height: auto;
+        }
+
+        .EventDetailsDiv .InfoDiv {
+            width: 400px;
+            height: auto;
+        }
+
+            .EventDetailsDiv .InfoDiv .ScheduleDiv {
+                float: none;
+                margin: 5px auto;
+            }
+
+            .EventDetailsDiv .InfoDiv .LocationDiv {
+                float: none;
+                margin: 5px auto;
+            }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv {
+                float: none;
+                margin: 5px auto;
+            }
+
+    .VideoDiv .Description .Info {
+        height: auto;
+    }
+
+        .VideoDiv .Description .Info span.TakenOn {
+            float: none;
+            display: block;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .VideoDiv .Description .Info span.LikesCount {
+            float: none;
+            display: block;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .VideoDiv .Description .Info span.DislikesCount {
+            float: none;
+            display: block;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .VideoDiv .Description .Info span.Share {
+            float: none;
+            display: block;
+        }
+
+
+    .AudioDiv .Description .Info {
+        height: auto;
+    }
+
+        .AudioDiv .Description .Info span.TakenOn {
+            float: none;
+            display: block;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .AudioDiv .Description .Info span.LikesCount {
+            float: none;
+            display: block;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .AudioDiv .Description .Info span.DislikesCount {
+            float: none;
+            display: block;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .AudioDiv .Description .Info span.Share {
+            float: none;
+            display: block;
+        }
+
+    .RelatedAudiosDiv .RelatedAudiosPanel .AudioBlock {
+        float: none;
+        margin: 5px auto;
+    }
+}
+
+@media (max-width:480px) {
+    body {
+        /*background: gray;*/
+    }
+
+    .AlbumsComponent {
+        text-align: center;
+    }
+
+    .AlbumBlock {
+        float: none;
+        display: inline-block;
+    }
+
+    .PhotosGallery a {
+        float: none;
+    }
+
+    .EventListDiv {
+        width: 200px;
+    }
+
+        .EventListDiv .EventListItemDiv {
+            width: 200px;
+            height: auto;
+        }
+
+            .EventListDiv .EventListItemDiv div.EventListItemContent {
+                height: auto;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent a {
+                }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent img.EventItemImage {
+                    width: 180px;
+                    height: 180px;
+                    float: none;
+                    margin: 0 auto;
+                }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv {
+                    width: 200px;
+                    height: auto;
+                    float: none;
+                }
+
+                    .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h1.Title {
+                        padding: 5px;
+                    }
+
+                    .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h3.SubTitle {
+                        padding: 5px;
+                    }
+
+                    .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv p.ShortDescription {
+                        padding: 5px;
+                    }
+
+            .EventListDiv .EventListItemDiv div.Schedule {
+                height: 152px;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule span.ScheduleSpan {
+                    float: none;
+                    display: block;
+                    border-bottom: 1px solid rgba(0,0,0,0.2);
+                    text-align: center;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.PastEvents {
+                    float: left;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.RegistrationRequired {
+                    float: left;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule a.ReadMoreAnchor {
+                }
+
+    .EventDetailsDiv {
+        width: 200px;
+    }
+
+        .EventDetailsDiv a.FancyBox {
+            float: none;
+            margin: 0 auto;
+        }
+
+        .EventDetailsDiv .EventContent {
+            width: 180px;
+            height: auto;
+        }
+
+        .EventDetailsDiv .InfoDiv {
+            width: 180px;
+            height: auto;
+        }
+
+            .EventDetailsDiv .InfoDiv .ScheduleDiv {
+                float: none;
+                margin: 5px auto;
+                width: 180px;
+            }
+
+            .EventDetailsDiv .InfoDiv .LocationDiv {
+                float: none;
+                margin: 5px auto;
+                width: 180px;
+            }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv {
+                float: none;
+                margin: 5px auto;
+                width: 180px;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.PastEvents {
+                    margin-left: 45px;
+                }
+
+    .VideoSectionsPanel .VideoSectionsItem {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .VideoCategoriesPanel .VideoCategoriesItem {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .CategoryVideosPanel .VideoBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .CategoryVideoSetsPanel .VideoSetBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .VideoSetPanel .VideoBlock {
+        float: none;
+        margin: 20px auto;
+    }
+
+    .RelatedVideosDiv .RelatedVideosPanel .VideoBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+
+    .AudioSectionsPanel .AudioSectionsItem {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .AudioCategoriesPanel .AudioCategoriesItem {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .CategoryAudiosPanel .AudioBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .CategoryAudioSetsPanel .AudioSetBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .AudioSetPanel .AudioBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .RelatedAudiosDiv .RelatedAudiosPanel .AudioBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .DrivesComponent .DriveBlock {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .DownloadsPanel .Folder {
+        margin: 10px auto;
+        float: none;
+    }
+
+    .DownloadsPanel .File {
+        margin: 10px auto;
+        float: none;
+    }
+
+    .Toolbar {
+        height: auto;
+    }
+
+        .Toolbar select {
+            width: 100px;
+        }
+}

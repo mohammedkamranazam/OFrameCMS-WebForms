@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<servers default="fatcow">
+  <server domain="http://owdaro.org" ip="googlekaro.com" isHttp="True" name="Arvixe" password="XXXXX" path="RemoteWebsites/ProjectJKL/Downloads/" rootDirectory="OWDARO-RemoteStorage/" username="oframeremotestorage" />
+</servers>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scripts>
+  <script path="~/Scripts/jQuery/jquery.js" />
+  <script path="~/Scripts/jQuery/jquery-migrate.js" />
+  <script path="~/Scripts/jQuery/jquery-ui-1.8.23.custom.js" />
+  <script path="~/Scripts/jQuery/jquery.mousewheel.pack.js" />
+  <script path="~/Scripts/jQuery/jquery.easing.pack.js" />
+  <script path="~/Scripts/ElevateZoom/jquery.elevateZoom-2.5.5.min.js" />
+  <script path="~/Scripts/Tipsy/jquery.tipsy.min.js" />
+  <script path="~/Scripts/ResponsiveMenu/jquery.smartmenus.js" />
+  <script path="~/Scripts/OwlCarousel/owl.carousel.min.js" />
+  <script path="~/Scripts/ModalDialog/jquery.simplemodal.js" />
+  <script path="~/Scripts/DLMenu/jquery.slight-submenu.js" />
+  <script path="~/Scripts/FocusPoint/jquery.focuspoint.min.js" />
+  <script path="~/Scripts/jTruncate/jquery.truncator.js" />
+  <script path="~/Scripts/RevolutionSlider/js/jquery.themepunch.plugins.min.js" />
+  <script path="~/Scripts/RevolutionSlider/js/jquery.themepunch.revolution.min.js" />
+  <script path="~/Themes/CheckOut/Scripts/custom.js" />
+  <script path="~/Themes/CheckOut/Scripts/reinitialize.js" />
+  <script path="~/Scripts/jCrop/jquery.Jcrop.min.js" />
+  <script path="~/Scripts/fancybox/jquery.fancybox.pack.js" />
+</scripts>

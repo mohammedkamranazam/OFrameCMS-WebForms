@@ -1,0 +1,1678 @@
+span.ico {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
+span span.ico {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    margin-top: -7px;
+    margin-left: -7px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+a span.ico {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    margin-bottom: -3px;
+    margin-right: 12px;
+}
+
+
+/*  icon  gray 18*18  class by IMG name*/
+
+.ico.gray.abacus {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 0;
+}
+
+.ico.gray.access_point {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -18px;
+}
+
+.ico.gray.add {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -36px;
+}
+
+.ico.gray.administrator {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -54px;
+}
+
+.ico.gray.alarm {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -72px;
+}
+
+.ico.gray.arrow_bidirectional {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -90px;
+}
+
+.ico.gray.arrow_down2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -108px;
+}
+
+.ico.gray.arrow_left2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -126px;
+}
+
+.ico.gray.arrow_right2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -144px;
+}
+
+.ico.gray.arrow_up2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -162px;
+}
+
+.ico.gray.attachment {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -180px;
+}
+
+.ico.gray.audio_knob {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -198px;
+}
+
+.ico.gray.barcode {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -216px;
+}
+
+.ico.gray.battery_empty {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -234px;
+}
+
+.ico.gray.battery_full {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -252px;
+}
+
+.ico.gray.battery_half {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -270px;
+}
+
+.ico.gray.bell {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -288px;
+}
+
+.ico.gray.bill {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -306px;
+}
+
+.ico.gray.binoculars {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -324px;
+}
+
+.ico.gray.bold {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -342px;
+}
+
+.ico.gray.book {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -360px;
+}
+
+.ico.gray.bookmark {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -378px;
+}
+
+.ico.gray.briefcase {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -396px;
+}
+
+.ico.gray.brightness {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -414px;
+}
+
+.ico.gray.broken_link {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -432px;
+}
+
+.ico.gray.brush {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -450px;
+}
+
+.ico.gray.burn_blu-ray {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -468px;
+}
+
+.ico.gray.burn_blu-ray2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -486px;
+}
+
+.ico.gray.burn_dvd {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -504px;
+}
+
+.ico.gray.burn_dvd2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -522px;
+}
+
+.ico.gray.cabinet {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -540px;
+}
+
+.ico.gray.calculator {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -558px;
+}
+
+.ico.gray.calendar {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -576px;
+}
+
+.ico.gray.camera {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -594px;
+}
+
+.ico.gray.cancel {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -612px;
+}
+
+.ico.gray.card_clubs {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -630px;
+}
+
+.ico.gray.card_diamonds {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -648px;
+}
+
+.ico.gray.card_hearts {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -666px;
+}
+
+.ico.gray.card_spades {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -684px;
+}
+
+.ico.gray.certificate {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -720px;
+}
+
+.ico.gray.chat-exclamation {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -738px;
+}
+
+.ico.gray.checkmark {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -756px;
+}
+
+.ico.gray.checkmark2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -774px;
+}
+
+.ico.gray.clip {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -792px;
+}
+
+.ico.gray.clipboard {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -810px;
+}
+
+.ico.gray.clock {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -828px;
+}
+
+.ico.gray.close {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -846px;
+}
+
+.ico.gray.cloud {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -864px;
+}
+
+.ico.gray.cloud2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -882px;
+}
+
+.ico.gray.coin {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -900px;
+}
+
+.ico.gray.compress {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -918px;
+}
+
+.ico.gray.connect {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -936px;
+}
+
+.ico.gray.contrast {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -954px;
+}
+
+.ico.gray.copy {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -972px;
+}
+
+.ico.gray.cross {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -990px;
+}
+
+.ico.gray.cutter {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1008px;
+}
+
+.ico.gray.delete {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1026px;
+}
+
+.ico.gray.dial {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1044px;
+}
+
+.ico.gray.diary {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1062px;
+}
+
+.ico.gray.dimensions {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1080px;
+}
+
+.ico.gray.directional_down {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1098px;
+}
+
+.ico.gray.directional_left {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1116px;
+}
+
+.ico.gray.directional_right {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1134px;
+}
+
+.ico.gray.directional_up {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1152px;
+}
+
+.ico.gray.disconnect {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1170px;
+}
+
+.ico.gray.diskette {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1188px;
+}
+
+.ico.gray.document {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1206px;
+}
+
+.ico.gray.door {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1224px;
+}
+
+.ico.gray.download2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1242px;
+}
+
+.ico.gray.dropper {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1260px;
+}
+
+.ico.gray.earphones {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1278px;
+}
+
+.ico.gray.effects {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1296px;
+}
+
+.ico.gray.eject {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1314px;
+}
+
+.ico.gray.emoticon_angry {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1332px;
+}
+
+.ico.gray.emoticon_confused {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1350px;
+}
+
+.ico.gray.emoticon_grin {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1368px;
+}
+
+.ico.gray.emoticon_in_love {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1386px;
+}
+
+.ico.gray.emoticon_sad {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1404px;
+}
+
+.ico.gray.emoticon_sleeping {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1422px;
+}
+
+.ico.gray.emoticon_smile {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1440px;
+}
+
+.ico.gray.encrypt {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1458px;
+}
+
+.ico.gray.eraser {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1476px;
+}
+
+.ico.gray.eye {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1494px;
+}
+
+.ico.gray.eye_closed {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1512px;
+}
+
+.ico.gray.fast_forward {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1530px;
+}
+
+.ico.gray.file {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1548px;
+}
+
+.ico.gray.fill {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1566px;
+}
+
+.ico.gray.fingerprint {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1584px;
+}
+
+.ico.gray.firewall {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1602px;
+}
+
+.ico.gray.first {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1620px;
+}
+
+.ico.gray.folder {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1638px;
+}
+
+.ico.gray.font {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1656px;
+}
+
+.ico.gray.font_size {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1674px;
+}
+
+.ico.gray.game_control {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1692px;
+}
+
+.ico.gray.gear {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1710px;
+}
+
+.ico.gray.group {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1728px;
+}
+
+.ico.gray.hammer {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1746px;
+}
+
+.ico.gray.hand_point {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1764px;
+}
+
+.ico.gray.hand_thumbsdown {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1782px;
+}
+
+.ico.gray.hand_thumbsup {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1800px;
+}
+
+.ico.gray.hard_disk {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1818px;
+}
+
+.ico.gray.headset {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1836px;
+}
+
+.ico.gray.heart {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1854px;
+}
+
+.ico.gray.help {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1872px;
+}
+
+.ico.gray.help2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1890px;
+}
+
+.ico.gray.history {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1908px;
+}
+
+.ico.gray.home {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1926px;
+}
+
+.ico.gray.hourglass {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1944px;
+}
+
+.ico.gray.hourglass2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1962px;
+}
+
+.ico.gray.id {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1980px;
+}
+
+.ico.gray.info {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -1998px;
+}
+
+.ico.gray.info2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2016px;
+}
+
+.ico.gray.italic {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2034px;
+}
+
+.ico.gray.item {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2052px;
+}
+
+.ico.gray.key {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2070px;
+}
+
+.ico.gray.last {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2088px;
+}
+
+.ico.gray.lightbulb {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2106px;
+}
+
+.ico.gray.link {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2124px;
+}
+
+.ico.gray.list {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2142px;
+}
+
+.ico.gray.location {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2160px;
+}
+
+.ico.gray.lock {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2178px;
+}
+
+.ico.gray.lock_open {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2196px;
+}
+
+.ico.gray.login {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2214px;
+}
+
+.ico.gray.mail {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2232px;
+}
+
+.ico.gray.mail_open {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2250px;
+}
+
+.ico.gray.messenger {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2268px;
+}
+
+.ico.gray.microhpone {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2286px;
+}
+
+.ico.gray.microphone {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2304px;
+}
+
+.ico.gray.money_bag {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2322px;
+}
+
+.ico.gray.monitor {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2340px;
+}
+
+.ico.gray.moon {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2358px;
+}
+
+.ico.gray.music {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2376px;
+}
+
+.ico.gray.music_folder {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2394px;
+}
+
+.ico.gray.music_library {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2412px;
+}
+
+.ico.gray.next {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2430px;
+}
+
+.ico.gray.notepad {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2448px;
+}
+
+.ico.gray.paragraph_align_left {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2466px;
+}
+
+.ico.gray.paragraph_align_right {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2484px;
+}
+
+.ico.gray.paragraph_justify {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2502px;
+}
+
+.ico.gray.password {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2520px;
+}
+
+.ico.gray.paste {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2538px;
+}
+
+.ico.gray.pause {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2556px;
+}
+
+.ico.gray.pen {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2574px;
+}
+
+.ico.gray.pencil {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2592px;
+}
+
+.ico.gray.phone {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2610px;
+}
+
+.ico.gray.photo_album {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2628px;
+}
+
+.ico.gray.pictures_folder {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2646px;
+}
+
+.ico.gray.play {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2664px;
+}
+
+.ico.gray.point {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2682px;
+}
+
+.ico.gray.power {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2700px;
+}
+
+.ico.gray.previous {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2718px;
+}
+
+.ico.gray.print {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2736px;
+}
+
+.ico.gray.pyramid {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2754px;
+}
+
+.ico.gray.random {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2772px;
+}
+
+.ico.gray.record {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2790px;
+}
+
+.ico.gray.redo {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2808px;
+}
+
+.ico.gray.reload {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2826px;
+}
+
+.ico.gray.repeat {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2844px;
+}
+
+.ico.gray.resize2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2862px;
+}
+
+.ico.gray.rewind {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2880px;
+}
+
+.ico.gray.rotate {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2898px;
+}
+
+.ico.gray.round {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2916px;
+}
+
+.ico.gray.ruler_square {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2934px;
+}
+
+.ico.gray.satellite {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2952px;
+}
+
+.ico.gray.scissors {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2970px;
+}
+
+.ico.gray.screwdriver {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -2988px;
+}
+
+.ico.gray.security {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3006px;
+}
+
+.ico.gray.shopping_basket {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3024px;
+}
+
+.ico.gray.software24 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3042px;
+}
+
+.ico.gray.spam {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3060px;
+}
+
+.ico.gray.speaker {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3078px;
+}
+
+.ico.gray.speaker2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3096px;
+}
+
+.ico.gray.sphere {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3114px;
+}
+
+.ico.gray.spreadsheet {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3132px;
+}
+
+.ico.gray.square {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3150px;
+}
+
+.ico.gray.star {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3168px;
+}
+
+.ico.gray.stats_bars {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3186px;
+}
+
+.ico.gray.stats_lines {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3204px;
+}
+
+.ico.gray.stats_pie {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3222px;
+}
+
+.ico.gray.stop {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3240px;
+}
+
+.ico.gray.strike_through {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3258px;
+}
+
+.ico.gray.sun {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3276px;
+}
+
+.ico.gray.target {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3294px;
+}
+
+.ico.gray.thunder {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3312px;
+}
+
+.ico.gray.trash_can {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3330px;
+}
+
+.ico.gray.underlined {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3348px;
+}
+
+.ico.gray.undo {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3366px;
+}
+
+.ico.gray.upload2 {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3384px;
+}
+
+.ico.gray.usb {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3402px;
+}
+
+.ico.gray.user {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3420px;
+}
+
+.ico.gray.user_woman {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3438px;
+}
+
+.ico.gray.volume_control {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3456px;
+}
+
+.ico.gray.webcam {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3474px;
+}
+
+.ico.gray.window {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3492px;
+}
+
+.ico.gray.wizard {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3510px;
+}
+
+.ico.gray.world {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3528px;
+}
+
+.ico.gray.zoom {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3546px;
+}
+
+.ico.gray.zoom_in {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3564px;
+}
+
+.ico.gray.zoom_out {
+    background: url('/Themes/Default/Graphics/icon/gray18.png') 0 -3582px;
+}
+
+/*  icon  color 18*18  class by IMG name*/
+
+
+.ico.color.abacus {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 0;
+}
+
+.ico.color.access_point {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -18px;
+}
+
+.ico.color.add {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -36px;
+}
+
+.ico.color.administrator {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -54px;
+}
+
+.ico.color.alarm {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -72px;
+}
+
+.ico.color.arrow_bidirectional {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -90px;
+}
+
+.ico.color.arrow_down2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -108px;
+}
+
+.ico.color.arrow_left2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -126px;
+}
+
+.ico.color.arrow_right2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -144px;
+}
+
+.ico.color.arrow_up2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -162px;
+}
+
+.ico.color.attachment {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -180px;
+}
+
+.ico.color.audio_knob {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -198px;
+}
+
+.ico.color.barcode {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -216px;
+}
+
+.ico.color.battery_empty {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -234px;
+}
+
+.ico.color.battery_full {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -252px;
+}
+
+.ico.color.battery_half {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -270px;
+}
+
+.ico.color.bell {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -288px;
+}
+
+.ico.color.bill {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -306px;
+}
+
+.ico.color.binoculars {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -324px;
+}
+
+.ico.color.bold {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -342px;
+}
+
+.ico.color.book {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -360px;
+}
+
+.ico.color.bookmark {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -378px;
+}
+
+.ico.color.briefcase {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -396px;
+}
+
+.ico.color.brightness {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -414px;
+}
+
+.ico.color.broken_link {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -432px;
+}
+
+.ico.color.brush {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -450px;
+}
+
+.ico.color.burn_blu-ray {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -468px;
+}
+
+.ico.color.burn_blu-ray2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -486px;
+}
+
+.ico.color.burn_dvd {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -504px;
+}
+
+.ico.color.burn_dvd2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -522px;
+}
+
+.ico.color.cabinet {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -540px;
+}
+
+.ico.color.calculator {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -558px;
+}
+
+.ico.color.calendar {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -576px;
+}
+
+.ico.color.camera {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -594px;
+}
+
+.ico.color.cancel {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -612px;
+}
+
+.ico.color.card_clubs {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -630px;
+}
+
+.ico.color.card_diamonds {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -648px;
+}
+
+.ico.color.card_hearts {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -666px;
+}
+
+.ico.color.card_spades {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -684px;
+}
+
+.ico.color.certificate {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -720px;
+}
+
+.ico.color.chat-exclamation {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -738px;
+}
+
+.ico.color.checkmark {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -756px;
+}
+
+.ico.color.checkmark2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -774px;
+}
+
+.ico.color.clip {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -792px;
+}
+
+.ico.color.clipboard {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -810px;
+}
+
+.ico.color.clock {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -828px;
+}
+
+.ico.color.close {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -846px;
+}
+
+.ico.color.cloud {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -864px;
+}
+
+.ico.color.cloud2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -882px;
+}
+
+.ico.color.coin {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -900px;
+}
+
+.ico.color.compress {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -918px;
+}
+
+.ico.color.connect {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -936px;
+}
+
+.ico.color.contrast {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -954px;
+}
+
+.ico.color.copy {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -972px;
+}
+
+.ico.color.cross {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -990px;
+}
+
+.ico.color.cutter {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1008px;
+}
+
+.ico.color.delete {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1026px;
+}
+
+.ico.color.dial {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1044px;
+}
+
+.ico.color.diary {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1062px;
+}
+
+.ico.color.dimensions {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1080px;
+}
+
+.ico.color.directional_down {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1098px;
+}
+
+.ico.color.directional_left {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1116px;
+}
+
+.ico.color.directional_right {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1134px;
+}
+
+.ico.color.directional_up {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1152px;
+}
+
+.ico.color.disconnect {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1170px;
+}
+
+.ico.color.diskette {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1188px;
+}
+
+.ico.color.document {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1206px;
+}
+
+.ico.color.door {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1224px;
+}
+
+.ico.color.download2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1242px;
+}
+
+.ico.color.dropper {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1260px;
+}
+
+.ico.color.earphones {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1278px;
+}
+
+.ico.color.effects {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1296px;
+}
+
+.ico.color.eject {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1314px;
+}
+
+.ico.color.emoticon_angry {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1332px;
+}
+
+.ico.color.emoticon_confused {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1350px;
+}
+
+.ico.color.emoticon_grin {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1368px;
+}
+
+.ico.color.emoticon_in_love {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1386px;
+}
+
+.ico.color.emoticon_sad {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1404px;
+}
+
+.ico.color.emoticon_sleeping {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1422px;
+}
+
+.ico.color.emoticon_smile {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1440px;
+}
+
+.ico.color.encrypt {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1458px;
+}
+
+.ico.color.eraser {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1476px;
+}
+
+.ico.color.eye {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1494px;
+}
+
+.ico.color.eye_closed {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1512px;
+}
+
+.ico.color.fast_forward {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1530px;
+}
+
+.ico.color.file {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1548px;
+}
+
+.ico.color.fill {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1566px;
+}
+
+.ico.color.fingerprint {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1584px;
+}
+
+.ico.color.firewall {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1602px;
+}
+
+.ico.color.first {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1620px;
+}
+
+.ico.color.folder {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1638px;
+}
+
+.ico.color.font {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1656px;
+}
+
+.ico.color.font_size {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1674px;
+}
+
+.ico.color.game_control {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1692px;
+}
+
+.ico.color.gear {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1710px;
+}
+
+.ico.color.group {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1728px;
+}
+
+.ico.color.hammer {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1746px;
+}
+
+.ico.color.hand_point {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1764px;
+}
+
+.ico.color.hand_thumbsdown {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1782px;
+}
+
+.ico.color.hand_thumbsup {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1800px;
+}
+
+.ico.color.hard_disk {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1818px;
+}
+
+.ico.color.headset {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1836px;
+}
+
+.ico.color.heart {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1854px;
+}
+
+.ico.color.help {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1872px;
+}
+
+.ico.color.help2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1890px;
+}
+
+.ico.color.history {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1908px;
+}
+
+.ico.color.home {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1926px;
+}
+
+.ico.color.hourglass {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1944px;
+}
+
+.ico.color.hourglass2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1962px;
+}
+
+.ico.color.id {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1980px;
+}
+
+.ico.color.info {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -1998px;
+}
+
+.ico.color.info2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2016px;
+}
+
+.ico.color.italic {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2034px;
+}
+
+.ico.color.item {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2052px;
+}
+
+.ico.color.key {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2070px;
+}
+
+.ico.color.last {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2088px;
+}
+
+.ico.color.lightbulb {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2106px;
+}
+
+.ico.color.link {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2124px;
+}
+
+.ico.color.list {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2142px;
+}
+
+.ico.color.location {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2160px;
+}
+
+.ico.color.lock {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2178px;
+}
+
+.ico.color.lock_open {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2196px;
+}
+
+.ico.color.login {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2214px;
+}
+
+.ico.color.mail {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2232px;
+}
+
+.ico.color.mail_open {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2250px;
+}
+
+.ico.color.messenger {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2268px;
+}
+
+.ico.color.microhpone {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2286px;
+}
+
+.ico.color.microphone {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2304px;
+}
+
+.ico.color.money_bag {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2322px;
+}
+
+.ico.color.monitor {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2340px;
+}
+
+.ico.color.moon {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2358px;
+}
+
+.ico.color.music {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2376px;
+}
+
+.ico.color.music_folder {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2394px;
+}
+
+.ico.color.music_library {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2412px;
+}
+
+.ico.color.next {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2430px;
+}
+
+.ico.color.notepad {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2448px;
+}
+
+.ico.color.paragraph_align_left {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2466px;
+}
+
+.ico.color.paragraph_align_right {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2484px;
+}
+
+.ico.color.paragraph_justify {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2502px;
+}
+
+.ico.color.password {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2520px;
+}
+
+.ico.color.paste {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2538px;
+}
+
+.ico.color.pause {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2556px;
+}
+
+.ico.color.pen {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2574px;
+}
+
+.ico.color.pencil {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2592px;
+}
+
+.ico.color.phone {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2610px;
+}
+
+.ico.color.photo_album {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2628px;
+}
+
+.ico.color.pictures_folder {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2646px;
+}
+
+.ico.color.play {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2664px;
+}
+
+.ico.color.point {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2682px;
+}
+
+.ico.color.power {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2700px;
+}
+
+.ico.color.previous {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2718px;
+}
+
+.ico.color.print {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2736px;
+}
+
+.ico.color.pyramid {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2754px;
+}
+
+.ico.color.random {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2772px;
+}
+
+.ico.color.record {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2790px;
+}
+
+.ico.color.redo {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2808px;
+}
+
+.ico.color.reload {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2826px;
+}
+
+.ico.color.repeat {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2844px;
+}
+
+.ico.color.resize2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2862px;
+}
+
+.ico.color.rewind {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2880px;
+}
+
+.ico.color.rotate {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2898px;
+}
+
+.ico.color.round {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2916px;
+}
+
+.ico.color.ruler_square {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2934px;
+}
+
+.ico.color.satellite {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2952px;
+}
+
+.ico.color.scissors {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2970px;
+}
+
+.ico.color.screwdriver {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -2988px;
+}
+
+.ico.color.security {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3006px;
+}
+
+.ico.color.shopping_basket {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3024px;
+}
+
+.ico.color.software24 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3042px;
+}
+
+.ico.color.spam {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3060px;
+}
+
+.ico.color.speaker {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3078px;
+}
+
+.ico.color.speaker2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3096px;
+}
+
+.ico.color.sphere {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3114px;
+}
+
+.ico.color.spreadsheet {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3132px;
+}
+
+.ico.color.square {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3150px;
+}
+
+.ico.color.star {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3168px;
+}
+
+.ico.color.stats_bars {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3186px;
+}
+
+.ico.color.stats_lines {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3204px;
+}
+
+.ico.color.stats_pie {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3222px;
+}
+
+.ico.color.stop {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3240px;
+}
+
+.ico.color.strike_through {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3258px;
+}
+
+.ico.color.sun {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3276px;
+}
+
+.ico.color.target {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3294px;
+}
+
+.ico.color.thunder {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3312px;
+}
+
+.ico.color.trash_can {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3330px;
+}
+
+.ico.color.underlined {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3348px;
+}
+
+.ico.color.undo {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3366px;
+}
+
+.ico.color.upload2 {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3384px;
+}
+
+.ico.color.usb {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3402px;
+}
+
+.ico.color.user {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3420px;
+}
+
+.ico.color.user_woman {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3438px;
+}
+
+.ico.color.volume_control {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3456px;
+}
+
+.ico.color.webcam {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3474px;
+}
+
+.ico.color.window {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3492px;
+}
+
+.ico.color.wizard {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3510px;
+}
+
+.ico.color.world {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3528px;
+}
+
+.ico.color.zoom {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3546px;
+}
+
+.ico.color.zoom_in {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3564px;
+}
+
+.ico.color.zoom_out {
+    background: url('/Themes/Default/Graphics/icon/color18.png') 0 -3582px;
+}
+
+
+.ico.gray.shadow.abacus {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 0;
+}
+
+.ico.gray.shadow.calendar {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -18px;
+}
+
+.ico.gray.shadow.file {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -36px;
+}
+
+.ico.gray.shadow.firewall {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -54px;
+}
+
+.ico.gray.shadow.home {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -72px;
+}
+
+.ico.gray.shadow.location {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -90px;
+}
+
+.ico.gray.shadow.paragraph_align_left {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -108px;
+}
+
+.ico.gray.shadow.pictures_folder {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -126px;
+}
+
+.ico.gray.shadow.satellite {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -144px;
+}
+
+.ico.gray.shadow.spreadsheet {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -162px;
+}
+
+.ico.gray.shadow.stats_lines {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -180px;
+}
+
+.ico.gray.shadow.window {
+    background: url('/Themes/Default/Graphics/icon/grayShadow18.png') 0 -198px;
+}

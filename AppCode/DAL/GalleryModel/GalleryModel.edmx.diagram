@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67a28b3fae1b480ca8b781354ca6988f" Name="Diagram1" ZoomLevel="108">
+        <EntityTypeShape EntityType="GalleryModel.GY_Albums" Width="1.5" PointX="15" PointY="10.875" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Audios" Width="1.5" PointX="10.5" PointY="8.875" />
+        <EntityTypeShape EntityType="GalleryModel.GY_AudioSet" Width="1.875" PointX="7.875" PointY="15.5" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Drives" Width="1.5" PointX="0.75" PointY="10.125" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Events" Width="1.5" PointX="12.75" PointY="10.125" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Files" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="GalleryModel.GY_FileTypes" Width="1.875" PointX="4.625" PointY="5.25" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Folders" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="GalleryModel.GY_LayerProperties" Width="1.5" PointX="17.25" PointY="3.375" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Layers" Width="1.5" PointX="15" PointY="3.125" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Photos" Width="1.5" PointX="17.25" PointY="11" />
+        <EntityTypeShape EntityType="GalleryModel.GY_SlideProperties" Width="1.5" PointX="15" PointY="6.375" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Slides" Width="1.5" PointX="12.75" PointY="4.5" />
+        <EntityTypeShape EntityType="GalleryModel.GY_Videos" Width="1.5" PointX="7.5" PointY="8.75" />
+        <EntityTypeShape EntityType="GalleryModel.GY_VideoSet" Width="1.875" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Albums_GY_Events" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Photos_GY_Albums" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Audios_GY_AudioSet" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Audios_GY_Files" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Files_GY_Drives" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Folders_GY_Drives" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Files_GY_FileTypes" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Files_GY_Folders" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Videos_GY_Files" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Folders_GY_Folders" />
+        <AssociationConnector Association="GalleryModel.FK_GY_LayerProperties_GY_Layers" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Layers_GY_Slides" />
+        <AssociationConnector Association="GalleryModel.FK_GY_SlideProperties_GY_Slides" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Videos_GY_VideoSet" />
+        <EntityTypeShape EntityType="GalleryModel.GY_AudioCategories" Width="2.25" PointX="2.375" PointY="15.375" />
+        <EntityTypeShape EntityType="GalleryModel.GY_VideoCategories" Width="2.125" PointX="0.75" PointY="5.75" />
+        <AssociationConnector Association="GalleryModel.FK_GY_AudioCategories_GY_AudioCategories" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Audios_GY_AudioCategories" />
+        <AssociationConnector Association="GalleryModel.FK_GY_AudioSet_GY_AudioCategories" />
+        <AssociationConnector Association="GalleryModel.FK_GY_VideoCategories_GY_VideoCategories" />
+        <AssociationConnector Association="GalleryModel.FK_GY_Videos_GY_VideoCategories" />
+        <AssociationConnector Association="GalleryModel.FK_GY_VideoSet_GY_VideoCategories" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

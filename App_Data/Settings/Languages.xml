@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<languages>
+  <language locale="ar-SA" direction="rtl" name="عربي">
+    <key name="TagCloud" value="سحابة الكلمة الدلالية" />
+    <key name="CheckoutPageDeliveryAddressListHoverMenuText" value="تحوم هنا لاختيار من قوائم العناوين المحفوظة التسليم" />
+    <key name="CheckoutPageBillingAddressListHoverMenuText" value="تحوم هنا لاختيار من قوائم عناوين الفواتير المحفوظة" />
+    <key name="ViewCartButtonText" value="({0}) عرض السلة" />
+    <key name="PostsComponentHeaderTitle" value="جميع المقالات" />
+    <key name="ChildPostsListComponentTitleHeader" value="ما هو داخل" />
+    <key name="GoBackText" value="العودة" />
+    <key name="MainPostText" value="المادة الرئيسية" />
+    <key name="PhotosComponentTitle" value="الصور" />
+    <key name="DrivesTitle" value="التنزيلات" />
+    <key name="DownloadsTitle" value="التنزيلات" />
+    <key name="VideoCategoriesTitle" value="كل لقطات الفيديو" />
+    <key name="EventStartsOn" value="يبدأ في:" />
+    <key name="EventEndsOn" value="ينتهي في:" />
+    <key name="ReadMore" value="قراءة المزيد" />
+    <key name="OnGoingEvents" value="الأحداث الجارية" />
+    <key name="PastEvents" value="الأحداث الماضية" />
+    <key name="AllEvents" value="كل الأحداث" />
+    <key name="UpComingEvents" value="الأحداث القادمة" />
+    <key name="NoMoreItemsToDisplay" value="لا مزيد من العناصر لعرضه" />
+    <key name="RequiresRegistration" value="يتطلب التسجيل" />
+    <key name="DoNotRequireRegistration" value="لا تتطلب التسجيل" />
+    <key name="When" value="متى؟" />
+    <key name="Where" value="أين؟" />
+    <key name="AreYouThere" value="هل أنت هناك؟" />
+    <key name="Register" value="تسجيل" />
+    <key name="StartDate" value="بدء التسجيل: " />
+    <key name="StartTime" value="بدء التوقيت: " />
+    <key name="EndDate" value="نهاية التاريخ: " />
+    <key name="EndTime" value="إنهاء الوقت: " />
+    <key name="RegistrationNotOpenYet" value="تسجيل لم يفتح بعد" />
+    <key name="RegistrationOpen" value="تسجيل المفتوحة" />
+    <key name="RegistrationClosed" value="تسجيل مغلق" />
+    <key name="AudioCategoriesTitle" value="جميع صوتيات" />
+    <key name="AudioCategoriesTitle" value="جميع الفئات الصوت" />
+    <key name="YouAreAlreadySubscribed" value="كنت مشتركا بالفعل" />
+    <key name="YouHaveBeenSubscribedSuccessfully" value="تم اشتراكك بنجاح" />
+    <key name="ErrorWhileSubscribing" value="كان هناك خطأ أثناء الاشتراك لك. يرجى المحاولة لاحقا" />
+    <key name="Name" value="اسم" />
+    <key name="Email" value="البريد الإلكتروني" />
+    <key name="Mobile" value="موبايل" />
+    <key name="Landline" value="الهاتف" />
+    <key name="Subscribe" value="الاشتراك" />
+    <key name="AddToCartButtonText" value="إضافة إلى السلة" />
+    <key name="Login" value="تسجيل الدخول" />
+    <key name="LogOut" value="تسجيل الخروج" />
+    <key name="Account" value="تقرير" />
+    <key name="ChangeContact" value="تغيير الاتصال" />
+    <key name="ChangeProfile" value="الملف التغيير" />
+    <key name="ChangePassword" value="تغيير كلمة المرور" />
+    <key name="ChnageSecurityQA" value="الجواب التغيير الأمن" />
+    <key name="City" value="المدينة" />
+    <key name="State" value="الدولة" />
+    <key name="Country" value="بلد" />
+    <key name="Comment" value="تعليق" />
+    <key name="Send" value="إرسال" />
+    <key name="Open" value="مفتوحة" />
+    <key name="TotalVideos" value="مجموع الفيديو :" />
+    <key name="TotalAudios" value="إجمالي صوتيات :" />
+    <key name="Audios" value="صوتيات" />
+    <key name="Videos" value="فيديو" />
+    <key name="Playlists" value="قوائم التشغيل" />
+    <key name="PhotoGallery" value="معرض الصور" />
+    <key name="Photos" value="الصور:" />
+    <key name="LoadMore" value="تحميل المزيد" />
+    <key name="RecentVideos" value="أشرطة الفيديو الأخيرة" />
+    <key name="RelatedVideos" value="فيديو ذات الصلة" />
+    <key name="RelatedAudios" value="صوتيات ذات الصلة" />
+    <key name="RelatedPosts" value="الوظائف ذات الصلة" />
+    <key name="Likes" value="يحب :" />
+    <key name="Dislikes" value="يكره :" />
+    <key name="NoSearchTermsProvided" value="لا شروط البحث قدمت" />
+    <key name="NoResultsFound" value="لا توجد نتائج" />
+    <key name="QuickContactForm" value="سريع نموذج الاتصال" />
+    <key name="OAuthComponentTitle" value="تسجيل الدخول عن طريق ..." />
+  </language>
+  <language locale="en-US" direction="ltr" name="English">
+    <key name="TagCloud" value="Tag Cloud" />
+    <key name="CheckoutPageDeliveryAddressListHoverMenuText" value="Hover Here To Choose From The Lists Of Saved Delivery Addresses" />
+    <key name="CheckoutPageBillingAddressListHoverMenuText" value="Hover Here To Choose From The Lists Of Saved Billing Addresses" />
+    <key name="ViewCartButtonText" value="View Cart ({0})" />
+    <key name="PostsComponentHeaderTitle" value="All Posts" />
+    <key name="PhotosComponentTitle" value="Photos" />
+    <key name="ChildPostsListComponentTitleHeader" value="What's Inside" />
+    <key name="GoBackText" value="Go Back" />
+    <key name="MainPostText" value="Main Post" />
+    <key name="DrivesTitle" value="Downloads" />
+    <key name="DownloadsTitle" value="Downloads" />
+    <key name="VideoCategoriesTitle" value="All Videos" />
+    <key name="AudioCategoriesTitle" value="All Audios" />
+    <key name="AudioCategoriesTitle" value="All Audio Categories" />
+    <key name="EventStartsOn" value="Starts On: " />
+    <key name="EventEndsOn" value="Ends On: " />
+    <key name="ReadMore" value="Read More" />
+    <key name="OnGoingEvents" value="Ongoing Events" />
+    <key name="PastEvents" value="Past Events" />
+    <key name="AllEvents" value="All Events" />
+    <key name="UpComingEvents" value="Up Coming Events" />
+    <key name="NoMoreItemsToDisplay" value="No More Items To Display" />
+    <key name="RequiresRegistration" value="Requires Registration" />
+    <key name="DoNotRequireRegistration" value="Do Not Require Registration" />
+    <key name="When" value="When?" />
+    <key name="Where" value="Where?" />
+    <key name="AreYouThere" value="Are You There?" />
+    <key name="Register" value="Register" />
+    <key name="StartDate" value="Start Date: " />
+    <key name="StartTime" value="Start Time: " />
+    <key name="EndDate" value="End Date: " />
+    <key name="EndTime" value="End Time:" />
+    <key name="RegistrationNotOpenYet" value="Registration Not Open Yet" />
+    <key name="RegistrationOpen" value="Registration Open" />
+    <key name="RegistrationClosed" value="Registration Closed" />
+    <key name="YouAreAlreadySubscribed" value="You are already subscribed." />
+    <key name="YouHaveBeenSubscribedSuccessfully" value="You have been subscribed successfully" />
+    <key name="ErrorWhileSubscribing" value="There was an error while subscribing you. Please try again later." />
+    <key name="Name" value="Name" />
+    <key name="Email" value="Email" />
+    <key name="Mobile" value="Mobile" />
+    <key name="Landline" value="Landline" />
+    <key name="Subscribe" value="Subscribe" />
+    <key name="AddToCartButtonText" value="Add To Cart" />
+    <key name="Login" value="Login" />
+    <key name="LogOut" value="Log Out" />
+    <key name="Account" value="Account" />
+    <key name="ChangeContact" value="Change Contact" />
+    <key name="ChangeProfile" value="Change Profile" />
+    <key name="ChangePassword" value="Change Password" />
+    <key name="ChnageSecurityQA" value="Change Security QA" />
+    <key name="City" value="City" />
+    <key name="State" value="State" />
+    <key name="Country" value="Country" />
+    <key name="Comment" value="Comment" />
+    <key name="Send" value="Send" />
+    <key name="Open" value="Open" />
+    <key name="TotalVideos" value="Total Videos: " />
+    <key name="TotalAudios" value="Total Audios: " />
+    <key name="Audios" value="Audios" />
+    <key name="Videos" value="Videos" />
+    <key name="Playlists" value="Playlists" />
+    <key name="PhotoGallery" value="Photo Gallery" />
+    <key name="Photos" value="Photos: " />
+    <key name="LoadMore" value="Load More" />
+    <key name="RecentVideos" value="Recent Videos" />
+    <key name="RelatedVideos" value="Related Videos" />
+    <key name="RelatedAudios" value="Related Audios" />
+    <key name="RelatedPosts" value="Related Posts" />
+    <key name="Likes" value="Likes: " />
+    <key name="Dislikes" value="Dislikes: " />
+    <key name="NoSearchTermsProvided" value="No Search Terms Provided" />
+    <key name="NoResultsFound" value="No Results Found" />
+    <key name="QuickContactForm" value="Quick Contact Form" />
+    <key name="OAuthComponentTitle" value="Login Using..." />
+  </language>
+</languages>

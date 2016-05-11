@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<stylesheets>
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/Reset.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/Form.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/Main.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/buttons.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/icon.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/CalendarExtendarStyle.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/Components.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/sm-core-css.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/hint.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/tipsy.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/animate.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/csshake.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/slider.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/jquery.fancybox.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/jquery.Jcrop.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/revSliderCaptions.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/owl.theme.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/menuTheme.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/timeline.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/focuspoint.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/focuspoint-css-fallbacks.css" />
+  <stylesheet path="~/Themes/CheckOut/Stylesheets/ResponsiveComponents.css" />
+</stylesheets>

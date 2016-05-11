@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/AppCode/Helpers/Themes/ZiceMasterPage.cs" Inherits="OWDARO.Themes.ZiceMasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title runat="server" id="Title"></title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="~/favicon.ico" runat="server" />
+    <OWD:WebmasterComponent runat="server" />
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Styles.Render(string.Format("~/Theme{0}", OWDARO.AppConfig.ZiceTheme)) %>
+    </asp:PlaceHolder>
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Scripts.Render(string.Format("~/Script{0}", OWDARO.AppConfig.ZiceTheme)) %>
+    </asp:PlaceHolder>
+    <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="~/Themes/Zice/Stylesheets/fix.min.css" runat="server" />
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="dashborad">
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+        <div id="header">
+            <div id="account_info">
+                <asp:Image CssClass="CompanyBranding" runat="server" ImageUrl="~/dashboard-logo.png" />
+                <div class="HeaderSectionDiv">
+                    <asp:TextBox runat="server" ClientIDMode="Static" type="text" ID="Zice_Admin_text_search" placeholder="Text Search" Style="height: 25px; float: left; margin: 10px 50px 0px 0px;
+                        line-height: 25px;" />
+                    <table>
+                        <tr style="vertical-align: middle; height: 45px;">
+                            <td style="padding-right: 10px;">
+                                <asp:Image ID="ProfileAvatarImage" runat="server" ImageUrl="~/Themes/Zice/Graphics/avatar.png"
+                                    alt="Online" CssClass="avartar" Height="32px" Width="32px" />
+                            </td>
+                            <td style="padding-right: 10px;">
+                                <b>Welcome,</b> <b style="color: Red;">
+                                    <asp:LoginName ID="LoginName1" runat="server" />
+                                </b>
+                            </td>
+                            <td style="padding-right: 10px; cursor: pointer;">
+                                <asp:Image runat="server" ImageUrl="~/Themes/Zice/Graphics/gear.png" ID="GearImage" />
+                                <asp:HoverMenuExtender ID="GearImage_HoverMenuExtender" runat="server" Enabled="True"
+                                    PopupPosition="Bottom" TargetControlID="GearImage" PopupControlID="ProfileOptionsPanel"
+                                    OffsetX="-100" OffsetY="3">
+                                </asp:HoverMenuExtender>
+                            </td>
+                            <td class="loginLinkFix">
+                                <span class="netip">
+                                    <asp:LoginStatus title="Logout" CssClass="LoginLink" runat="server" LoginText=""
+                                        LogoutText="" />
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="shadowhead">
+        </div>
+        <asp:ContentPlaceHolder runat="server" ID="SidebarLinksPlaceHolder">
+        </asp:ContentPlaceHolder>
+        <div id="content" class="text-search-data">
+            <div class="inner">
+                <asp:ContentPlaceHolder ID="TopLinksPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="Clear">
+                </div>
+                <asp:ContentPlaceHolder ID="SliderPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="BottomPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="Clear">
+                </div>
+                <asp:Literal runat="server" ID="BrandingLiteral"></asp:Literal>
+                <a href="#" class="scrollup">
+                    <asp:Image runat="server" ImageUrl="~/Themes/Zice/Graphics/icon/totop.png" /></a>
+            </div>
+        </div>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" DynamicLayout="true" DisplayAfter="0">
+            <ProgressTemplate>
+                <div style="padding: 10px; background: #222222; color: White; border: 1px solid #008bc9; display: inline-block; z-index: 100009; position: absolute;">
+                    Commanding...
+                </div>
+                <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; overflow: hidden; background: black; opacity: 0.3; z-index: 9999999;">
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <asp:AlwaysVisibleControlExtender ID="UpdateProgress1_AlwaysVisibleControlExtender"
+            runat="server" Enabled="True" HorizontalSide="Center" TargetControlID="UpdateProgress1"
+            VerticalSide="Middle" UseAnimation="True">
+        </asp:AlwaysVisibleControlExtender>
+        <asp:Panel runat="server" CssClass="ProfileOptionsPanel" ID="ProfileOptionsPanel">
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UI/Pages/Common/ChangeContact.aspx"
+                Text="Change Contact"></asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/UI/Pages/Common/ChangeProfile.aspx"
+                Text="Change Profile"></asp:HyperLink>
+            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/UI/Pages/Common/ChangePassword.aspx"
+                Text="Change Password"></asp:HyperLink>
+            <asp:HyperLink ID="SecurityQAHyperLink" runat="server" NavigateUrl="~/UI/Pages/Common/ChangeSecQA.aspx"
+                Text="Change Security QA"></asp:HyperLink>
+        </asp:Panel>
+
+        <script type="text/javascript">
+            function OnChange(element) {
+                var value = $(element).val();
+                if (value == "-1")
+                    return false;
+                else {
+                    __doPostBack('UpdatePanel1', '');
+                }
+            }
+
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_endRequest(function (s, e) {
+                ReInitialize();
+            });
+        </script>
+
+        <%= string.Format("{0}", OWDARO.AppConfig.GoogleAnalyticsCode) %>
+
+        <%= string.Format("{0}", OWDARO.AppConfig.MicrosoftApplicationInsightScript) %>
+    </form>
+</body>
+</html>

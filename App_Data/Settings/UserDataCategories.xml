@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<userDataCategories>
+  <userDataCategory name="EmailCategory" value="Email" />
+  <userDataCategory name="MobileCategory" value="Mobile" />
+  <userDataCategory name="LandlineCategory" value="Landline" />
+  <userDataCategory name="FaxCategory" value="Fax" />
+  <userDataCategory name="WebsiteCategory" value="Website" />
+  <userDataCategory name="HomeAddressCategory" value="Home Address" />
+  <userDataCategory name="BillingAddressCategory" value="Billing Address" />
+  <userDataCategory name="DeliveryAddressCategory" value="Delivery Address" />
+  <userDataCategory name="OfficeAddressCategory" value="Office Address" />
+</userDataCategories>

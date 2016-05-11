@@ -1,0 +1,423 @@
+﻿.Header {
+    max-width: 1200px;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.MenuContainer {
+    min-height: 40px;
+    background: #2d2d51;
+}
+
+.ContentContainer {
+    width: 1200px;
+    margin: 0px auto;
+    padding: 10px 0px 20px 0px;
+}
+
+.Content {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.SideBarLeft {
+    width: 180px;
+    float: left;
+}
+
+.ContentMiddle {
+    float: right;
+    width: 1000px;
+}
+
+h1 {
+    font-family: Verdana;
+    color: #008bc9;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+    padding: 5px 5px 10px 0px;
+    border-bottom: 2px solid #333333;
+}
+
+    h1.PageTitle {
+        font-family: Verdana;
+        color: #4D90FE;
+        font-size: 25px;
+        display: block;
+        font-weight: bold;
+        padding: 5px 5px 5px 0px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #333333;
+    }
+
+h2.PageTitle {
+    font-family: Verdana;
+    color: #80a020;
+    font-size: 15px;
+    display: block;
+    font-weight: bold;
+    padding: 5px 5px 5px 0px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333333;
+}
+
+img.Logo {
+    display: inline-block;
+    width: 100px;
+    margin-right: 0px;
+    float: left;
+}
+
+h1.Title {
+    font-family: Verdana;
+    color: #e5b312;
+    font-size: 50px;
+    display: inline-block;
+    margin-top: 15px;
+    float: left;
+    border-bottom: none;
+    text-shadow: 0px 0px 3px rgba(252, 222, 100, 0.5);
+}
+
+    h1.Title span {
+        font-size: 15px;
+        color: #333333;
+        line-height: 20px;
+        text-align: right;
+        display: block;
+    }
+
+
+
+
+.BottomRow {
+    padding: 20px 0px 20px 0px;
+}
+
+    .BottomRow .Container {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+.Color1 {
+    background: #00161c;
+}
+
+    .Color1 h2.PageTitle {
+        color: white;
+        border-bottom: 2px solid #55b4d4;
+        font-size: 25px;
+    }
+
+.Color2 {
+    background: #c7cbd4;
+    color: #333333;
+}
+
+.Footer {
+    width: 100%;
+    background: #222222;
+}
+
+    .Footer .FooterMiddle {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+        .Footer .FooterMiddle .FooterSection {
+            width: 255px;
+            background: orange;
+            padding: 10px;
+            background: #333333;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            float: left;
+            min-height: 200px;
+            margin: 10px;
+        }
+
+            .Footer .FooterMiddle .FooterSection p a {
+                text-decoration: none;
+                border-bottom: 2px solid #80a020;
+                color: #4D90FE;
+                font-family: Verdana;
+                font-size: 12px;
+            }
+
+                .Footer .FooterMiddle .FooterSection p a:hover {
+                    border-bottom: 2px solid orange;
+                }
+
+            .Footer .FooterMiddle .FooterSection:last-child {
+            }
+
+            .Footer .FooterMiddle .FooterSection h3 {
+                line-height: 20px;
+                display: block;
+                font-family: Verdana;
+                font-size: 15px;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+ul.LoginStatus {
+    list-style-type: none;
+}
+
+    ul.LoginStatus li {
+        float: none;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+        ul.LoginStatus li a {
+            display: block;
+            line-height: 30px;
+            background: #007acc;
+            padding: 0px 20px 0px 20px;
+            font-family: Verdana;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+        }
+
+            ul.LoginStatus li a:hover {
+                background: brown;
+            }
+
+.ErrorPage {
+    background: url('/Themes/CheckOut/Graphics/fuzzy.gif') repeat;
+    height: 300px;
+    width: 100%;
+}
+
+    .ErrorPage h2 {
+        font-family: Verdana;
+        font-size: 40px;
+        color: #444444;
+        text-shadow: 2px 2px 0px rgba(255, 255, 255, 1);
+        padding: 50px 0px 0px 40px;
+    }
+
+    .ErrorPage p {
+        font-family: Verdana;
+        font-size: 30px;
+        color: #222222;
+        padding: 30px 0px 0px 0px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 40px;
+    }
+
+    .ErrorPage a {
+        padding: 5px 20px 5px 20px;
+        background: white;
+        color: firebrick;
+        border-bottom: 2px solid orangered;
+        font-size: 20px;
+        text-decoration: none;
+        display: inline-table;
+    }
+
+        .ErrorPage a:hover {
+            background: orangered;
+            color: white;
+            border-bottom-color: lightseagreen;
+        }
+
+        .ErrorPage a:active {
+            background-color: brown;
+            color: white;
+            border-bottom-color: gold;
+        }
+
+.HeaderMenu li span.EditDiv {
+    background: white;
+    border-radius: 6px;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+    margin-right: 2px;
+    margin-left: 3px;
+}
+
+    .HeaderMenu li span.EditDiv a.LinkEditStyle {
+        font-family: Verdana;
+        font-size: 10px;
+        display: inline-block;
+        padding: 5px 10px 5px 10px;
+        border-radius: 3px;
+        color: #ffffff;
+        background: #555555;
+        display: none;
+    }
+
+        .HeaderMenu li span.EditDiv a.LinkEditStyle:hover {
+            background: orange;
+        }
+
+    .HeaderMenu li span.EditDiv:hover a.LinkEditStyle {
+        display: block;
+        position: absolute;
+        margin-top: 6px;
+        margin-left: 6px;
+    }
+
+.HeaderMenu {
+    min-height: 24px;
+    background: #333333;
+    padding: 0px 10px 0px 10px;
+}
+
+    .HeaderMenu li {
+        list-style-type: none;
+        float: left;
+        margin-right: 10px;
+        background: #333333;
+    }
+
+        .HeaderMenu li:hover {
+            background: #008bc9;
+        }
+
+        .HeaderMenu li a {
+            display: inline-block;
+            float: left;
+            padding: 6px 10px 6px 10px;
+            font-family: Verdana;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+        }
+
+            .HeaderMenu li a:hover {
+                background: #008bc9;
+                color: white;
+            }
+
+        .HeaderMenu li ul {
+            display: none;
+        }
+
+        .HeaderMenu li:hover ul {
+            display: block;
+            position: absolute;
+            padding-top: 10px;
+            margin-top: 24px;
+        }
+
+            .HeaderMenu li:hover ul li {
+                float: none;
+                margin: 0px;
+                background: #333333;
+                width: 200px;
+            }
+
+                .HeaderMenu li:hover ul li a {
+                    display: block;
+                    float: none;
+                    padding: 5px 10px 5px 10px;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    color: white;
+                }
+
+                    .HeaderMenu li:hover ul li a:hover {
+                        background: #008bc9;
+                        color: white;
+                    }
+
+
+                .HeaderMenu li:hover ul li ul {
+                    display: none;
+                }
+
+        .HeaderMenu li ul li:hover ul {
+            display: block;
+            position: absolute;
+            margin-left: 200px;
+            padding-top: 0px;
+            margin-top: -23px;
+            padding-left: 10px;
+        }
+
+.HeaderMenu2 {
+    margin-top: 20px;
+    min-height: 24px;
+    background: #333333;
+    padding: 0px 10px 0px 10px;
+}
+
+    .HeaderMenu2 li {
+        list-style-type: none;
+        float: left;
+        margin-right: 10px;
+        background: #333333;
+    }
+
+        .HeaderMenu2 li:hover {
+            background: #008bc9;
+        }
+
+        .HeaderMenu2 li a {
+            display: inline-block;
+            float: left;
+            padding: 6px 10px 6px 10px;
+            font-family: Verdana;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+        }
+
+            .HeaderMenu2 li a:hover {
+                background: #008bc9;
+                color: white;
+            }
+
+        .HeaderMenu2 li ul {
+            display: none;
+        }
+
+        .HeaderMenu2 li:hover ul {
+            display: block;
+            position: absolute;
+            padding-top: 10px;
+            margin-top: 23px;
+        }
+
+            .HeaderMenu2 li:hover ul li {
+                float: none;
+                margin: 0px;
+                background: #333333;
+                width: 200px;
+            }
+
+                .HeaderMenu2 li:hover ul li a {
+                    display: block;
+                    float: none;
+                    padding: 5px 10px 5px 10px;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    color: white;
+                }
+
+                    .HeaderMenu2 li:hover ul li a:hover {
+                        background: #008bc9;
+                        color: white;
+                    }
+
+
+                .HeaderMenu2 li:hover ul li ul {
+                    display: none;
+                }
+
+        .HeaderMenu2 li ul li:hover ul {
+            display: block;
+            position: absolute;
+            margin-left: 200px;
+            padding-top: 0px;
+            margin-top: -22px;
+            padding-left: 10px;
+        }

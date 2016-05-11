@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages>
+  <page id="HomePage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="{ONLY-SITENAME}" />
+  </page>
+  <page id="AboutUsPage">
+    <meta name="keywords" content="about us, information, know us, company details" />
+    <meta name="description" content="know about us" />
+    <meta name="title" content="About Us{ONLY-TITLE}" />
+  </page>
+  <page id="ContactUsPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Contact Us{ONLY-TITLE}" />
+  </page>
+  <page id="AlbumsPage">
+    <meta name="keywords" content="photos, albums, pics, pix, snaps, pictures, fotos, clicks" />
+    <meta name="description" content="the photos of all the happenings going in and around us" />
+    <meta name="title" content="Photos" />
+  </page>
+  <page id="CartPage">
+    <meta name="keywords" content="cart, shopping, checkout" />
+    <meta name="description" content="all the products selected for buying are here in the shopping cart" />
+    <meta name="title" content="Cart" />
+  </page>
+  <page id="DownloadsPage">
+    <meta name="keywords" content="downloads, getables, freeware" />
+    <meta name="description" content="all the downloads and getables can be taken from the downloads page" />
+    <meta name="title" content="Downloads" />
+  </page>
+  <page id="SearchPage">
+    <meta name="keywords" content="search, find, explore" />
+    <meta name="description" content="can't find anything? this is where you will find all the stuffs" />
+    <meta name="title" content="Search" />
+  </page>
+  <page id="ReviewsPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Review" />
+  </page>
+  <page id="PortfolioPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Portfolios" />
+  </page>
+  <page id="ForgotPasswordPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Forgot Password" />
+  </page>
+  <page id="ExternalFormEmbedCodePage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Form" />
+  </page>
+  <page id="ExternalFormEmbedIDPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Form" />
+  </page>
+  <page id="UserManagePage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="User Contact Details" />
+  </page>
+  <page id="UserListPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Users List" />
+  </page>
+  <page id="UserAddPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Add User" />
+  </page>
+  <page id="RegisterPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Sign Up" />
+  </page>
+  <page id="ChangeSecQAPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Security Qauestion and Answer" />
+  </page>
+  <page id="ChangeContactPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Contact Details" />
+  </page>
+  <page id="ChangePasswordPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Change Password" />
+  </page>
+  <page id="ChangeProfilePage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Profile Details" />
+  </page>
+  <page id="PrintPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Print" />
+  </page>
+  <page id="ImageListAndUploadPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Image Upload" />
+  </page>
+  <page id="FileListAndUploadPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="File Upload" />
+  </page>
+  <page id="FileBrowserPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="File Explorer" />
+  </page>
+  <page id="DownloadOpenPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="View" />
+  </page>
+  <page id="DownloadGetPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Download" />
+  </page>
+  <page id="DownloadPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Downloads" />
+  </page>
+  <page id="PaymentGatewayPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Payment Gateway" />
+  </page>
+  <page id="PaymentConfirmedPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Payment Confirmation" />
+  </page>
+  <page id="OrderConfirmedPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Order Confirmation" />
+  </page>
+  <page id="CheckOutStep2Page">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Checkout Step 2" />
+  </page>
+  <page id="CheckOutStep1Page">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Checkout Step 1" />
+  </page>
+  <page id="LogOnPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Login" />
+  </page>
+  <page id="InstallPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Install" />
+  </page>
+  <page id="AllEventsPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="All Events" />
+  </page>
+  <page id="UpcomingEventsPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Up Coming Events" />
+  </page>
+  <page id="PastEventsPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="Past Events" />
+  </page>
+  <page id="OnGoingEventsPage">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="title" content="On Going Events" />
+  </page>
+  <page id="AllPostsPage">
+    <meta name="keywords" content="articles, posts, all, new, contents" />
+    <meta name="description" content="all the posts from all the categories can be found here" />
+    <meta name="title" content="All Posts" />
+  </page>
+  <page id="AudioSectionsPage">
+    <meta name="keywords" content="audios, sections, play, lists, categories, category" />
+    <meta name="description" content="All the audio sections and play lists available on this website" />
+    <meta name="title" content="Audios" />
+  </page>
+  <page id="DrivesPage">
+    <meta name="keywords" content="drive, files, folders, downloads, category, categories" />
+    <meta name="description" content="All the files and folders available for viewing and downloading available on this site can be found here" />
+    <meta name="title" content="Downloads" />
+  </page>
+  <page id="VideoSectionsPage">
+    <meta name="keywords" content="videos, sections, play, lists, categories, category" />
+    <meta name="description" content="All the video sections and play lists available on this website" />
+    <meta name="title" content="Videos" />
+  </page>
+  <page id="AudioSectionsPage">
+    <meta name="keywords" content="audios, sections, play, lists, categories, category" />
+    <meta name="description" content="All the audio sections and play lists available on this website" />
+    <meta name="title" content="Audios" />
+  </page>
+</pages>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pageSetting>
+  <add>
+    <pages>
+      <page name="AddUser">
+        <categories default="-1">
+          <category id="-1" name="None" locked="True" showEducation="True" showWork="True" showAddress="True" showDateOfBirth="True" showFax="True" showGender="True" showLandline="True" showMobile="True" showWebsite="True" showBillingAddress="True" showDeliveryAddress="True" />
+        </categories>
+      </page>
+    </pages>
+  </add>
+  <list>
+    <pages>
+      <page name="ListUsers">
+        <categories>
+          <category id="-1" name="None" locked="True" showEducation="True" showWork="True" showAddress="True" showDateOfBirth="True" showFax="True" showGender="True" showLandline="True" showMobile="True" showWebsite="True" showBillingAddress="True" showDeliveryAddress="True" />
+        </categories>
+      </page>
+    </pages>
+  </list>
+  <manage>
+    <pages>
+      <page name="ManageUser">
+        <categories>
+          <category id="-1" name="None" locked="True" showEducation="True" showWork="True" showAddress="True" showDateOfBirth="True" showFax="True" showGender="True" showLandline="True" showMobile="True" showWebsite="True" showBillingAddress="True" showDeliveryAddress="True" />
+        </categories>
+      </page>
+    </pages>
+  </manage>
+</pageSetting>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1fa9e845ea81498d8424451e74ebe7d2" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="MembershipModel.MS_EducationQualificationTypes" Width="1.5" PointX="6" PointY="6.375" />
+        <EntityTypeShape EntityType="MembershipModel.MS_UserAdresses" Width="1.5" PointX="5.25" PointY="14" />
+        <EntityTypeShape EntityType="MembershipModel.MS_UserCategories" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="MembershipModel.MS_UserEducations" Width="1.5" PointX="8.25" PointY="6.875" />
+        <EntityTypeShape EntityType="MembershipModel.MS_Users" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="MembershipModel.MS_UsersData" Width="1.5" PointX="5.25" PointY="3.375" />
+        <EntityTypeShape EntityType="MembershipModel.MS_UserWorks" Width="1.5" PointX="5.25" PointY="10" />
+        <AssociationConnector Association="MembershipModel.FK_UserEducations_EducationQualificationTypes" />
+        <AssociationConnector Association="MembershipModel.FK_UserAdresses_Users" />
+        <AssociationConnector Association="MembershipModel.FK_Users_UserCategories" />
+        <AssociationConnector Association="MembershipModel.FK_UserEducations_Users" />
+        <AssociationConnector Association="MembershipModel.FK_UsersData_Users" />
+        <AssociationConnector Association="MembershipModel.FK_UserWorks_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<locations>
+  <countries>
+    <country name="India" value="1">
+      <states>
+        <state name="Odisha" value="1.1">
+          <cities>
+            <city name="Cuttack" value="1.1.1" zipcode="753001">
+              <streets>
+                <street name="Deewan Bazaar" value="1.1.1.1" zipcode="753001">
+                  <localities>
+                    <locality name="Tambi Padia" value="1.1.1.1.1" />
+                    <locality name="Ambadi Padia" value="1.1.1.1.2" />
+                    <locality name="Janta Gali" value="1.1.1.1.3" />
+                    <locality name="Other" value="1.1.1.1.0" />
+                  </localities>
+                </street>
+                <street name="Other" value="1.1.1.0" zipcode="753001">
+                  <localities>
+                    <locality name="Other" value="1.1.1.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+            <city name="Other" value="1.1.0" zipcode="######">
+              <streets>
+                <street name="Other" value="1.1.0.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="1.1.0.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+          </cities>
+        </state>
+        <state name="West Bengal" value="1.2">
+          <cities>
+            <city name="Kolkata" value="1.2.1" zipcode="740001">
+              <streets>
+                <street name="Central" value="1.2.1.1" zipcode="######">
+                  <localities>
+                    <locality name="Eden Hospital" value="1.2.1.1.1" />
+                    <locality name="Other" value="1.2.1.1.0" />
+                  </localities>
+                </street>
+                <street name="M.G. Road" value="1.2.1.2" zipcode="######">
+                  <localities>
+                    <locality name="Kela Bagan" value="1.2.1.2.1" />
+                    <locality name="Machhua" value="1.2.1.2.2" />
+                    <locality name="Other" value="1.2.1.2.0" />
+                  </localities>
+                </street>
+                <street name="Other" value="1.2.1.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="1.2.1.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+            <city name="Other" value="1.2.0" zipcode="######">
+              <streets>
+                <street name="Other" value="1.2.0.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="1.2.0.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+          </cities>
+        </state>
+        <state name="Other" value="1.0">
+          <cities>
+            <city name="Other" value="1.0.0" zipcode="######">
+              <streets>
+                <street name="Other" value="1.0.0.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="1.0.0.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+          </cities>
+        </state>
+      </states>
+    </country>
+    <country name="U.S.A" value="2">
+      <states>
+        <state name="Alabama" value="2.1">
+          <cities>
+            <city name="New York" value="2.1.1" zipcode="######">
+              <streets>
+                <street name="Wall Street" value="2.1.1.1" zipcode="######">
+                  <localities>
+                    <locality name="Block 1" value="2.1.1.1.1" />
+                    <locality name="Other" value="2.1.1.1.0" />
+                  </localities>
+                </street>
+                <street name="Other" value="2.1.1.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="2.1.1.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+            <city name="Other" value="2.1.0" zipcode="######">
+              <streets>
+                <street name="Other" value="2.1.0.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="2.1.0.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+          </cities>
+        </state>
+        <state name="Other" value="2.0">
+          <cities>
+            <city name="Other" value="2.0.0" zipcode="######">
+              <streets>
+                <street name="Other" value="2.0.0.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="2.0.0.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+          </cities>
+        </state>
+      </states>
+    </country>
+    <country name="Other" value="0">
+      <states>
+        <state name="Other" value="0.0">
+          <cities>
+            <city name="Other" value="0.0.0" zipcode="######">
+              <streets>
+                <street name="Other" value="0.0.0.0" zipcode="######">
+                  <localities>
+                    <locality name="Other" value="0.0.0.0.0" />
+                  </localities>
+                </street>
+              </streets>
+            </city>
+          </cities>
+        </state>
+      </states>
+    </country>
+  </countries>
+</locations>

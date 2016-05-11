@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MediaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ME_BookCategories">
+          <Key>
+            <PropertyRef Name="BookCategoryID" />
+          </Key>
+          <Property Name="BookCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+        </EntityType>
+        <EntityType Name="ME_Books">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WrittenOn" Type="datetime" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="BookCategoryID" Type="int" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+        </EntityType>
+        <EntityType Name="ME_Chapters">
+          <Key>
+            <PropertyRef Name="ChapterID" />
+          </Key>
+          <Property Name="ChapterID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ChapterContent" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BookID" Type="int" Nullable="false" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ME_Clients">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ME_PortfolioCategories">
+          <Key>
+            <PropertyRef Name="PortfolioCategoryID" />
+          </Key>
+          <Property Name="PortfolioCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PortfolioID" Type="int" Nullable="false" />
+          <Property Name="ProjectCategoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ME_Portfolios">
+          <Key>
+            <PropertyRef Name="PortfolioID" />
+          </Key>
+          <Property Name="PortfolioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ClientID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Date" Type="date" />
+          <Property Name="URL" Type="nvarchar(max)" />
+          <Property Name="ImageID" Type="int" />
+        </EntityType>
+        <EntityType Name="ME_PostCategories">
+          <Key>
+            <PropertyRef Name="PostCategoryID" />
+          </Key>
+          <Property Name="PostCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="ParentPostCategoryID" Type="int" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ME_Posts">
+          <Key>
+            <PropertyRef Name="PostID" />
+          </Key>
+          <Property Name="PostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="PostContent" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="PostCategoryID" Type="int" Nullable="false" />
+          <Property Name="ParentPostID" Type="int" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ME_ProjectCategories">
+          <Key>
+            <PropertyRef Name="ProjectCategoryID" />
+          </Key>
+          <Property Name="ProjectCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ME_Subscriptions">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Email" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsSubscribed" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ME_Testimonials">
+          <Key>
+            <PropertyRef Name="TestimonialID" />
+          </Key>
+          <Property Name="TestimonialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Testimonial" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Company" Type="nvarchar" MaxLength="100" />
+          <Property Name="Position" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImageID" Type="int" />
+        </EntityType>
+        <Association Name="FK_ME_Books_ME_BookCategories">
+          <End Role="ME_BookCategories" Type="Self.ME_BookCategories" Multiplicity="1" />
+          <End Role="ME_Books" Type="Self.ME_Books" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_BookCategories">
+              <PropertyRef Name="BookCategoryID" />
+            </Principal>
+            <Dependent Role="ME_Books">
+              <PropertyRef Name="BookCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Chapters_ME_Books">
+          <End Role="ME_Books" Type="Self.ME_Books" Multiplicity="1" />
+          <End Role="ME_Chapters" Type="Self.ME_Chapters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Books">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="ME_Chapters">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_PortfolioCategories_ME_Portfolios">
+          <End Role="ME_Portfolios" Type="Self.ME_Portfolios" Multiplicity="1" />
+          <End Role="ME_PortfolioCategories" Type="Self.ME_PortfolioCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Portfolios">
+              <PropertyRef Name="PortfolioID" />
+            </Principal>
+            <Dependent Role="ME_PortfolioCategories">
+              <PropertyRef Name="PortfolioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_PortfolioCategories_ME_ProjectCategories">
+          <End Role="ME_ProjectCategories" Type="Self.ME_ProjectCategories" Multiplicity="1" />
+          <End Role="ME_PortfolioCategories" Type="Self.ME_PortfolioCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_ProjectCategories">
+              <PropertyRef Name="ProjectCategoryID" />
+            </Principal>
+            <Dependent Role="ME_PortfolioCategories">
+              <PropertyRef Name="ProjectCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Portfolios_ME_Clients">
+          <End Role="ME_Clients" Type="Self.ME_Clients" Multiplicity="1" />
+          <End Role="ME_Portfolios" Type="Self.ME_Portfolios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="ME_Portfolios">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_PostCategories_ME_PostCategories">
+          <End Role="ME_PostCategories" Type="Self.ME_PostCategories" Multiplicity="0..1" />
+          <End Role="ME_PostCategories1" Type="Self.ME_PostCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_PostCategories">
+              <PropertyRef Name="PostCategoryID" />
+            </Principal>
+            <Dependent Role="ME_PostCategories1">
+              <PropertyRef Name="ParentPostCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Posts_ME_PostCategories">
+          <End Role="ME_PostCategories" Type="Self.ME_PostCategories" Multiplicity="1" />
+          <End Role="ME_Posts" Type="Self.ME_Posts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_PostCategories">
+              <PropertyRef Name="PostCategoryID" />
+            </Principal>
+            <Dependent Role="ME_Posts">
+              <PropertyRef Name="PostCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Posts_ME_Posts">
+          <End Role="ME_Posts" Type="Self.ME_Posts" Multiplicity="0..1" />
+          <End Role="ME_Posts1" Type="Self.ME_Posts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Posts">
+              <PropertyRef Name="PostID" />
+            </Principal>
+            <Dependent Role="ME_Posts1">
+              <PropertyRef Name="ParentPostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MediaModelStoreContainer">
+          <EntitySet Name="ME_BookCategories" EntityType="Self.ME_BookCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_Books" EntityType="Self.ME_Books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_Chapters" EntityType="Self.ME_Chapters" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_Clients" EntityType="Self.ME_Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_PortfolioCategories" EntityType="Self.ME_PortfolioCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_Portfolios" EntityType="Self.ME_Portfolios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_PostCategories" EntityType="Self.ME_PostCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_Posts" EntityType="Self.ME_Posts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_ProjectCategories" EntityType="Self.ME_ProjectCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_Subscriptions" EntityType="Self.ME_Subscriptions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ME_Testimonials" EntityType="Self.ME_Testimonials" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ME_Books_ME_BookCategories" Association="Self.FK_ME_Books_ME_BookCategories">
+            <End Role="ME_BookCategories" EntitySet="ME_BookCategories" />
+            <End Role="ME_Books" EntitySet="ME_Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Chapters_ME_Books" Association="Self.FK_ME_Chapters_ME_Books">
+            <End Role="ME_Books" EntitySet="ME_Books" />
+            <End Role="ME_Chapters" EntitySet="ME_Chapters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_PortfolioCategories_ME_Portfolios" Association="Self.FK_ME_PortfolioCategories_ME_Portfolios">
+            <End Role="ME_Portfolios" EntitySet="ME_Portfolios" />
+            <End Role="ME_PortfolioCategories" EntitySet="ME_PortfolioCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_PortfolioCategories_ME_ProjectCategories" Association="Self.FK_ME_PortfolioCategories_ME_ProjectCategories">
+            <End Role="ME_ProjectCategories" EntitySet="ME_ProjectCategories" />
+            <End Role="ME_PortfolioCategories" EntitySet="ME_PortfolioCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Portfolios_ME_Clients" Association="Self.FK_ME_Portfolios_ME_Clients">
+            <End Role="ME_Clients" EntitySet="ME_Clients" />
+            <End Role="ME_Portfolios" EntitySet="ME_Portfolios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_PostCategories_ME_PostCategories" Association="Self.FK_ME_PostCategories_ME_PostCategories">
+            <End Role="ME_PostCategories" EntitySet="ME_PostCategories" />
+            <End Role="ME_PostCategories1" EntitySet="ME_PostCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Posts_ME_PostCategories" Association="Self.FK_ME_Posts_ME_PostCategories">
+            <End Role="ME_PostCategories" EntitySet="ME_PostCategories" />
+            <End Role="ME_Posts" EntitySet="ME_Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Posts_ME_Posts" Association="Self.FK_ME_Posts_ME_Posts">
+            <End Role="ME_Posts" EntitySet="ME_Posts" />
+            <End Role="ME_Posts1" EntitySet="ME_Posts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MediaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MediaEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ME_BookCategories" EntityType="MediaModel.ME_BookCategories" />
+          <EntitySet Name="ME_Books" EntityType="MediaModel.ME_Books" />
+          <EntitySet Name="ME_Chapters" EntityType="MediaModel.ME_Chapters" />
+          <EntitySet Name="ME_Clients" EntityType="MediaModel.ME_Clients" />
+          <EntitySet Name="ME_PortfolioCategories" EntityType="MediaModel.ME_PortfolioCategories" />
+          <EntitySet Name="ME_Portfolios" EntityType="MediaModel.ME_Portfolios" />
+          <EntitySet Name="ME_ProjectCategories" EntityType="MediaModel.ME_ProjectCategories" />
+          <EntitySet Name="ME_Subscriptions" EntityType="MediaModel.ME_Subscriptions" />
+          <EntitySet Name="ME_Testimonials" EntityType="MediaModel.ME_Testimonials" />
+          <AssociationSet Name="FK_ME_Books_ME_BookCategories" Association="MediaModel.FK_ME_Books_ME_BookCategories">
+            <End Role="ME_BookCategories" EntitySet="ME_BookCategories" />
+            <End Role="ME_Books" EntitySet="ME_Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Chapters_ME_Books" Association="MediaModel.FK_ME_Chapters_ME_Books">
+            <End Role="ME_Books" EntitySet="ME_Books" />
+            <End Role="ME_Chapters" EntitySet="ME_Chapters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Portfolios_ME_Clients" Association="MediaModel.FK_ME_Portfolios_ME_Clients">
+            <End Role="ME_Clients" EntitySet="ME_Clients" />
+            <End Role="ME_Portfolios" EntitySet="ME_Portfolios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_PortfolioCategories_ME_Portfolios" Association="MediaModel.FK_ME_PortfolioCategories_ME_Portfolios">
+            <End Role="ME_Portfolios" EntitySet="ME_Portfolios" />
+            <End Role="ME_PortfolioCategories" EntitySet="ME_PortfolioCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_PortfolioCategories_ME_ProjectCategories" Association="MediaModel.FK_ME_PortfolioCategories_ME_ProjectCategories">
+            <End Role="ME_ProjectCategories" EntitySet="ME_ProjectCategories" />
+            <End Role="ME_PortfolioCategories" EntitySet="ME_PortfolioCategories" />
+          </AssociationSet>
+          <EntitySet Name="ME_PostCategories" EntityType="MediaModel.ME_PostCategories" />
+          <EntitySet Name="ME_Posts" EntityType="MediaModel.ME_Posts" />
+          <AssociationSet Name="FK_ME_PostCategories_ME_PostCategories" Association="MediaModel.FK_ME_PostCategories_ME_PostCategories">
+            <End Role="ME_PostCategories" EntitySet="ME_PostCategories" />
+            <End Role="ME_PostCategories1" EntitySet="ME_PostCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Posts_ME_PostCategories" Association="MediaModel.FK_ME_Posts_ME_PostCategories">
+            <End Role="ME_PostCategories" EntitySet="ME_PostCategories" />
+            <End Role="ME_Posts" EntitySet="ME_Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ME_Posts_ME_Posts" Association="MediaModel.FK_ME_Posts_ME_Posts">
+            <End Role="ME_Posts" EntitySet="ME_Posts" />
+            <End Role="ME_Posts1" EntitySet="ME_Posts" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="ME_BookCategories">
+          <Key>
+            <PropertyRef Name="BookCategoryID" />
+          </Key>
+          <Property Name="BookCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <NavigationProperty Name="ME_Books" Relationship="MediaModel.FK_ME_Books_ME_BookCategories" FromRole="ME_BookCategories" ToRole="ME_Books" />
+        </EntityType>
+        <EntityType Name="ME_Books">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WrittenOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BookCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <NavigationProperty Name="ME_BookCategories" Relationship="MediaModel.FK_ME_Books_ME_BookCategories" FromRole="ME_Books" ToRole="ME_BookCategories" />
+          <NavigationProperty Name="ME_Chapters" Relationship="MediaModel.FK_ME_Chapters_ME_Books" FromRole="ME_Books" ToRole="ME_Chapters" />
+        </EntityType>
+        <EntityType Name="ME_Chapters">
+          <Key>
+            <PropertyRef Name="ChapterID" />
+          </Key>
+          <Property Name="ChapterID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChapterContent" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookID" Type="Int32" Nullable="false" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ME_Books" Relationship="MediaModel.FK_ME_Chapters_ME_Books" FromRole="ME_Chapters" ToRole="ME_Books" />
+        </EntityType>
+        <EntityType Name="ME_Clients">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ME_Portfolios" Relationship="MediaModel.FK_ME_Portfolios_ME_Clients" FromRole="ME_Clients" ToRole="ME_Portfolios" />
+        </EntityType>
+        <EntityType Name="ME_PortfolioCategories">
+          <Key>
+            <PropertyRef Name="PortfolioCategoryID" />
+          </Key>
+          <Property Name="PortfolioCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioID" Type="Int32" Nullable="false" />
+          <Property Name="ProjectCategoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ME_Portfolios" Relationship="MediaModel.FK_ME_PortfolioCategories_ME_Portfolios" FromRole="ME_PortfolioCategories" ToRole="ME_Portfolios" />
+          <NavigationProperty Name="ME_ProjectCategories" Relationship="MediaModel.FK_ME_PortfolioCategories_ME_ProjectCategories" FromRole="ME_PortfolioCategories" ToRole="ME_ProjectCategories" />
+        </EntityType>
+        <EntityType Name="ME_Portfolios">
+          <Key>
+            <PropertyRef Name="PortfolioID" />
+          </Key>
+          <Property Name="PortfolioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImageID" Type="Int32" />
+          <NavigationProperty Name="ME_Clients" Relationship="MediaModel.FK_ME_Portfolios_ME_Clients" FromRole="ME_Portfolios" ToRole="ME_Clients" />
+          <NavigationProperty Name="ME_PortfolioCategories" Relationship="MediaModel.FK_ME_PortfolioCategories_ME_Portfolios" FromRole="ME_Portfolios" ToRole="ME_PortfolioCategories" />
+        </EntityType>
+        <EntityType Name="ME_ProjectCategories">
+          <Key>
+            <PropertyRef Name="ProjectCategoryID" />
+          </Key>
+          <Property Name="ProjectCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ME_PortfolioCategories" Relationship="MediaModel.FK_ME_PortfolioCategories_ME_ProjectCategories" FromRole="ME_ProjectCategories" ToRole="ME_PortfolioCategories" />
+        </EntityType>
+        <EntityType Name="ME_Subscriptions">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsSubscribed" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ME_Testimonials">
+          <Key>
+            <PropertyRef Name="TestimonialID" />
+          </Key>
+          <Property Name="TestimonialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Testimonial" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ImageID" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_ME_Books_ME_BookCategories">
+          <End Type="MediaModel.ME_BookCategories" Role="ME_BookCategories" Multiplicity="1" />
+          <End Type="MediaModel.ME_Books" Role="ME_Books" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_BookCategories">
+              <PropertyRef Name="BookCategoryID" />
+            </Principal>
+            <Dependent Role="ME_Books">
+              <PropertyRef Name="BookCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Chapters_ME_Books">
+          <End Type="MediaModel.ME_Books" Role="ME_Books" Multiplicity="1" />
+          <End Type="MediaModel.ME_Chapters" Role="ME_Chapters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Books">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="ME_Chapters">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Portfolios_ME_Clients">
+          <End Type="MediaModel.ME_Clients" Role="ME_Clients" Multiplicity="1" />
+          <End Type="MediaModel.ME_Portfolios" Role="ME_Portfolios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="ME_Portfolios">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_PortfolioCategories_ME_Portfolios">
+          <End Type="MediaModel.ME_Portfolios" Role="ME_Portfolios" Multiplicity="1" />
+          <End Type="MediaModel.ME_PortfolioCategories" Role="ME_PortfolioCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Portfolios">
+              <PropertyRef Name="PortfolioID" />
+            </Principal>
+            <Dependent Role="ME_PortfolioCategories">
+              <PropertyRef Name="PortfolioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_PortfolioCategories_ME_ProjectCategories">
+          <End Type="MediaModel.ME_ProjectCategories" Role="ME_ProjectCategories" Multiplicity="1" />
+          <End Type="MediaModel.ME_PortfolioCategories" Role="ME_PortfolioCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_ProjectCategories">
+              <PropertyRef Name="ProjectCategoryID" />
+            </Principal>
+            <Dependent Role="ME_PortfolioCategories">
+              <PropertyRef Name="ProjectCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ME_PostCategories">
+          <Key>
+            <PropertyRef Name="PostCategoryID" />
+          </Key>
+          <Property Name="PostCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="ParentPostCategoryID" Type="Int32" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ME_ChildPostCategories" Relationship="MediaModel.FK_ME_PostCategories_ME_PostCategories" FromRole="ME_PostCategories" ToRole="ME_PostCategories1" />
+          <NavigationProperty Name="ME_ParentPostCategory" Relationship="MediaModel.FK_ME_PostCategories_ME_PostCategories" FromRole="ME_PostCategories1" ToRole="ME_PostCategories" />
+          <NavigationProperty Name="ME_Posts" Relationship="MediaModel.FK_ME_Posts_ME_PostCategories" FromRole="ME_PostCategories" ToRole="ME_Posts" />
+        </EntityType>
+        <EntityType Name="ME_Posts">
+          <Key>
+            <PropertyRef Name="PostID" />
+          </Key>
+          <Property Name="PostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PostContent" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="PostCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="ParentPostID" Type="Int32" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ME_PostCategories" Relationship="MediaModel.FK_ME_Posts_ME_PostCategories" FromRole="ME_Posts" ToRole="ME_PostCategories" />
+          <NavigationProperty Name="ME_Posts1" Relationship="MediaModel.FK_ME_Posts_ME_Posts" FromRole="ME_Posts" ToRole="ME_Posts1" />
+          <NavigationProperty Name="ME_Posts2" Relationship="MediaModel.FK_ME_Posts_ME_Posts" FromRole="ME_Posts1" ToRole="ME_Posts" />
+        </EntityType>
+        <Association Name="FK_ME_PostCategories_ME_PostCategories">
+          <End Type="MediaModel.ME_PostCategories" Role="ME_PostCategories" Multiplicity="0..1" />
+          <End Type="MediaModel.ME_PostCategories" Role="ME_PostCategories1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_PostCategories">
+              <PropertyRef Name="PostCategoryID" />
+            </Principal>
+            <Dependent Role="ME_PostCategories1">
+              <PropertyRef Name="ParentPostCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Posts_ME_PostCategories">
+          <End Type="MediaModel.ME_PostCategories" Role="ME_PostCategories" Multiplicity="1" />
+          <End Type="MediaModel.ME_Posts" Role="ME_Posts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_PostCategories">
+              <PropertyRef Name="PostCategoryID" />
+            </Principal>
+            <Dependent Role="ME_Posts">
+              <PropertyRef Name="PostCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ME_Posts_ME_Posts">
+          <End Type="MediaModel.ME_Posts" Role="ME_Posts" Multiplicity="0..1" />
+          <End Type="MediaModel.ME_Posts" Role="ME_Posts1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ME_Posts">
+              <PropertyRef Name="PostID" />
+            </Principal>
+            <Dependent Role="ME_Posts1">
+              <PropertyRef Name="ParentPostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MediaModelStoreContainer" CdmEntityContainer="MediaEntities">
+          <EntitySetMapping Name="ME_BookCategories">
+            <EntityTypeMapping TypeName="MediaModel.ME_BookCategories">
+              <MappingFragment StoreEntitySet="ME_BookCategories">
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BookCategoryID" ColumnName="BookCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_Books">
+            <EntityTypeMapping TypeName="MediaModel.ME_Books">
+              <MappingFragment StoreEntitySet="ME_Books">
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="BookCategoryID" ColumnName="BookCategoryID" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="WrittenOn" ColumnName="WrittenOn" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_Chapters">
+            <EntityTypeMapping TypeName="MediaModel.ME_Chapters">
+              <MappingFragment StoreEntitySet="ME_Chapters">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="ChapterContent" ColumnName="ChapterContent" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ChapterID" ColumnName="ChapterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_Clients">
+            <EntityTypeMapping TypeName="MediaModel.ME_Clients">
+              <MappingFragment StoreEntitySet="ME_Clients">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_PortfolioCategories">
+            <EntityTypeMapping TypeName="MediaModel.ME_PortfolioCategories">
+              <MappingFragment StoreEntitySet="ME_PortfolioCategories">
+                <ScalarProperty Name="ProjectCategoryID" ColumnName="ProjectCategoryID" />
+                <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+                <ScalarProperty Name="PortfolioCategoryID" ColumnName="PortfolioCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_Portfolios">
+            <EntityTypeMapping TypeName="MediaModel.ME_Portfolios">
+              <MappingFragment StoreEntitySet="ME_Portfolios">
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PortfolioID" ColumnName="PortfolioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_ProjectCategories">
+            <EntityTypeMapping TypeName="MediaModel.ME_ProjectCategories">
+              <MappingFragment StoreEntitySet="ME_ProjectCategories">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ProjectCategoryID" ColumnName="ProjectCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_Subscriptions">
+            <EntityTypeMapping TypeName="MediaModel.ME_Subscriptions">
+              <MappingFragment StoreEntitySet="ME_Subscriptions">
+                <ScalarProperty Name="IsSubscribed" ColumnName="IsSubscribed" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_Testimonials">
+            <EntityTypeMapping TypeName="MediaModel.ME_Testimonials">
+              <MappingFragment StoreEntitySet="ME_Testimonials">
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Testimonial" ColumnName="Testimonial" />
+                <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_PostCategories">
+            <EntityTypeMapping TypeName="MediaModel.ME_PostCategories">
+              <MappingFragment StoreEntitySet="ME_PostCategories">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="ParentPostCategoryID" ColumnName="ParentPostCategoryID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PostCategoryID" ColumnName="PostCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ME_Posts">
+            <EntityTypeMapping TypeName="MediaModel.ME_Posts">
+              <MappingFragment StoreEntitySet="ME_Posts">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="ParentPostID" ColumnName="ParentPostID" />
+                <ScalarProperty Name="PostCategoryID" ColumnName="PostCategoryID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="PostContent" ColumnName="PostContent" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PostID" ColumnName="PostID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

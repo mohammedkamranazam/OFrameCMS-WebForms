@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/AppCode/Helpers/Themes/CheckOutMasterPage.cs" Inherits="OWDARO.Themes.CheckOutMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%: OWDARO.AppConfig.SiteName %></title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="~/favicon.ico" runat="server" />
+    <OWD:WebmasterComponent runat="server" />
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Styles.Render(string.Format("~/Theme{0}", OWDARO.AppConfig.CheckOutTheme)) %>
+    </asp:PlaceHolder>
+    <asp:PlaceHolder runat="server">
+        <%: System.Web.Optimization.Scripts.Render(string.Format("~/Script{0}", OWDARO.AppConfig.CheckOutTheme)) %>
+    </asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+        <%-- <asp:ContentPlaceHolder ID="SliderPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>--%>
+        <div style="width: 1000px; margin: 20px auto;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%--   <asp:ContentPlaceHolder ID="BottomPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>--%>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" DynamicLayout="true" DisplayAfter="0">
+            <ProgressTemplate>
+                <div class="spinner" style="z-index: 99999999; position: absolute;"></div>
+                <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; overflow: hidden; background: white; opacity: 0.5; z-index: 9999999;">
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <asp:AlwaysVisibleControlExtender ID="UpdateProgress1_AlwaysVisibleControlExtender"
+            runat="server" Enabled="True" HorizontalSide="Center" TargetControlID="UpdateProgress1"
+            VerticalSide="Middle" UseAnimation="True">
+        </asp:AlwaysVisibleControlExtender>
+        <script type="text/javascript">
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_endRequest(function (s, e) {
+                ReInitialize();
+            });
+        </script>
+        <%= string.Format("{0}", OWDARO.AppConfig.GoogleAnalyticsCode) %>
+
+        <%= string.Format("{0}", OWDARO.AppConfig.MicrosoftApplicationInsightScript) %>
+    </form>
+</body>
+</html>

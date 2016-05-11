@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6f8c1fd4dee46d0a075013b1836f845" Name="Diagram1" ZoomLevel="100" ShowGrid="true" DisplayType="true">
+        <EntityTypeShape EntityType="MediaModel.ME_BookCategories" Width="2.125" PointX="0.5" PointY="3.75" />
+        <EntityTypeShape EntityType="MediaModel.ME_Books" Width="2.125" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="MediaModel.ME_Chapters" Width="2.375" PointX="6" PointY="3.75" />
+        <EntityTypeShape EntityType="MediaModel.ME_Clients" Width="1.875" PointX="5.5" PointY="0.625" />
+        <EntityTypeShape EntityType="MediaModel.ME_PortfolioCategories" Width="2.25" PointX="10.75" PointY="0.625" />
+        <EntityTypeShape EntityType="MediaModel.ME_Portfolios" Width="1.875" PointX="8.25" PointY="0.625" />
+        <EntityTypeShape EntityType="MediaModel.ME_ProjectCategories" Width="2.375" PointX="13.875" PointY="0.625" />
+        <EntityTypeShape EntityType="MediaModel.ME_Subscriptions" Width="1.75" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MediaModel.ME_Testimonials" Width="1.875" PointX="3.125" PointY="0.625" />
+        <AssociationConnector Association="MediaModel.FK_ME_Books_ME_BookCategories" />
+        <AssociationConnector Association="MediaModel.FK_ME_Chapters_ME_Books" />
+        <AssociationConnector Association="MediaModel.FK_ME_Portfolios_ME_Clients" />
+        <AssociationConnector Association="MediaModel.FK_ME_PortfolioCategories_ME_Portfolios" />
+        <AssociationConnector Association="MediaModel.FK_ME_PortfolioCategories_ME_ProjectCategories" />
+        <EntityTypeShape EntityType="MediaModel.ME_PostCategories" Width="2.125" PointX="0.75" PointY="8.5" />
+        <EntityTypeShape EntityType="MediaModel.ME_Posts" Width="2.25" PointX="4" PointY="8.125" />
+        <AssociationConnector Association="MediaModel.FK_ME_PostCategories_ME_PostCategories" />
+        <AssociationConnector Association="MediaModel.FK_ME_Posts_ME_PostCategories" />
+        <AssociationConnector Association="MediaModel.FK_ME_Posts_ME_Posts" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

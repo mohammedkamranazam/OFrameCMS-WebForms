@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SuperAdmin_Zice.master.cs" Inherits="OWDARO.UI.Pages.MasterPages.SuperAdmin_Zice" %>
+
+<asp:content id="Content1" contentplaceholderid="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:content>
+<asp:content id="Content2" contentplaceholderid="SidebarLinksPlaceHolder" runat="server">
+    <OWD:DashBoardSideBarLinksComponent runat="server"></OWD:DashBoardSideBarLinksComponent>
+</asp:content>
+<asp:content id="Content3" contentplaceholderid="TopLinksPlaceHolder" runat="server">
+    <OWD:DashBoardTopLinksComponent runat="server"></OWD:DashBoardTopLinksComponent>
+</asp:content>
+<asp:content id="Content4" contentplaceholderid="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder ID="SliderPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="BottomPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:content>

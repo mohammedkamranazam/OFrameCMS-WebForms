@@ -1,0 +1,1562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GalleryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GY_Albums">
+          <Key>
+            <PropertyRef Name="AlbumID" />
+          </Key>
+          <Property Name="AlbumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="TakenOn" Type="datetime" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="EventID" Type="int" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_AudioCategories">
+          <Key>
+            <PropertyRef Name="AudioCategoryID" />
+          </Key>
+          <Property Name="AudioCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ParentAudioCategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="GY_Audios">
+          <Key>
+            <PropertyRef Name="AudioID" />
+          </Key>
+          <Property Name="AudioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="TakenOn" Type="datetime" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="AudioSetID" Type="int" />
+          <Property Name="AudioCategoryID" Type="int" Nullable="false" />
+          <Property Name="LocalAudioURL" Type="nvarchar(max)" />
+          <Property Name="WebAudioURL" Type="nvarchar(max)" />
+          <Property Name="ShowWebAudio" Type="bit" Nullable="false" />
+          <Property Name="FileID" Type="bigint" />
+          <Property Name="Length" Type="nvarchar" MaxLength="50" />
+          <Property Name="LikesCount" Type="float" Nullable="false" />
+          <Property Name="DislikesCount" Type="float" Nullable="false" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_AudioSet">
+          <Key>
+            <PropertyRef Name="AudioSetID" />
+          </Key>
+          <Property Name="AudioSetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="TakenOn" Type="datetime" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="AudioCategoryID" Type="int" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_Drives">
+          <Key>
+            <PropertyRef Name="DriveID" />
+          </Key>
+          <Property Name="DriveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_Events">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SubDescription" Type="nvarchar" MaxLength="250" />
+          <Property Name="StartsOn" Type="datetime" />
+          <Property Name="EndsOn" Type="datetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="EventTypeID" Type="int" Nullable="false" />
+          <Property Name="UseExternalForm" Type="bit" Nullable="false" />
+          <Property Name="ExternalFormEmbedCode" Type="nvarchar(max)" />
+          <Property Name="ExternalFormURL" Type="nvarchar(max)" />
+          <Property Name="ExternalFormID" Type="int" />
+          <Property Name="PopUpExternalForm" Type="bit" Nullable="false" />
+          <Property Name="RegistrationStartDateTime" Type="datetime" />
+          <Property Name="RegistrationEndDateTime" Type="datetime" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_Files">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="FileURL" Type="nvarchar(max)" />
+          <Property Name="WebFileURL" Type="nvarchar(max)" />
+          <Property Name="ShowWebFile" Type="bit" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Extension" Type="nvarchar" MaxLength="10" />
+          <Property Name="Size" Type="float" Nullable="false" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="DownloadCount" Type="float" Nullable="false" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="FolderID" Type="bigint" />
+          <Property Name="DriveID" Type="int" Nullable="false" />
+          <Property Name="FileTypeID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_FileTypes">
+          <Key>
+            <PropertyRef Name="FileTypeID" />
+          </Key>
+          <Property Name="FileTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_Folders">
+          <Key>
+            <PropertyRef Name="FolderID" />
+          </Key>
+          <Property Name="FolderID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="DriveID" Type="int" Nullable="false" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="ParentFolderID" Type="bigint" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_LayerProperties">
+          <Key>
+            <PropertyRef Name="LayerPropertyID" />
+          </Key>
+          <Property Name="LayerPropertyID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LayerID" Type="bigint" Nullable="false" />
+          <Property Name="Attribute" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_Layers">
+          <Key>
+            <PropertyRef Name="LayerID" />
+          </Key>
+          <Property Name="LayerID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SlideID" Type="bigint" Nullable="false" />
+          <Property Name="LayerContentType" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LayerContent" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_Photos">
+          <Key>
+            <PropertyRef Name="PhotoID" />
+          </Key>
+          <Property Name="PhotoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="AlbumID" Type="int" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="TakenOn" Type="datetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_SlideProperties">
+          <Key>
+            <PropertyRef Name="SlidePropertyID" />
+          </Key>
+          <Property Name="SlidePropertyID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SlideID" Type="bigint" Nullable="false" />
+          <Property Name="Attribute" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsImageProperty" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_Slides">
+          <Key>
+            <PropertyRef Name="SlideID" />
+          </Key>
+          <Property Name="SlideID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="BGImageURL" Type="nvarchar(max)" />
+          <Property Name="BGImageThumbURL" Type="nvarchar(max)" />
+          <Property Name="BGImageDummyURL" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_VideoCategories">
+          <Key>
+            <PropertyRef Name="VideoCategoryID" />
+          </Key>
+          <Property Name="VideoCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ParentVideoCategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="GY_Videos">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="VideoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="TakenOn" Type="datetime" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="VideoSetID" Type="int" />
+          <Property Name="VideoCategoryID" Type="int" Nullable="false" />
+          <Property Name="LocalVideoURL" Type="nvarchar(max)" />
+          <Property Name="WebVideoURL" Type="nvarchar(max)" />
+          <Property Name="ShowWebVideo" Type="bit" Nullable="false" />
+          <Property Name="FileID" Type="bigint" />
+          <Property Name="Length" Type="nvarchar" MaxLength="50" />
+          <Property Name="LikesCount" Type="float" Nullable="false" />
+          <Property Name="DislikesCount" Type="float" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GY_VideoSet">
+          <Key>
+            <PropertyRef Name="VideoSetID" />
+          </Key>
+          <Property Name="VideoSetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="AddedOn" Type="datetime" Nullable="false" />
+          <Property Name="TakenOn" Type="datetime" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="250" />
+          <Property Name="Location" Type="nvarchar" MaxLength="250" />
+          <Property Name="VideoCategoryID" Type="int" Nullable="false" />
+          <Property Name="ImageID" Type="int" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_GY_Albums_GY_Events">
+          <End Role="GY_Events" Type="Self.GY_Events" Multiplicity="0..1" />
+          <End Role="GY_Albums" Type="Self.GY_Albums" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Events">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="GY_Albums">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_AudioCategories_GY_AudioCategories">
+          <End Role="GY_AudioCategories" Type="Self.GY_AudioCategories" Multiplicity="0..1" />
+          <End Role="GY_AudioCategories1" Type="Self.GY_AudioCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioCategories">
+              <PropertyRef Name="AudioCategoryID" />
+            </Principal>
+            <Dependent Role="GY_AudioCategories1">
+              <PropertyRef Name="ParentAudioCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Audios_GY_AudioCategories">
+          <End Role="GY_AudioCategories" Type="Self.GY_AudioCategories" Multiplicity="1" />
+          <End Role="GY_Audios" Type="Self.GY_Audios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioCategories">
+              <PropertyRef Name="AudioCategoryID" />
+            </Principal>
+            <Dependent Role="GY_Audios">
+              <PropertyRef Name="AudioCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Audios_GY_AudioSet">
+          <End Role="GY_AudioSet" Type="Self.GY_AudioSet" Multiplicity="0..1" />
+          <End Role="GY_Audios" Type="Self.GY_Audios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioSet">
+              <PropertyRef Name="AudioSetID" />
+            </Principal>
+            <Dependent Role="GY_Audios">
+              <PropertyRef Name="AudioSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Audios_GY_Files">
+          <End Role="GY_Files" Type="Self.GY_Files" Multiplicity="0..1" />
+          <End Role="GY_Audios" Type="Self.GY_Audios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Files">
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="GY_Audios">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_AudioSet_GY_AudioCategories">
+          <End Role="GY_AudioCategories" Type="Self.GY_AudioCategories" Multiplicity="1" />
+          <End Role="GY_AudioSet" Type="Self.GY_AudioSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioCategories">
+              <PropertyRef Name="AudioCategoryID" />
+            </Principal>
+            <Dependent Role="GY_AudioSet">
+              <PropertyRef Name="AudioCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Files_GY_Drives">
+          <End Role="GY_Drives" Type="Self.GY_Drives" Multiplicity="1" />
+          <End Role="GY_Files" Type="Self.GY_Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Drives">
+              <PropertyRef Name="DriveID" />
+            </Principal>
+            <Dependent Role="GY_Files">
+              <PropertyRef Name="DriveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Files_GY_FileTypes">
+          <End Role="GY_FileTypes" Type="Self.GY_FileTypes" Multiplicity="1" />
+          <End Role="GY_Files" Type="Self.GY_Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_FileTypes">
+              <PropertyRef Name="FileTypeID" />
+            </Principal>
+            <Dependent Role="GY_Files">
+              <PropertyRef Name="FileTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Files_GY_Folders">
+          <End Role="GY_Folders" Type="Self.GY_Folders" Multiplicity="0..1" />
+          <End Role="GY_Files" Type="Self.GY_Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Folders">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="GY_Files">
+              <PropertyRef Name="FolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Folders_GY_Drives">
+          <End Role="GY_Drives" Type="Self.GY_Drives" Multiplicity="1" />
+          <End Role="GY_Folders" Type="Self.GY_Folders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Drives">
+              <PropertyRef Name="DriveID" />
+            </Principal>
+            <Dependent Role="GY_Folders">
+              <PropertyRef Name="DriveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Folders_GY_Folders">
+          <End Role="GY_Folders" Type="Self.GY_Folders" Multiplicity="0..1" />
+          <End Role="GY_Folders1" Type="Self.GY_Folders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Folders">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="GY_Folders1">
+              <PropertyRef Name="ParentFolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_LayerProperties_GY_Layers">
+          <End Role="GY_Layers" Type="Self.GY_Layers" Multiplicity="1" />
+          <End Role="GY_LayerProperties" Type="Self.GY_LayerProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Layers">
+              <PropertyRef Name="LayerID" />
+            </Principal>
+            <Dependent Role="GY_LayerProperties">
+              <PropertyRef Name="LayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Layers_GY_Slides">
+          <End Role="GY_Slides" Type="Self.GY_Slides" Multiplicity="1" />
+          <End Role="GY_Layers" Type="Self.GY_Layers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Slides">
+              <PropertyRef Name="SlideID" />
+            </Principal>
+            <Dependent Role="GY_Layers">
+              <PropertyRef Name="SlideID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Photos_GY_Albums">
+          <End Role="GY_Albums" Type="Self.GY_Albums" Multiplicity="1" />
+          <End Role="GY_Photos" Type="Self.GY_Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Albums">
+              <PropertyRef Name="AlbumID" />
+            </Principal>
+            <Dependent Role="GY_Photos">
+              <PropertyRef Name="AlbumID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_SlideProperties_GY_Slides">
+          <End Role="GY_Slides" Type="Self.GY_Slides" Multiplicity="1" />
+          <End Role="GY_SlideProperties" Type="Self.GY_SlideProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Slides">
+              <PropertyRef Name="SlideID" />
+            </Principal>
+            <Dependent Role="GY_SlideProperties">
+              <PropertyRef Name="SlideID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_VideoCategories_GY_VideoCategories">
+          <End Role="GY_VideoCategories" Type="Self.GY_VideoCategories" Multiplicity="0..1" />
+          <End Role="GY_VideoCategories1" Type="Self.GY_VideoCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoCategories">
+              <PropertyRef Name="VideoCategoryID" />
+            </Principal>
+            <Dependent Role="GY_VideoCategories1">
+              <PropertyRef Name="ParentVideoCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Videos_GY_Files">
+          <End Role="GY_Files" Type="Self.GY_Files" Multiplicity="0..1" />
+          <End Role="GY_Videos" Type="Self.GY_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Files">
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="GY_Videos">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Videos_GY_VideoCategories">
+          <End Role="GY_VideoCategories" Type="Self.GY_VideoCategories" Multiplicity="1" />
+          <End Role="GY_Videos" Type="Self.GY_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoCategories">
+              <PropertyRef Name="VideoCategoryID" />
+            </Principal>
+            <Dependent Role="GY_Videos">
+              <PropertyRef Name="VideoCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Videos_GY_VideoSet">
+          <End Role="GY_VideoSet" Type="Self.GY_VideoSet" Multiplicity="0..1" />
+          <End Role="GY_Videos" Type="Self.GY_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoSet">
+              <PropertyRef Name="VideoSetID" />
+            </Principal>
+            <Dependent Role="GY_Videos">
+              <PropertyRef Name="VideoSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_VideoSet_GY_VideoCategories">
+          <End Role="GY_VideoCategories" Type="Self.GY_VideoCategories" Multiplicity="1" />
+          <End Role="GY_VideoSet" Type="Self.GY_VideoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoCategories">
+              <PropertyRef Name="VideoCategoryID" />
+            </Principal>
+            <Dependent Role="GY_VideoSet">
+              <PropertyRef Name="VideoCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GalleryModelStoreContainer">
+          <EntitySet Name="GY_Albums" EntityType="Self.GY_Albums" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_AudioCategories" EntityType="Self.GY_AudioCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Audios" EntityType="Self.GY_Audios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_AudioSet" EntityType="Self.GY_AudioSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Drives" EntityType="Self.GY_Drives" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Events" EntityType="Self.GY_Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Files" EntityType="Self.GY_Files" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_FileTypes" EntityType="Self.GY_FileTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Folders" EntityType="Self.GY_Folders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_LayerProperties" EntityType="Self.GY_LayerProperties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Layers" EntityType="Self.GY_Layers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Photos" EntityType="Self.GY_Photos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_SlideProperties" EntityType="Self.GY_SlideProperties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Slides" EntityType="Self.GY_Slides" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_VideoCategories" EntityType="Self.GY_VideoCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_Videos" EntityType="Self.GY_Videos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GY_VideoSet" EntityType="Self.GY_VideoSet" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_GY_Albums_GY_Events" Association="Self.FK_GY_Albums_GY_Events">
+            <End Role="GY_Events" EntitySet="GY_Events" />
+            <End Role="GY_Albums" EntitySet="GY_Albums" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_AudioCategories_GY_AudioCategories" Association="Self.FK_GY_AudioCategories_GY_AudioCategories">
+            <End Role="GY_AudioCategories" EntitySet="GY_AudioCategories" />
+            <End Role="GY_AudioCategories1" EntitySet="GY_AudioCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Audios_GY_AudioCategories" Association="Self.FK_GY_Audios_GY_AudioCategories">
+            <End Role="GY_AudioCategories" EntitySet="GY_AudioCategories" />
+            <End Role="GY_Audios" EntitySet="GY_Audios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Audios_GY_AudioSet" Association="Self.FK_GY_Audios_GY_AudioSet">
+            <End Role="GY_AudioSet" EntitySet="GY_AudioSet" />
+            <End Role="GY_Audios" EntitySet="GY_Audios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Audios_GY_Files" Association="Self.FK_GY_Audios_GY_Files">
+            <End Role="GY_Files" EntitySet="GY_Files" />
+            <End Role="GY_Audios" EntitySet="GY_Audios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_AudioSet_GY_AudioCategories" Association="Self.FK_GY_AudioSet_GY_AudioCategories">
+            <End Role="GY_AudioCategories" EntitySet="GY_AudioCategories" />
+            <End Role="GY_AudioSet" EntitySet="GY_AudioSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Files_GY_Drives" Association="Self.FK_GY_Files_GY_Drives">
+            <End Role="GY_Drives" EntitySet="GY_Drives" />
+            <End Role="GY_Files" EntitySet="GY_Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Files_GY_FileTypes" Association="Self.FK_GY_Files_GY_FileTypes">
+            <End Role="GY_FileTypes" EntitySet="GY_FileTypes" />
+            <End Role="GY_Files" EntitySet="GY_Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Files_GY_Folders" Association="Self.FK_GY_Files_GY_Folders">
+            <End Role="GY_Folders" EntitySet="GY_Folders" />
+            <End Role="GY_Files" EntitySet="GY_Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Folders_GY_Drives" Association="Self.FK_GY_Folders_GY_Drives">
+            <End Role="GY_Drives" EntitySet="GY_Drives" />
+            <End Role="GY_Folders" EntitySet="GY_Folders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Folders_GY_Folders" Association="Self.FK_GY_Folders_GY_Folders">
+            <End Role="GY_Folders" EntitySet="GY_Folders" />
+            <End Role="GY_Folders1" EntitySet="GY_Folders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_LayerProperties_GY_Layers" Association="Self.FK_GY_LayerProperties_GY_Layers">
+            <End Role="GY_Layers" EntitySet="GY_Layers" />
+            <End Role="GY_LayerProperties" EntitySet="GY_LayerProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Layers_GY_Slides" Association="Self.FK_GY_Layers_GY_Slides">
+            <End Role="GY_Slides" EntitySet="GY_Slides" />
+            <End Role="GY_Layers" EntitySet="GY_Layers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Photos_GY_Albums" Association="Self.FK_GY_Photos_GY_Albums">
+            <End Role="GY_Albums" EntitySet="GY_Albums" />
+            <End Role="GY_Photos" EntitySet="GY_Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_SlideProperties_GY_Slides" Association="Self.FK_GY_SlideProperties_GY_Slides">
+            <End Role="GY_Slides" EntitySet="GY_Slides" />
+            <End Role="GY_SlideProperties" EntitySet="GY_SlideProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_VideoCategories_GY_VideoCategories" Association="Self.FK_GY_VideoCategories_GY_VideoCategories">
+            <End Role="GY_VideoCategories" EntitySet="GY_VideoCategories" />
+            <End Role="GY_VideoCategories1" EntitySet="GY_VideoCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Videos_GY_Files" Association="Self.FK_GY_Videos_GY_Files">
+            <End Role="GY_Files" EntitySet="GY_Files" />
+            <End Role="GY_Videos" EntitySet="GY_Videos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Videos_GY_VideoCategories" Association="Self.FK_GY_Videos_GY_VideoCategories">
+            <End Role="GY_VideoCategories" EntitySet="GY_VideoCategories" />
+            <End Role="GY_Videos" EntitySet="GY_Videos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Videos_GY_VideoSet" Association="Self.FK_GY_Videos_GY_VideoSet">
+            <End Role="GY_VideoSet" EntitySet="GY_VideoSet" />
+            <End Role="GY_Videos" EntitySet="GY_Videos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_VideoSet_GY_VideoCategories" Association="Self.FK_GY_VideoSet_GY_VideoCategories">
+            <End Role="GY_VideoCategories" EntitySet="GY_VideoCategories" />
+            <End Role="GY_VideoSet" EntitySet="GY_VideoSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GalleryModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GalleryEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="GY_Albums" EntityType="GalleryModel.GY_Albums" />
+          <EntitySet Name="GY_Audios" EntityType="GalleryModel.GY_Audios" />
+          <EntitySet Name="GY_AudioSet" EntityType="GalleryModel.GY_AudioSet" />
+          <EntitySet Name="GY_Drives" EntityType="GalleryModel.GY_Drives" />
+          <EntitySet Name="GY_Events" EntityType="GalleryModel.GY_Events" />
+          <EntitySet Name="GY_Files" EntityType="GalleryModel.GY_Files" />
+          <EntitySet Name="GY_FileTypes" EntityType="GalleryModel.GY_FileTypes" />
+          <EntitySet Name="GY_Folders" EntityType="GalleryModel.GY_Folders" />
+          <EntitySet Name="GY_LayerProperties" EntityType="GalleryModel.GY_LayerProperties" />
+          <EntitySet Name="GY_Layers" EntityType="GalleryModel.GY_Layers" />
+          <EntitySet Name="GY_Photos" EntityType="GalleryModel.GY_Photos" />
+          <EntitySet Name="GY_SlideProperties" EntityType="GalleryModel.GY_SlideProperties" />
+          <EntitySet Name="GY_Slides" EntityType="GalleryModel.GY_Slides" />
+          <EntitySet Name="GY_Videos" EntityType="GalleryModel.GY_Videos" />
+          <EntitySet Name="GY_VideoSet" EntityType="GalleryModel.GY_VideoSet" />
+          <AssociationSet Name="FK_GY_Albums_GY_Events" Association="GalleryModel.FK_GY_Albums_GY_Events">
+            <End Role="GY_Events" EntitySet="GY_Events" />
+            <End Role="GY_Albums" EntitySet="GY_Albums" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Photos_GY_Albums" Association="GalleryModel.FK_GY_Photos_GY_Albums">
+            <End Role="GY_Albums" EntitySet="GY_Albums" />
+            <End Role="GY_Photos" EntitySet="GY_Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Audios_GY_AudioSet" Association="GalleryModel.FK_GY_Audios_GY_AudioSet">
+            <End Role="GY_AudioSet" EntitySet="GY_AudioSet" />
+            <End Role="GY_Audios" EntitySet="GY_Audios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Audios_GY_Files" Association="GalleryModel.FK_GY_Audios_GY_Files">
+            <End Role="GY_Files" EntitySet="GY_Files" />
+            <End Role="GY_Audios" EntitySet="GY_Audios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Files_GY_Drives" Association="GalleryModel.FK_GY_Files_GY_Drives">
+            <End Role="GY_Drives" EntitySet="GY_Drives" />
+            <End Role="GY_Files" EntitySet="GY_Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Folders_GY_Drives" Association="GalleryModel.FK_GY_Folders_GY_Drives">
+            <End Role="GY_Drives" EntitySet="GY_Drives" />
+            <End Role="GY_Folders" EntitySet="GY_Folders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Files_GY_FileTypes" Association="GalleryModel.FK_GY_Files_GY_FileTypes">
+            <End Role="GY_FileTypes" EntitySet="GY_FileTypes" />
+            <End Role="GY_Files" EntitySet="GY_Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Files_GY_Folders" Association="GalleryModel.FK_GY_Files_GY_Folders">
+            <End Role="GY_Folders" EntitySet="GY_Folders" />
+            <End Role="GY_Files" EntitySet="GY_Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Videos_GY_Files" Association="GalleryModel.FK_GY_Videos_GY_Files">
+            <End Role="GY_Files" EntitySet="GY_Files" />
+            <End Role="GY_Videos" EntitySet="GY_Videos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Folders_GY_Folders" Association="GalleryModel.FK_GY_Folders_GY_Folders">
+            <End Role="GY_Folders" EntitySet="GY_Folders" />
+            <End Role="GY_Folders1" EntitySet="GY_Folders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_LayerProperties_GY_Layers" Association="GalleryModel.FK_GY_LayerProperties_GY_Layers">
+            <End Role="GY_Layers" EntitySet="GY_Layers" />
+            <End Role="GY_LayerProperties" EntitySet="GY_LayerProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Layers_GY_Slides" Association="GalleryModel.FK_GY_Layers_GY_Slides">
+            <End Role="GY_Slides" EntitySet="GY_Slides" />
+            <End Role="GY_Layers" EntitySet="GY_Layers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_SlideProperties_GY_Slides" Association="GalleryModel.FK_GY_SlideProperties_GY_Slides">
+            <End Role="GY_Slides" EntitySet="GY_Slides" />
+            <End Role="GY_SlideProperties" EntitySet="GY_SlideProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Videos_GY_VideoSet" Association="GalleryModel.FK_GY_Videos_GY_VideoSet">
+            <End Role="GY_VideoSet" EntitySet="GY_VideoSet" />
+            <End Role="GY_Videos" EntitySet="GY_Videos" />
+          </AssociationSet>
+          <EntitySet Name="GY_AudioCategories" EntityType="GalleryModel.GY_AudioCategories" />
+          <EntitySet Name="GY_VideoCategories" EntityType="GalleryModel.GY_VideoCategories" />
+          <AssociationSet Name="FK_GY_AudioCategories_GY_AudioCategories" Association="GalleryModel.FK_GY_AudioCategories_GY_AudioCategories">
+            <End Role="GY_AudioCategories" EntitySet="GY_AudioCategories" />
+            <End Role="GY_AudioCategories1" EntitySet="GY_AudioCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Audios_GY_AudioCategories" Association="GalleryModel.FK_GY_Audios_GY_AudioCategories">
+            <End Role="GY_AudioCategories" EntitySet="GY_AudioCategories" />
+            <End Role="GY_Audios" EntitySet="GY_Audios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_AudioSet_GY_AudioCategories" Association="GalleryModel.FK_GY_AudioSet_GY_AudioCategories">
+            <End Role="GY_AudioCategories" EntitySet="GY_AudioCategories" />
+            <End Role="GY_AudioSet" EntitySet="GY_AudioSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_VideoCategories_GY_VideoCategories" Association="GalleryModel.FK_GY_VideoCategories_GY_VideoCategories">
+            <End Role="GY_VideoCategories" EntitySet="GY_VideoCategories" />
+            <End Role="GY_VideoCategories1" EntitySet="GY_VideoCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_Videos_GY_VideoCategories" Association="GalleryModel.FK_GY_Videos_GY_VideoCategories">
+            <End Role="GY_VideoCategories" EntitySet="GY_VideoCategories" />
+            <End Role="GY_Videos" EntitySet="GY_Videos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GY_VideoSet_GY_VideoCategories" Association="GalleryModel.FK_GY_VideoSet_GY_VideoCategories">
+            <End Role="GY_VideoCategories" EntitySet="GY_VideoCategories" />
+            <End Role="GY_VideoSet" EntitySet="GY_VideoSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GY_Albums">
+          <Key>
+            <PropertyRef Name="AlbumID" />
+          </Key>
+          <Property Name="AlbumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TakenOn" Type="DateTime" Precision="3" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="EventID" Type="Int32" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Events" Relationship="GalleryModel.FK_GY_Albums_GY_Events" FromRole="GY_Albums" ToRole="GY_Events" />
+          <NavigationProperty Name="GY_Photos" Relationship="GalleryModel.FK_GY_Photos_GY_Albums" FromRole="GY_Albums" ToRole="GY_Photos" />
+        </EntityType>
+        <EntityType Name="GY_Audios">
+          <Key>
+            <PropertyRef Name="AudioID" />
+          </Key>
+          <Property Name="AudioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TakenOn" Type="DateTime" Precision="3" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AudioSetID" Type="Int32" />
+          <Property Name="AudioCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="LocalAudioURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebAudioURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShowWebAudio" Type="Boolean" Nullable="false" />
+          <Property Name="FileID" Type="Int64" />
+          <Property Name="Length" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LikesCount" Type="Double" Nullable="false" />
+          <Property Name="DislikesCount" Type="Double" Nullable="false" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_AudioSet" Relationship="GalleryModel.FK_GY_Audios_GY_AudioSet" FromRole="GY_Audios" ToRole="GY_AudioSet" />
+          <NavigationProperty Name="GY_Files" Relationship="GalleryModel.FK_GY_Audios_GY_Files" FromRole="GY_Audios" ToRole="GY_Files" />
+          <NavigationProperty Name="GY_AudioCategories" Relationship="GalleryModel.FK_GY_Audios_GY_AudioCategories" FromRole="GY_Audios" ToRole="GY_AudioCategories" />
+        </EntityType>
+        <EntityType Name="GY_AudioSet">
+          <Key>
+            <PropertyRef Name="AudioSetID" />
+          </Key>
+          <Property Name="AudioSetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TakenOn" Type="DateTime" Precision="3" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AudioCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Audios" Relationship="GalleryModel.FK_GY_Audios_GY_AudioSet" FromRole="GY_AudioSet" ToRole="GY_Audios" />
+          <NavigationProperty Name="GY_AudioCategories" Relationship="GalleryModel.FK_GY_AudioSet_GY_AudioCategories" FromRole="GY_AudioSet" ToRole="GY_AudioCategories" />
+        </EntityType>
+        <EntityType Name="GY_Drives">
+          <Key>
+            <PropertyRef Name="DriveID" />
+          </Key>
+          <Property Name="DriveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Files" Relationship="GalleryModel.FK_GY_Files_GY_Drives" FromRole="GY_Drives" ToRole="GY_Files" />
+          <NavigationProperty Name="GY_Folders" Relationship="GalleryModel.FK_GY_Folders_GY_Drives" FromRole="GY_Drives" ToRole="GY_Folders" />
+        </EntityType>
+        <EntityType Name="GY_Events">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="StartsOn" Type="DateTime" Precision="3" />
+          <Property Name="EndsOn" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="EventTypeID" Type="Int32" Nullable="false" />
+          <Property Name="UseExternalForm" Type="Boolean" Nullable="false" />
+          <Property Name="ExternalFormEmbedCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExternalFormURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExternalFormID" Type="Int32" />
+          <Property Name="PopUpExternalForm" Type="Boolean" Nullable="false" />
+          <Property Name="RegistrationStartDateTime" Type="DateTime" Precision="3" />
+          <Property Name="RegistrationEndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Albums" Relationship="GalleryModel.FK_GY_Albums_GY_Events" FromRole="GY_Events" ToRole="GY_Albums" />
+        </EntityType>
+        <EntityType Name="GY_Files">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebFileURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShowWebFile" Type="Boolean" Nullable="false" />
+          <Property Name="FileName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Size" Type="Double" Nullable="false" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DownloadCount" Type="Double" Nullable="false" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FolderID" Type="Int64" />
+          <Property Name="DriveID" Type="Int32" Nullable="false" />
+          <Property Name="FileTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Audios" Relationship="GalleryModel.FK_GY_Audios_GY_Files" FromRole="GY_Files" ToRole="GY_Audios" />
+          <NavigationProperty Name="GY_Drives" Relationship="GalleryModel.FK_GY_Files_GY_Drives" FromRole="GY_Files" ToRole="GY_Drives" />
+          <NavigationProperty Name="GY_FileTypes" Relationship="GalleryModel.FK_GY_Files_GY_FileTypes" FromRole="GY_Files" ToRole="GY_FileTypes" />
+          <NavigationProperty Name="GY_Folders" Relationship="GalleryModel.FK_GY_Files_GY_Folders" FromRole="GY_Files" ToRole="GY_Folders" />
+          <NavigationProperty Name="GY_Videos" Relationship="GalleryModel.FK_GY_Videos_GY_Files" FromRole="GY_Files" ToRole="GY_Videos" />
+        </EntityType>
+        <EntityType Name="GY_FileTypes">
+          <Key>
+            <PropertyRef Name="FileTypeID" />
+          </Key>
+          <Property Name="FileTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="GY_Files" Relationship="GalleryModel.FK_GY_Files_GY_FileTypes" FromRole="GY_FileTypes" ToRole="GY_Files" />
+        </EntityType>
+        <EntityType Name="GY_Folders">
+          <Key>
+            <PropertyRef Name="FolderID" />
+          </Key>
+          <Property Name="FolderID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="DriveID" Type="Int32" Nullable="false" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ParentFolderID" Type="Int64" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Drives" Relationship="GalleryModel.FK_GY_Folders_GY_Drives" FromRole="GY_Folders" ToRole="GY_Drives" />
+          <NavigationProperty Name="GY_Files" Relationship="GalleryModel.FK_GY_Files_GY_Folders" FromRole="GY_Folders" ToRole="GY_Files" />
+          <NavigationProperty Name="ChildFolders" Relationship="GalleryModel.FK_GY_Folders_GY_Folders" FromRole="GY_Folders" ToRole="GY_Folders1" />
+          <NavigationProperty Name="ParentFolder" Relationship="GalleryModel.FK_GY_Folders_GY_Folders" FromRole="GY_Folders1" ToRole="GY_Folders" />
+        </EntityType>
+        <EntityType Name="GY_LayerProperties">
+          <Key>
+            <PropertyRef Name="LayerPropertyID" />
+          </Key>
+          <Property Name="LayerPropertyID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LayerID" Type="Int64" Nullable="false" />
+          <Property Name="Attribute" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Layers" Relationship="GalleryModel.FK_GY_LayerProperties_GY_Layers" FromRole="GY_LayerProperties" ToRole="GY_Layers" />
+        </EntityType>
+        <EntityType Name="GY_Layers">
+          <Key>
+            <PropertyRef Name="LayerID" />
+          </Key>
+          <Property Name="LayerID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SlideID" Type="Int64" Nullable="false" />
+          <Property Name="LayerContentType" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LayerContent" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="GY_LayerProperties" Relationship="GalleryModel.FK_GY_LayerProperties_GY_Layers" FromRole="GY_Layers" ToRole="GY_LayerProperties" />
+          <NavigationProperty Name="GY_Slides" Relationship="GalleryModel.FK_GY_Layers_GY_Slides" FromRole="GY_Layers" ToRole="GY_Slides" />
+        </EntityType>
+        <EntityType Name="GY_Photos">
+          <Key>
+            <PropertyRef Name="PhotoID" />
+          </Key>
+          <Property Name="PhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AlbumID" Type="Int32" Nullable="false" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TakenOn" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Albums" Relationship="GalleryModel.FK_GY_Photos_GY_Albums" FromRole="GY_Photos" ToRole="GY_Albums" />
+        </EntityType>
+        <EntityType Name="GY_SlideProperties">
+          <Key>
+            <PropertyRef Name="SlidePropertyID" />
+          </Key>
+          <Property Name="SlidePropertyID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SlideID" Type="Int64" Nullable="false" />
+          <Property Name="Attribute" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsImageProperty" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="GY_Slides" Relationship="GalleryModel.FK_GY_SlideProperties_GY_Slides" FromRole="GY_SlideProperties" ToRole="GY_Slides" />
+        </EntityType>
+        <EntityType Name="GY_Slides">
+          <Key>
+            <PropertyRef Name="SlideID" />
+          </Key>
+          <Property Name="SlideID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="BGImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BGImageThumbURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BGImageDummyURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="GY_Layers" Relationship="GalleryModel.FK_GY_Layers_GY_Slides" FromRole="GY_Slides" ToRole="GY_Layers" />
+          <NavigationProperty Name="GY_SlideProperties" Relationship="GalleryModel.FK_GY_SlideProperties_GY_Slides" FromRole="GY_Slides" ToRole="GY_SlideProperties" />
+        </EntityType>
+        <EntityType Name="GY_Videos">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="VideoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TakenOn" Type="DateTime" Precision="3" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="VideoSetID" Type="Int32" />
+          <Property Name="VideoCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="LocalVideoURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebVideoURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShowWebVideo" Type="Boolean" Nullable="false" />
+          <Property Name="FileID" Type="Int64" />
+          <Property Name="Length" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LikesCount" Type="Double" Nullable="false" />
+          <Property Name="DislikesCount" Type="Double" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Files" Relationship="GalleryModel.FK_GY_Videos_GY_Files" FromRole="GY_Videos" ToRole="GY_Files" />
+          <NavigationProperty Name="GY_VideoSet" Relationship="GalleryModel.FK_GY_Videos_GY_VideoSet" FromRole="GY_Videos" ToRole="GY_VideoSet" />
+          <NavigationProperty Name="GY_VideoCategories" Relationship="GalleryModel.FK_GY_Videos_GY_VideoCategories" FromRole="GY_Videos" ToRole="GY_VideoCategories" />
+        </EntityType>
+        <EntityType Name="GY_VideoSet">
+          <Key>
+            <PropertyRef Name="VideoSetID" />
+          </Key>
+          <Property Name="VideoSetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="AddedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TakenOn" Type="DateTime" Precision="3" />
+          <Property Name="Tags" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="VideoCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GY_Videos" Relationship="GalleryModel.FK_GY_Videos_GY_VideoSet" FromRole="GY_VideoSet" ToRole="GY_Videos" />
+          <NavigationProperty Name="GY_VideoCategories" Relationship="GalleryModel.FK_GY_VideoSet_GY_VideoCategories" FromRole="GY_VideoSet" ToRole="GY_VideoCategories" />
+        </EntityType>
+        <Association Name="FK_GY_Albums_GY_Events">
+          <End Type="GalleryModel.GY_Events" Role="GY_Events" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_Albums" Role="GY_Albums" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Events">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="GY_Albums">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Photos_GY_Albums">
+          <End Type="GalleryModel.GY_Albums" Role="GY_Albums" Multiplicity="1" />
+          <End Type="GalleryModel.GY_Photos" Role="GY_Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Albums">
+              <PropertyRef Name="AlbumID" />
+            </Principal>
+            <Dependent Role="GY_Photos">
+              <PropertyRef Name="AlbumID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Audios_GY_AudioSet">
+          <End Type="GalleryModel.GY_AudioSet" Role="GY_AudioSet" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_Audios" Role="GY_Audios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioSet">
+              <PropertyRef Name="AudioSetID" />
+            </Principal>
+            <Dependent Role="GY_Audios">
+              <PropertyRef Name="AudioSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Audios_GY_Files">
+          <End Type="GalleryModel.GY_Files" Role="GY_Files" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_Audios" Role="GY_Audios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Files">
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="GY_Audios">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Files_GY_Drives">
+          <End Type="GalleryModel.GY_Drives" Role="GY_Drives" Multiplicity="1" />
+          <End Type="GalleryModel.GY_Files" Role="GY_Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Drives">
+              <PropertyRef Name="DriveID" />
+            </Principal>
+            <Dependent Role="GY_Files">
+              <PropertyRef Name="DriveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Folders_GY_Drives">
+          <End Type="GalleryModel.GY_Drives" Role="GY_Drives" Multiplicity="1" />
+          <End Type="GalleryModel.GY_Folders" Role="GY_Folders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Drives">
+              <PropertyRef Name="DriveID" />
+            </Principal>
+            <Dependent Role="GY_Folders">
+              <PropertyRef Name="DriveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Files_GY_FileTypes">
+          <End Type="GalleryModel.GY_FileTypes" Role="GY_FileTypes" Multiplicity="1" />
+          <End Type="GalleryModel.GY_Files" Role="GY_Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_FileTypes">
+              <PropertyRef Name="FileTypeID" />
+            </Principal>
+            <Dependent Role="GY_Files">
+              <PropertyRef Name="FileTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Files_GY_Folders">
+          <End Type="GalleryModel.GY_Folders" Role="GY_Folders" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_Files" Role="GY_Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Folders">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="GY_Files">
+              <PropertyRef Name="FolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Videos_GY_Files">
+          <End Type="GalleryModel.GY_Files" Role="GY_Files" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_Videos" Role="GY_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Files">
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="GY_Videos">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Folders_GY_Folders">
+          <End Type="GalleryModel.GY_Folders" Role="GY_Folders" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_Folders" Role="GY_Folders1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Folders">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="GY_Folders1">
+              <PropertyRef Name="ParentFolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_LayerProperties_GY_Layers">
+          <End Type="GalleryModel.GY_Layers" Role="GY_Layers" Multiplicity="1" />
+          <End Type="GalleryModel.GY_LayerProperties" Role="GY_LayerProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Layers">
+              <PropertyRef Name="LayerID" />
+            </Principal>
+            <Dependent Role="GY_LayerProperties">
+              <PropertyRef Name="LayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Layers_GY_Slides">
+          <End Type="GalleryModel.GY_Slides" Role="GY_Slides" Multiplicity="1" />
+          <End Type="GalleryModel.GY_Layers" Role="GY_Layers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Slides">
+              <PropertyRef Name="SlideID" />
+            </Principal>
+            <Dependent Role="GY_Layers">
+              <PropertyRef Name="SlideID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_SlideProperties_GY_Slides">
+          <End Type="GalleryModel.GY_Slides" Role="GY_Slides" Multiplicity="1" />
+          <End Type="GalleryModel.GY_SlideProperties" Role="GY_SlideProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_Slides">
+              <PropertyRef Name="SlideID" />
+            </Principal>
+            <Dependent Role="GY_SlideProperties">
+              <PropertyRef Name="SlideID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Videos_GY_VideoSet">
+          <End Type="GalleryModel.GY_VideoSet" Role="GY_VideoSet" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_Videos" Role="GY_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoSet">
+              <PropertyRef Name="VideoSetID" />
+            </Principal>
+            <Dependent Role="GY_Videos">
+              <PropertyRef Name="VideoSetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="GY_AudioCategories">
+          <Key>
+            <PropertyRef Name="AudioCategoryID" />
+          </Key>
+          <Property Name="AudioCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ParentAudioCategoryID" Type="Int32" />
+          <NavigationProperty Name="GY_ChildAudioCategories" Relationship="GalleryModel.FK_GY_AudioCategories_GY_AudioCategories" FromRole="GY_AudioCategories" ToRole="GY_AudioCategories1" />
+          <NavigationProperty Name="GY_ParentAudioCategory" Relationship="GalleryModel.FK_GY_AudioCategories_GY_AudioCategories" FromRole="GY_AudioCategories1" ToRole="GY_AudioCategories" />
+          <NavigationProperty Name="GY_Audios" Relationship="GalleryModel.FK_GY_Audios_GY_AudioCategories" FromRole="GY_AudioCategories" ToRole="GY_Audios" />
+          <NavigationProperty Name="GY_AudioSet" Relationship="GalleryModel.FK_GY_AudioSet_GY_AudioCategories" FromRole="GY_AudioCategories" ToRole="GY_AudioSet" />
+        </EntityType>
+        <EntityType Name="GY_VideoCategories">
+          <Key>
+            <PropertyRef Name="VideoCategoryID" />
+          </Key>
+          <Property Name="VideoCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="ImageID" Type="Int32" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ParentVideoCategoryID" Type="Int32" />
+          <NavigationProperty Name="GY_ChildVideoCategories" Relationship="GalleryModel.FK_GY_VideoCategories_GY_VideoCategories" FromRole="GY_VideoCategories" ToRole="GY_VideoCategories1" />
+          <NavigationProperty Name="GY_ParentVideoCategory" Relationship="GalleryModel.FK_GY_VideoCategories_GY_VideoCategories" FromRole="GY_VideoCategories1" ToRole="GY_VideoCategories" />
+          <NavigationProperty Name="GY_Videos" Relationship="GalleryModel.FK_GY_Videos_GY_VideoCategories" FromRole="GY_VideoCategories" ToRole="GY_Videos" />
+          <NavigationProperty Name="GY_VideoSet" Relationship="GalleryModel.FK_GY_VideoSet_GY_VideoCategories" FromRole="GY_VideoCategories" ToRole="GY_VideoSet" />
+        </EntityType>
+        <Association Name="FK_GY_AudioCategories_GY_AudioCategories">
+          <End Type="GalleryModel.GY_AudioCategories" Role="GY_AudioCategories" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_AudioCategories" Role="GY_AudioCategories1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioCategories">
+              <PropertyRef Name="AudioCategoryID" />
+            </Principal>
+            <Dependent Role="GY_AudioCategories1">
+              <PropertyRef Name="ParentAudioCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Audios_GY_AudioCategories">
+          <End Type="GalleryModel.GY_AudioCategories" Role="GY_AudioCategories" Multiplicity="1" />
+          <End Type="GalleryModel.GY_Audios" Role="GY_Audios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioCategories">
+              <PropertyRef Name="AudioCategoryID" />
+            </Principal>
+            <Dependent Role="GY_Audios">
+              <PropertyRef Name="AudioCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_AudioSet_GY_AudioCategories">
+          <End Type="GalleryModel.GY_AudioCategories" Role="GY_AudioCategories" Multiplicity="1" />
+          <End Type="GalleryModel.GY_AudioSet" Role="GY_AudioSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_AudioCategories">
+              <PropertyRef Name="AudioCategoryID" />
+            </Principal>
+            <Dependent Role="GY_AudioSet">
+              <PropertyRef Name="AudioCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_VideoCategories_GY_VideoCategories">
+          <End Type="GalleryModel.GY_VideoCategories" Role="GY_VideoCategories" Multiplicity="0..1" />
+          <End Type="GalleryModel.GY_VideoCategories" Role="GY_VideoCategories1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoCategories">
+              <PropertyRef Name="VideoCategoryID" />
+            </Principal>
+            <Dependent Role="GY_VideoCategories1">
+              <PropertyRef Name="ParentVideoCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_Videos_GY_VideoCategories">
+          <End Type="GalleryModel.GY_VideoCategories" Role="GY_VideoCategories" Multiplicity="1" />
+          <End Type="GalleryModel.GY_Videos" Role="GY_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoCategories">
+              <PropertyRef Name="VideoCategoryID" />
+            </Principal>
+            <Dependent Role="GY_Videos">
+              <PropertyRef Name="VideoCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GY_VideoSet_GY_VideoCategories">
+          <End Type="GalleryModel.GY_VideoCategories" Role="GY_VideoCategories" Multiplicity="1" />
+          <End Type="GalleryModel.GY_VideoSet" Role="GY_VideoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GY_VideoCategories">
+              <PropertyRef Name="VideoCategoryID" />
+            </Principal>
+            <Dependent Role="GY_VideoSet">
+              <PropertyRef Name="VideoCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GalleryModelStoreContainer" CdmEntityContainer="GalleryEntities">
+          <EntitySetMapping Name="GY_Albums">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Albums">
+              <MappingFragment StoreEntitySet="GY_Albums">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="TakenOn" ColumnName="TakenOn" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Audios">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Audios">
+              <MappingFragment StoreEntitySet="GY_Audios">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="DislikesCount" ColumnName="DislikesCount" />
+                <ScalarProperty Name="LikesCount" ColumnName="LikesCount" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="ShowWebAudio" ColumnName="ShowWebAudio" />
+                <ScalarProperty Name="WebAudioURL" ColumnName="WebAudioURL" />
+                <ScalarProperty Name="LocalAudioURL" ColumnName="LocalAudioURL" />
+                <ScalarProperty Name="AudioCategoryID" ColumnName="AudioCategoryID" />
+                <ScalarProperty Name="AudioSetID" ColumnName="AudioSetID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="TakenOn" ColumnName="TakenOn" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="AudioID" ColumnName="AudioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_AudioSet">
+            <EntityTypeMapping TypeName="GalleryModel.GY_AudioSet">
+              <MappingFragment StoreEntitySet="GY_AudioSet">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="AudioCategoryID" ColumnName="AudioCategoryID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="TakenOn" ColumnName="TakenOn" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="AudioSetID" ColumnName="AudioSetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Drives">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Drives">
+              <MappingFragment StoreEntitySet="GY_Drives">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="DriveID" ColumnName="DriveID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Events">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Events">
+              <MappingFragment StoreEntitySet="GY_Events">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="RegistrationEndDateTime" ColumnName="RegistrationEndDateTime" />
+                <ScalarProperty Name="RegistrationStartDateTime" ColumnName="RegistrationStartDateTime" />
+                <ScalarProperty Name="PopUpExternalForm" ColumnName="PopUpExternalForm" />
+                <ScalarProperty Name="ExternalFormID" ColumnName="ExternalFormID" />
+                <ScalarProperty Name="ExternalFormURL" ColumnName="ExternalFormURL" />
+                <ScalarProperty Name="ExternalFormEmbedCode" ColumnName="ExternalFormEmbedCode" />
+                <ScalarProperty Name="UseExternalForm" ColumnName="UseExternalForm" />
+                <ScalarProperty Name="EventTypeID" ColumnName="EventTypeID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="EndsOn" ColumnName="EndsOn" />
+                <ScalarProperty Name="StartsOn" ColumnName="StartsOn" />
+                <ScalarProperty Name="SubDescription" ColumnName="SubDescription" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Files">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Files">
+              <MappingFragment StoreEntitySet="GY_Files">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FileTypeID" ColumnName="FileTypeID" />
+                <ScalarProperty Name="DriveID" ColumnName="DriveID" />
+                <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="ShowWebFile" ColumnName="ShowWebFile" />
+                <ScalarProperty Name="WebFileURL" ColumnName="WebFileURL" />
+                <ScalarProperty Name="FileURL" ColumnName="FileURL" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_FileTypes">
+            <EntityTypeMapping TypeName="GalleryModel.GY_FileTypes">
+              <MappingFragment StoreEntitySet="GY_FileTypes">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="FileTypeID" ColumnName="FileTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Folders">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Folders">
+              <MappingFragment StoreEntitySet="GY_Folders">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="ParentFolderID" ColumnName="ParentFolderID" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="DriveID" ColumnName="DriveID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_LayerProperties">
+            <EntityTypeMapping TypeName="GalleryModel.GY_LayerProperties">
+              <MappingFragment StoreEntitySet="GY_LayerProperties">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+                <ScalarProperty Name="LayerID" ColumnName="LayerID" />
+                <ScalarProperty Name="LayerPropertyID" ColumnName="LayerPropertyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Layers">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Layers">
+              <MappingFragment StoreEntitySet="GY_Layers">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="LayerContent" ColumnName="LayerContent" />
+                <ScalarProperty Name="LayerContentType" ColumnName="LayerContentType" />
+                <ScalarProperty Name="SlideID" ColumnName="SlideID" />
+                <ScalarProperty Name="LayerID" ColumnName="LayerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Photos">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Photos">
+              <MappingFragment StoreEntitySet="GY_Photos">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="TakenOn" ColumnName="TakenOn" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_SlideProperties">
+            <EntityTypeMapping TypeName="GalleryModel.GY_SlideProperties">
+              <MappingFragment StoreEntitySet="GY_SlideProperties">
+                <ScalarProperty Name="IsImageProperty" ColumnName="IsImageProperty" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+                <ScalarProperty Name="SlideID" ColumnName="SlideID" />
+                <ScalarProperty Name="SlidePropertyID" ColumnName="SlidePropertyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Slides">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Slides">
+              <MappingFragment StoreEntitySet="GY_Slides">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="BGImageDummyURL" ColumnName="BGImageDummyURL" />
+                <ScalarProperty Name="BGImageThumbURL" ColumnName="BGImageThumbURL" />
+                <ScalarProperty Name="BGImageURL" ColumnName="BGImageURL" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SlideID" ColumnName="SlideID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_Videos">
+            <EntityTypeMapping TypeName="GalleryModel.GY_Videos">
+              <MappingFragment StoreEntitySet="GY_Videos">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="DislikesCount" ColumnName="DislikesCount" />
+                <ScalarProperty Name="LikesCount" ColumnName="LikesCount" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="ShowWebVideo" ColumnName="ShowWebVideo" />
+                <ScalarProperty Name="WebVideoURL" ColumnName="WebVideoURL" />
+                <ScalarProperty Name="LocalVideoURL" ColumnName="LocalVideoURL" />
+                <ScalarProperty Name="VideoCategoryID" ColumnName="VideoCategoryID" />
+                <ScalarProperty Name="VideoSetID" ColumnName="VideoSetID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="TakenOn" ColumnName="TakenOn" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_VideoSet">
+            <EntityTypeMapping TypeName="GalleryModel.GY_VideoSet">
+              <MappingFragment StoreEntitySet="GY_VideoSet">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="VideoCategoryID" ColumnName="VideoCategoryID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="TakenOn" ColumnName="TakenOn" />
+                <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="VideoSetID" ColumnName="VideoSetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_AudioCategories">
+            <EntityTypeMapping TypeName="GalleryModel.GY_AudioCategories">
+              <MappingFragment StoreEntitySet="GY_AudioCategories">
+                <ScalarProperty Name="ParentAudioCategoryID" ColumnName="ParentAudioCategoryID" />
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="AudioCategoryID" ColumnName="AudioCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GY_VideoCategories">
+            <EntityTypeMapping TypeName="GalleryModel.GY_VideoCategories">
+              <MappingFragment StoreEntitySet="GY_VideoCategories">
+                <ScalarProperty Name="ParentVideoCategoryID" ColumnName="ParentVideoCategoryID" />
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="VideoCategoryID" ColumnName="VideoCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

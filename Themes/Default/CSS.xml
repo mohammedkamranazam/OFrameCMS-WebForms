@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<stylesheets>
+  <stylesheet path="~/Themes/Default/Stylesheets/Reset.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/Form.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/Main.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/buttons.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/icon.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/CalendarExtendarStyle.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/Components.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/sm-core-css.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/hint.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/tipsy.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/animate.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/csshake.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/slider.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/jquery.fancybox.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/jquery.Jcrop.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/revSliderCaptions.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/owl.theme.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/menuTheme.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/timeline.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/focuspoint.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/focuspoint-css-fallbacks.css" />
+  <stylesheet path="~/Themes/Default/Stylesheets/ResponsiveComponents.css" />
+</stylesheets>

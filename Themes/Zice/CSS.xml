@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<stylesheets>
+  <stylesheet path=   "~/Themes/Zice/Stylesheets/zice.style.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/Form.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/buttons.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/icon.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/CalendarExtendarStyle.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/Components.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/jscrollpane.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/tipsy.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/animate.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/jquery.Jcrop.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/jquery.fancybox.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/focuspoint.css" />
+  <stylesheet path=  "~/Themes/Zice/Stylesheets/focuspoint-css-fallbacks.css" />
+</stylesheets>

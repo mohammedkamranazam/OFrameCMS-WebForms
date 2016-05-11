@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages>
+  <page id="HomePage" duration="5" location="None" />
+  <page id="AboutUsPage" duration="60" location="None" />
+  <page id="AlbumsPage" duration="5" location="None" />
+  <page id="AudioPage" duration="5" location="None" />
+  <page id="AudioCategoriesPage" duration="5" location="None" />
+  <page id="AudioCategoryPage" duration="5" location="None" />
+  <page id="AudioSectionsPage" duration="5" location="None" />
+  <page id="AudioSetPage" duration="5" location="None" />
+  <page id="ContactUsPage" duration="60" location="None" />
+  <page id="DownloadsPage" duration="5" location="None" />
+  <page id="DrivesPage" duration="5" location="None" />
+  <page id="EventsPage" duration="5" location="None" />
+  <page id="EventPage" duration="5" location="None" />
+  <page id="PhotosPage" duration="5" location="None" />
+  <page id="PortfolioPage" duration="60" location="None" />
+  <page id="PostPage" duration="5" location="None" />
+  <page id="PostsPage" duration="5" location="None" />
+  <page id="VideoPage" duration="5" location="None" />
+  <page id="VideoCategoriesPage" duration="5" location="None" />
+  <page id="VideoCategoryPage" duration="5" location="None" />
+  <page id="VideoSectionsPage" duration="5" location="None" />
+  <page id="VideoSetPage" duration="5" location="None" />
+  <!--None, Server, None, Both-->
+</pages>

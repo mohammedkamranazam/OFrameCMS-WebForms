@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<stylesheets>
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/Form.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/buttons.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/icon.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/CalendarExtendarStyle.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/Components.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/tipsy.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/jquery.Jcrop.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/jquery.fancybox.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/focuspoint.css" />
+  <stylesheet path=  "~/Themes/PopUp/Stylesheets/focuspoint-css-fallbacks.css" />
+</stylesheets>

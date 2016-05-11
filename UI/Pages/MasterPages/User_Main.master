@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User_Main.master.cs" Inherits="ProjectJKL.UI.Pages.MasterPages.User_Main" %>
+
+<asp:content id="Content1" contentplaceholderid="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:content>
+<asp:content id="Content2" contentplaceholderid="SliderPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="SliderPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:content>
+<asp:content id="Content3" contentplaceholderid="ContentPlaceHolder1" runat="server">
+
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+     </asp:ContentPlaceHolder>
+</asp:content>
+<asp:content id="Content4" contentplaceholderid="BottomPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="BottomPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:content>

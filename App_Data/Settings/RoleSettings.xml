@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<roleSetting>
+  <roles default="user" superAdmin="master" admin="admin" user="user" inactivated="inactivated" anonymous="anonymous">
+    <role name="anonymous" theme="Default" path="~/" masterPage="~/Themes/{0}/Main.Master" locked="False" showCategory="False" showRoles="False" hideSuperAdmin="True" registrationBlocked="False" login="False" />
+    <role name="master" path="~/UI/Pages/SuperAdmin/" masterPage="~/UI/Pages/MasterPages/SuperAdmin_Zice.master" locked="False" showCategory="True" showRoles="True" hideSuperAdmin="False" registrationBlocked="False" login="False" theme="Zice" />
+    <role name="admin" path="~/UI/Pages/Admin/" masterPage="~/UI/Pages/MasterPages/Admin_Zice.master" locked="False" showCategory="True" showRoles="True" hideSuperAdmin="True" registrationBlocked="False" login="False" theme="Zice" />
+    <role name="user" path="~/UI/Pages/User/" masterPage="~/UI/Pages/MasterPages/User_Main.master" locked="False" showCategory="False" showRoles="False" hideSuperAdmin="True" registrationBlocked="True" login="False" theme="Default" />
+    <role name="inactivated" path="~/UI/Pages/Inactivated/" masterPage="~/UI/Pages/MasterPages/Inactivated_Main.master" locked="False" showCategory="False" showRoles="False" hideSuperAdmin="True" registrationBlocked="True" login="False" theme="Default" />
+  </roles>
+</roleSetting>

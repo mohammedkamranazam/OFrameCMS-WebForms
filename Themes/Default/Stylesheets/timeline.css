@@ -1,0 +1,279 @@
+
+.timeline {
+    list-style: none;
+    position: relative;
+    padding: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+    .timeline:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -2px;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        width: 4px;
+        border-radius: 2px;
+        display: block;
+    }
+
+    .timeline .timeline-row {
+        padding-left: 50%;
+        position: relative;
+        z-index: 10;
+    }
+
+        .timeline .timeline-row .timeline-time {
+            position: absolute;
+            right: 50%;
+            top: 31px;
+            text-align: right;
+            margin-right: 40px;
+            font-weight: 600;
+            line-height: 40px;
+            font-family: Verdana;
+            color: #444444;
+            font-size: 12px;
+        }
+
+            .timeline .timeline-row .timeline-time small {
+                display: block;
+                color: white;
+                text-transform: uppercase;
+                opacity: 0.75;
+                font-size: 11px;
+                font-weight: 400;
+            }
+
+        .timeline .timeline-row .timeline-icon {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            margin-left: -20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333333;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 3px;
+            color: white;
+            font-size: 14px;
+            z-index: 100;
+        }
+
+            .timeline .timeline-row .timeline-icon > div {
+                border-radius: 50%;
+                line-height: 34px;
+                font-size: 16px;
+            }
+
+        .timeline .timeline-row .timeline-content {
+            margin-left: 40px;
+            position: relative;
+            background-color: white;
+            color: #333333;
+        }
+
+            .timeline .timeline-row .timeline-content:after {
+                content: "";
+                position: absolute;
+                top: 48px;
+                left: -41px;
+                height: 4px;
+                width: 40px;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: -1;
+            }
+
+            .timeline .timeline-row .timeline-content .panel-body {
+                padding: 10px;
+                position: relative;
+                z-index: 10;
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+            }
+
+                .timeline .timeline-row .timeline-content .panel-body .fancybox img {
+                    width: 100%;
+                }
+
+            .timeline .timeline-row .timeline-content h2 {
+                font-size: 16px;
+                font-family: Verdana;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                line-height: 25px;
+                color: #333333;
+                border-bottom: 1px solid #333333;
+            }
+
+            .timeline .timeline-row .timeline-content div.Description {
+                padding-top: 15px;
+            }
+
+                .timeline .timeline-row .timeline-content div.Description img {
+                    max-width: 100%;
+                }
+
+            .timeline .timeline-row .timeline-content span.Client {
+                display: block;
+                font-family: Verdana;
+                line-height: 20px;
+                padding: 0px 10px 0px 0px;
+                color: #008bc9;
+                font-size: 12px;
+            }
+
+                .timeline .timeline-row .timeline-content span.Client strong {
+                    color: black;
+                }
+
+            .timeline .timeline-row .timeline-content span.Categories {
+                display: block;
+                font-family: Verdana;
+                line-height: 20px;
+                padding: 0px 10px 0px 0px;
+                color: #008bc9;
+                font-size: 12px;
+            }
+
+                .timeline .timeline-row .timeline-content span.Categories strong {
+                    color: black;
+                }
+
+            .timeline .timeline-row .timeline-content span.URL {
+                display: block;
+                font-family: Verdana;
+                line-height: 20px;
+                padding: 0px 10px 0px 0px;
+                font-size: 12px;
+            }
+
+                .timeline .timeline-row .timeline-content span.URL a {
+                    text-decoration: none;
+                    border-bottom: 1px solid #008bc9;
+                    color: #008bc9;
+                }
+
+                .timeline .timeline-row .timeline-content span.URL strong {
+                    color: black;
+                }
+
+        .timeline .timeline-row:nth-child(odd) {
+            padding-left: 0;
+            padding-right: 50%;
+        }
+
+            .timeline .timeline-row:nth-child(odd) .timeline-time {
+                right: auto;
+                left: 50%;
+                text-align: left;
+                margin-right: 0;
+                margin-left: 40px;
+            }
+
+            .timeline .timeline-row:nth-child(odd) .timeline-content {
+                margin-right: 40px;
+                margin-left: 0;
+            }
+
+                .timeline .timeline-row:nth-child(odd) .timeline-content:after {
+                    left: auto;
+                    right: -41px;
+                }
+
+    .timeline.animated .timeline-row .timeline-content {
+        left: 20px;
+        -webkit-transition: all 0.8s;
+        -moz-transition: all 0.8s;
+        transition: all 0.8s;
+    }
+
+    .timeline.animated .timeline-row:nth-child(odd) .timeline-content {
+        left: -20px;
+    }
+
+    .timeline.animated .timeline-row.active .timeline-content {
+        opacity: 1;
+        left: 0;
+    }
+
+    .timeline.animated .timeline-row.active:nth-child(odd) .timeline-content {
+        left: 0;
+    }
+
+@media (max-width: 1200px) {
+    .timeline {
+        padding: 15px 10px;
+    }
+
+        .timeline:after {
+            left: 28px;
+        }
+
+        .timeline .timeline-row {
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+            .timeline .timeline-row .timeline-time {
+                position: relative;
+                right: auto;
+                top: 0;
+                text-align: left;
+                margin: 0 0 6px 56px;
+            }
+
+                .timeline .timeline-row .timeline-time strong {
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+
+            .timeline .timeline-row .timeline-icon {
+                top: 52px;
+                left: -2px;
+                margin-left: 0;
+            }
+
+            .timeline .timeline-row .timeline-content {
+                margin-left: 56px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+
+                .timeline .timeline-row .timeline-content:after {
+                    right: auto !important;
+                    left: -20px !important;
+                    top: 32px;
+                }
+
+            .timeline .timeline-row:nth-child(odd) {
+                padding-right: 0;
+            }
+
+                .timeline .timeline-row:nth-child(odd) .timeline-time {
+                    position: relative;
+                    right: auto;
+                    left: auto;
+                    top: 0;
+                    text-align: left;
+                    margin: 0 0 6px 56px;
+                }
+
+                .timeline .timeline-row:nth-child(odd) .timeline-content {
+                    margin-right: 0;
+                    margin-left: 55px;
+                }
+
+        .timeline.animated .timeline-row:nth-child(odd) .timeline-content {
+            left: 20px;
+        }
+
+        .timeline.animated .timeline-row.active:nth-child(odd) .timeline-content {
+            left: 0;
+        }
+}

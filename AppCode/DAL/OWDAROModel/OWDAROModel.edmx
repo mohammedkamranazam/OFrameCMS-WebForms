@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OWDAROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="OW_ActivityLogs">
+          <Key>
+            <PropertyRef Name="ActivityLogID" />
+          </Key>
+          <Property Name="ActivityLogID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ActivityOn" Type="datetime" Nullable="false" />
+          <Property Name="ActivityType" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ActivityMessage" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OW_Images">
+          <Key>
+            <PropertyRef Name="ImageID" />
+          </Key>
+          <Property Name="ImageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImageURL" Type="nvarchar(max)" />
+          <Property Name="WebImageURL" Type="nvarchar(max)" />
+          <Property Name="WebImageThumbURL" Type="nvarchar(max)" />
+          <Property Name="ShowWebImage" Type="bit" Nullable="false" />
+          <Property Name="OriginalWidth" Type="int" Nullable="false" />
+          <Property Name="OriginalHeight" Type="int" Nullable="false" />
+          <Property Name="CropHeight" Type="int" Nullable="false" />
+          <Property Name="CropWidth" Type="int" Nullable="false" />
+          <Property Name="Width" Type="int" Nullable="false" />
+          <Property Name="Height" Type="int" Nullable="false" />
+          <Property Name="X1" Type="int" Nullable="false" />
+          <Property Name="X2" Type="int" Nullable="false" />
+          <Property Name="Y1" Type="int" Nullable="false" />
+          <Property Name="Y2" Type="int" Nullable="false" />
+          <Property Name="XUnit" Type="int" Nullable="false" />
+          <Property Name="YUnit" Type="int" Nullable="false" />
+          <Property Name="Mode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Scale" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Anchor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Quality" Type="int" Nullable="false" />
+          <Property Name="MaxWidth" Type="int" Nullable="false" />
+          <Property Name="MaxHeight" Type="int" Nullable="false" />
+          <Property Name="ThumbCropHeight" Type="int" Nullable="false" />
+          <Property Name="ThumbCropWidth" Type="int" Nullable="false" />
+          <Property Name="ThumbWidth" Type="int" Nullable="false" />
+          <Property Name="ThumbHeight" Type="int" Nullable="false" />
+          <Property Name="ThumbX1" Type="int" Nullable="false" />
+          <Property Name="ThumbX2" Type="int" Nullable="false" />
+          <Property Name="ThumbY1" Type="int" Nullable="false" />
+          <Property Name="ThumbY2" Type="int" Nullable="false" />
+          <Property Name="ThumbMode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThumbScale" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThumbAnchor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThumbQuality" Type="int" Nullable="false" />
+          <Property Name="ThumbMaxWidth" Type="int" Nullable="false" />
+          <Property Name="ThumbMaxHeight" Type="int" Nullable="false" />
+          <Property Name="ThumbXUnit" Type="int" Nullable="false" />
+          <Property Name="ThumbYUnit" Type="int" Nullable="false" />
+          <Property Name="FocusPointX" Type="float" Nullable="false" />
+          <Property Name="FocusPointY" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OW_Menu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IconURL" Type="nvarchar(max)" />
+          <Property Name="ParentMenuID" Type="int" />
+          <Property Name="NavigateURL" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsRoot" Type="bit" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="Locale" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_OW_Menu_OW_Menu">
+          <End Role="OW_Menu" Type="Self.OW_Menu" Multiplicity="0..1" />
+          <End Role="OW_Menu1" Type="Self.OW_Menu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OW_Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="OW_Menu1">
+              <PropertyRef Name="ParentMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OWDAROModelStoreContainer">
+          <EntitySet Name="OW_ActivityLogs" EntityType="Self.OW_ActivityLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OW_Images" EntityType="Self.OW_Images" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OW_Menu" EntityType="Self.OW_Menu" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_OW_Menu_OW_Menu" Association="Self.FK_OW_Menu_OW_Menu">
+            <End Role="OW_Menu" EntitySet="OW_Menu" />
+            <End Role="OW_Menu1" EntitySet="OW_Menu" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OWDAROModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OWDAROEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="OW_ActivityLogs" EntityType="OWDAROModel.OW_ActivityLogs" />
+          <EntitySet Name="OW_Images" EntityType="OWDAROModel.OW_Images" />
+          <EntitySet Name="OW_Menu" EntityType="OWDAROModel.OW_Menu" />
+          <AssociationSet Name="FK_OW_Menu_OW_Menu" Association="OWDAROModel.FK_OW_Menu_OW_Menu">
+            <End Role="OW_Menu" EntitySet="OW_Menu" />
+            <End Role="OW_Menu1" EntitySet="OW_Menu" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="OW_ActivityLogs">
+          <Key>
+            <PropertyRef Name="ActivityLogID" />
+          </Key>
+          <Property Name="ActivityLogID" Type="Guid" Nullable="false" />
+          <Property Name="ActivityOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ActivityType" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ActivityMessage" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OW_Images">
+          <Key>
+            <PropertyRef Name="ImageID" />
+          </Key>
+          <Property Name="ImageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebImageThumbURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShowWebImage" Type="Boolean" Nullable="false" />
+          <Property Name="OriginalWidth" Type="Int32" Nullable="false" />
+          <Property Name="OriginalHeight" Type="Int32" Nullable="false" />
+          <Property Name="CropHeight" Type="Int32" Nullable="false" />
+          <Property Name="CropWidth" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="Int32" Nullable="false" />
+          <Property Name="Height" Type="Int32" Nullable="false" />
+          <Property Name="X1" Type="Int32" Nullable="false" />
+          <Property Name="X2" Type="Int32" Nullable="false" />
+          <Property Name="Y1" Type="Int32" Nullable="false" />
+          <Property Name="Y2" Type="Int32" Nullable="false" />
+          <Property Name="XUnit" Type="Int32" Nullable="false" />
+          <Property Name="YUnit" Type="Int32" Nullable="false" />
+          <Property Name="Mode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Scale" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Anchor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Quality" Type="Int32" Nullable="false" />
+          <Property Name="MaxWidth" Type="Int32" Nullable="false" />
+          <Property Name="MaxHeight" Type="Int32" Nullable="false" />
+          <Property Name="ThumbCropHeight" Type="Int32" Nullable="false" />
+          <Property Name="ThumbCropWidth" Type="Int32" Nullable="false" />
+          <Property Name="ThumbWidth" Type="Int32" Nullable="false" />
+          <Property Name="ThumbHeight" Type="Int32" Nullable="false" />
+          <Property Name="ThumbX1" Type="Int32" Nullable="false" />
+          <Property Name="ThumbX2" Type="Int32" Nullable="false" />
+          <Property Name="ThumbY1" Type="Int32" Nullable="false" />
+          <Property Name="ThumbY2" Type="Int32" Nullable="false" />
+          <Property Name="ThumbMode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ThumbScale" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ThumbAnchor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ThumbQuality" Type="Int32" Nullable="false" />
+          <Property Name="ThumbMaxWidth" Type="Int32" Nullable="false" />
+          <Property Name="ThumbMaxHeight" Type="Int32" Nullable="false" />
+          <Property Name="ThumbXUnit" Type="Int32" Nullable="false" />
+          <Property Name="ThumbYUnit" Type="Int32" Nullable="false" />
+          <Property Name="FocusPointX" Type="Double" Nullable="false" />
+          <Property Name="FocusPointY" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OW_Menu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IconURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ParentMenuID" Type="Int32" />
+          <Property Name="NavigateURL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsRoot" Type="Boolean" Nullable="false" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="Locale" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ChildMenus" Relationship="OWDAROModel.FK_OW_Menu_OW_Menu" FromRole="OW_Menu" ToRole="OW_Menu1" />
+          <NavigationProperty Name="ParentMenu" Relationship="OWDAROModel.FK_OW_Menu_OW_Menu" FromRole="OW_Menu1" ToRole="OW_Menu" />
+        </EntityType>
+        <Association Name="FK_OW_Menu_OW_Menu">
+          <End Type="OWDAROModel.OW_Menu" Role="OW_Menu" Multiplicity="0..1" />
+          <End Type="OWDAROModel.OW_Menu" Role="OW_Menu1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OW_Menu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="OW_Menu1">
+              <PropertyRef Name="ParentMenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OWDAROModelStoreContainer" CdmEntityContainer="OWDAROEntities">
+          <EntitySetMapping Name="OW_ActivityLogs">
+            <EntityTypeMapping TypeName="OWDAROModel.OW_ActivityLogs">
+              <MappingFragment StoreEntitySet="OW_ActivityLogs">
+                <ScalarProperty Name="ActivityMessage" ColumnName="ActivityMessage" />
+                <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+                <ScalarProperty Name="ActivityOn" ColumnName="ActivityOn" />
+                <ScalarProperty Name="ActivityLogID" ColumnName="ActivityLogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OW_Images">
+            <EntityTypeMapping TypeName="OWDAROModel.OW_Images">
+              <MappingFragment StoreEntitySet="OW_Images">
+                <ScalarProperty Name="FocusPointY" ColumnName="FocusPointY" />
+                <ScalarProperty Name="FocusPointX" ColumnName="FocusPointX" />
+                <ScalarProperty Name="ThumbYUnit" ColumnName="ThumbYUnit" />
+                <ScalarProperty Name="ThumbXUnit" ColumnName="ThumbXUnit" />
+                <ScalarProperty Name="ThumbMaxHeight" ColumnName="ThumbMaxHeight" />
+                <ScalarProperty Name="ThumbMaxWidth" ColumnName="ThumbMaxWidth" />
+                <ScalarProperty Name="ThumbQuality" ColumnName="ThumbQuality" />
+                <ScalarProperty Name="ThumbAnchor" ColumnName="ThumbAnchor" />
+                <ScalarProperty Name="ThumbScale" ColumnName="ThumbScale" />
+                <ScalarProperty Name="ThumbMode" ColumnName="ThumbMode" />
+                <ScalarProperty Name="ThumbY2" ColumnName="ThumbY2" />
+                <ScalarProperty Name="ThumbY1" ColumnName="ThumbY1" />
+                <ScalarProperty Name="ThumbX2" ColumnName="ThumbX2" />
+                <ScalarProperty Name="ThumbX1" ColumnName="ThumbX1" />
+                <ScalarProperty Name="ThumbHeight" ColumnName="ThumbHeight" />
+                <ScalarProperty Name="ThumbWidth" ColumnName="ThumbWidth" />
+                <ScalarProperty Name="ThumbCropWidth" ColumnName="ThumbCropWidth" />
+                <ScalarProperty Name="ThumbCropHeight" ColumnName="ThumbCropHeight" />
+                <ScalarProperty Name="MaxHeight" ColumnName="MaxHeight" />
+                <ScalarProperty Name="MaxWidth" ColumnName="MaxWidth" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+                <ScalarProperty Name="Anchor" ColumnName="Anchor" />
+                <ScalarProperty Name="Scale" ColumnName="Scale" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="YUnit" ColumnName="YUnit" />
+                <ScalarProperty Name="XUnit" ColumnName="XUnit" />
+                <ScalarProperty Name="Y2" ColumnName="Y2" />
+                <ScalarProperty Name="Y1" ColumnName="Y1" />
+                <ScalarProperty Name="X2" ColumnName="X2" />
+                <ScalarProperty Name="X1" ColumnName="X1" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="CropWidth" ColumnName="CropWidth" />
+                <ScalarProperty Name="CropHeight" ColumnName="CropHeight" />
+                <ScalarProperty Name="OriginalHeight" ColumnName="OriginalHeight" />
+                <ScalarProperty Name="OriginalWidth" ColumnName="OriginalWidth" />
+                <ScalarProperty Name="ShowWebImage" ColumnName="ShowWebImage" />
+                <ScalarProperty Name="WebImageThumbURL" ColumnName="WebImageThumbURL" />
+                <ScalarProperty Name="WebImageURL" ColumnName="WebImageURL" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OW_Menu">
+            <EntityTypeMapping TypeName="OWDAROModel.OW_Menu">
+              <MappingFragment StoreEntitySet="OW_Menu">
+                <ScalarProperty Name="Locale" ColumnName="Locale" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="IsRoot" ColumnName="IsRoot" />
+                <ScalarProperty Name="NavigateURL" ColumnName="NavigateURL" />
+                <ScalarProperty Name="ParentMenuID" ColumnName="ParentMenuID" />
+                <ScalarProperty Name="IconURL" ColumnName="IconURL" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

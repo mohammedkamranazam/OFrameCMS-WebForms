@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scripts>
+  <script path="~/Scripts/jQuery/jquery.js" />
+  <script path="~/Scripts/jQuery/jquery-migrate.js" />
+  <script path="~/Scripts/jQuery/jquery-ui-1.8.23.custom.js" />
+  <script path="~/Scripts/jQuery/jquery.easing.pack.js" />
+  <script path="~/Scripts/Tipsy/jquery.tipsy.min.js" />
+  <script path="~/Scripts/jCrop/jquery.Jcrop.min.js" />
+  <script path="~/Scripts/fancybox/jquery.fancybox.pack.js" />
+  <script path="~/Themes/PopUp/Scripts/custom.js" />
+  <script path="~/Themes/PopUp/Scripts/reinitialize.js" />
+</scripts>

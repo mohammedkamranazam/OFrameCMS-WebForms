@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<eventTypes>
+  <eventType id="1" title="Non Registrable" description="" hide="false" imageUrl="" imageThumbUrl="" isRegisterable="false" registrationPageUrl="" useExternalForm="false" externalFormEmbedCode="" externalFormURL="" externalFormID="" popUpExternalForm="false" />
+  <eventType id="2" title="Registrable" description="" hide="false" imageUrl="" imageThumbUrl="" isRegisterable="true" registrationPageUrl="" useExternalForm="true" externalFormEmbedCode="" externalFormURL="" externalFormID="" popUpExternalForm="false" />
+</eventTypes>

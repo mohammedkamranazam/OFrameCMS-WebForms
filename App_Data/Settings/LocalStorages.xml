@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<storages>
+  <storage name="Storage" path="~/Storage/" />
+  <storage name="Cache" path="~/Storage/Cache/" />
+  <storage name="Downloads" path="~/Storage/Downloads/" />
+  <storage name="Resources" path="~/Storage/Resources/" />
+  <storage name="Temp" path="~/Storage/Temp/" />
+  <storage name="Uploads" path="~/Storage/Uploads/" />
+  <storage name="Vault" path="~/Storage/Vault/" />
+  <storage name="Albums" path="~/Storage/Resources/Albums/" />
+  <storage name="AudioCategories" path="~/Storage/Resources/AudioCategories/" />
+  <storage name="Audios" path="~/Storage/Resources/Audios/" />
+  <storage name="AudioSections" path="~/Storage/Resources/AudioSections/" />
+  <storage name="AudioSet" path="~/Storage/Resources/AudioSet/" />
+  <storage name="Banners" path="~/Storage/Resources/Banners/" />
+  <storage name="Colors" path="~/Storage/Resources/Colors/" />
+  <storage name="DownloadPics" path="~/Storage/Resources/DownloadPics/" />
+  <storage name="Drives" path="~/Storage/Resources/Drives/" />
+  <storage name="Events" path="~/Storage/Resources/Events/" />
+  <storage name="Files" path="~/Storage/Resources/Files/" />
+  <storage name="FileTypes" path="~/Storage/Resources/FileTypes/" />
+  <storage name="Folders" path="~/Storage/Resources/Folders/" />
+  <storage name="Icons" path="~/Storage/Resources/Icons/" />
+  <storage name="Others" path="~/Storage/Resources/Others/" />
+  <storage name="Photos" path="~/Storage/Resources/Photos/" />
+  <storage name="PostCategories" path="~/Storage/Resources/PostCategories/" />
+  <storage name="Posts" path="~/Storage/Resources/Posts/" />
+  <storage name="PostSections" path="~/Storage/Resources/PostSections/" />
+  <storage name="PostSubCategories" path="~/Storage/Resources/PostSubCategories/" />
+  <storage name="ProductBrands" path="~/Storage/Resources/ProductBrands/" />
+  <storage name="ProductCategories" path="~/Storage/Resources/ProductCategories/" />
+  <storage name="Products" path="~/Storage/Resources/Products/" />
+  <storage name="ProductSections" path="~/Storage/Resources/ProductSections/" />
+  <storage name="ProductSubCategories" path="~/Storage/Resources/ProductSubCategories/" />
+  <storage name="Profiles" path="~/Storage/Resources/Profiles/" />
+  <storage name="VideoCategories" path="~/Storage/Resources/VideoCategories/" />
+  <storage name="Videos" path="~/Storage/Resources/Videos/" />
+  <storage name="VideoSections" path="~/Storage/Resources/VideoSections/" />
+  <storage name="VideoSet" path="~/Storage/Resources/VideoSet/" />
+</storages>

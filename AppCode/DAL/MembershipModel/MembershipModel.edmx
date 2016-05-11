@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MembershipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MS_EducationQualificationTypes">
+          <Key>
+            <PropertyRef Name="EducationQualificationTypeID" />
+          </Key>
+          <Property Name="EducationQualificationTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MS_UserAdresses">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Name="AddressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AddressCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StreetName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ZipCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MS_UserCategories">
+          <Key>
+            <PropertyRef Name="UserCategoryID" />
+          </Key>
+          <Property Name="UserCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MS_UserEducations">
+          <Key>
+            <PropertyRef Name="EducationID" />
+          </Key>
+          <Property Name="EducationID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InstituteName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Stream" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="EducationQualificationTypeID" Type="int" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MS_Users">
+          <Key>
+            <PropertyRef Name="Username" />
+          </Key>
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="ProfilePic" Type="nvarchar(max)" />
+          <Property Name="SecurityQuestion" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="SecurityAnswer" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="20" />
+          <Property Name="UserRole" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserCategoryID" Type="int" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MS_UsersData">
+          <Key>
+            <PropertyRef Name="UserDataID" />
+          </Key>
+          <Property Name="UserDataID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UsersDataCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserData" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MS_UserWorks">
+          <Key>
+            <PropertyRef Name="WorkID" />
+          </Key>
+          <Property Name="WorkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Organization" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="WorkHere" Type="bit" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Hide" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_UserAdresses_Users">
+          <End Role="MS_Users" Type="Self.MS_Users" Multiplicity="1" />
+          <End Role="MS_UserAdresses" Type="Self.MS_UserAdresses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UserAdresses">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserEducations_EducationQualificationTypes">
+          <End Role="MS_EducationQualificationTypes" Type="Self.MS_EducationQualificationTypes" Multiplicity="1" />
+          <End Role="MS_UserEducations" Type="Self.MS_UserEducations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_EducationQualificationTypes">
+              <PropertyRef Name="EducationQualificationTypeID" />
+            </Principal>
+            <Dependent Role="MS_UserEducations">
+              <PropertyRef Name="EducationQualificationTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserEducations_Users">
+          <End Role="MS_Users" Type="Self.MS_Users" Multiplicity="1" />
+          <End Role="MS_UserEducations" Type="Self.MS_UserEducations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UserEducations">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserCategories">
+          <End Role="MS_UserCategories" Type="Self.MS_UserCategories" Multiplicity="0..1" />
+          <End Role="MS_Users" Type="Self.MS_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_UserCategories">
+              <PropertyRef Name="UserCategoryID" />
+            </Principal>
+            <Dependent Role="MS_Users">
+              <PropertyRef Name="UserCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersData_Users">
+          <End Role="MS_Users" Type="Self.MS_Users" Multiplicity="1" />
+          <End Role="MS_UsersData" Type="Self.MS_UsersData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UsersData">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserWorks_Users">
+          <End Role="MS_Users" Type="Self.MS_Users" Multiplicity="1" />
+          <End Role="MS_UserWorks" Type="Self.MS_UserWorks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UserWorks">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MembershipModelStoreContainer">
+          <EntitySet Name="MS_EducationQualificationTypes" EntityType="Self.MS_EducationQualificationTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MS_UserAdresses" EntityType="Self.MS_UserAdresses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MS_UserCategories" EntityType="Self.MS_UserCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MS_UserEducations" EntityType="Self.MS_UserEducations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MS_Users" EntityType="Self.MS_Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MS_UsersData" EntityType="Self.MS_UsersData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MS_UserWorks" EntityType="Self.MS_UserWorks" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_UserAdresses_Users" Association="Self.FK_UserAdresses_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UserAdresses" EntitySet="MS_UserAdresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserEducations_EducationQualificationTypes" Association="Self.FK_UserEducations_EducationQualificationTypes">
+            <End Role="MS_EducationQualificationTypes" EntitySet="MS_EducationQualificationTypes" />
+            <End Role="MS_UserEducations" EntitySet="MS_UserEducations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserEducations_Users" Association="Self.FK_UserEducations_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UserEducations" EntitySet="MS_UserEducations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserCategories" Association="Self.FK_Users_UserCategories">
+            <End Role="MS_UserCategories" EntitySet="MS_UserCategories" />
+            <End Role="MS_Users" EntitySet="MS_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersData_Users" Association="Self.FK_UsersData_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UsersData" EntitySet="MS_UsersData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserWorks_Users" Association="Self.FK_UserWorks_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UserWorks" EntitySet="MS_UserWorks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MembershipModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MembershipEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="MS_EducationQualificationTypes" EntityType="MembershipModel.MS_EducationQualificationTypes" />
+          <EntitySet Name="MS_UserAdresses" EntityType="MembershipModel.MS_UserAdresses" />
+          <EntitySet Name="MS_UserCategories" EntityType="MembershipModel.MS_UserCategories" />
+          <EntitySet Name="MS_UserEducations" EntityType="MembershipModel.MS_UserEducations" />
+          <EntitySet Name="MS_Users" EntityType="MembershipModel.MS_Users" />
+          <EntitySet Name="MS_UsersData" EntityType="MembershipModel.MS_UsersData" />
+          <EntitySet Name="MS_UserWorks" EntityType="MembershipModel.MS_UserWorks" />
+          <AssociationSet Name="FK_UserEducations_EducationQualificationTypes" Association="MembershipModel.FK_UserEducations_EducationQualificationTypes">
+            <End Role="MS_EducationQualificationTypes" EntitySet="MS_EducationQualificationTypes" />
+            <End Role="MS_UserEducations" EntitySet="MS_UserEducations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAdresses_Users" Association="MembershipModel.FK_UserAdresses_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UserAdresses" EntitySet="MS_UserAdresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserCategories" Association="MembershipModel.FK_Users_UserCategories">
+            <End Role="MS_UserCategories" EntitySet="MS_UserCategories" />
+            <End Role="MS_Users" EntitySet="MS_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserEducations_Users" Association="MembershipModel.FK_UserEducations_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UserEducations" EntitySet="MS_UserEducations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersData_Users" Association="MembershipModel.FK_UsersData_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UsersData" EntitySet="MS_UsersData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserWorks_Users" Association="MembershipModel.FK_UserWorks_Users">
+            <End Role="MS_Users" EntitySet="MS_Users" />
+            <End Role="MS_UserWorks" EntitySet="MS_UserWorks" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MS_EducationQualificationTypes">
+          <Key>
+            <PropertyRef Name="EducationQualificationTypeID" />
+          </Key>
+          <Property Name="EducationQualificationTypeID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MS_UserEducations" Relationship="MembershipModel.FK_UserEducations_EducationQualificationTypes" FromRole="MS_EducationQualificationTypes" ToRole="MS_UserEducations" />
+        </EntityType>
+        <EntityType Name="MS_UserAdresses">
+          <Key>
+            <PropertyRef Name="AddressID" />
+          </Key>
+          <Property Name="AddressID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AddressCategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StreetName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MS_Users" Relationship="MembershipModel.FK_UserAdresses_Users" FromRole="MS_UserAdresses" ToRole="MS_Users" />
+        </EntityType>
+        <EntityType Name="MS_UserCategories">
+          <Key>
+            <PropertyRef Name="UserCategoryID" />
+          </Key>
+          <Property Name="UserCategoryID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MS_Users" Relationship="MembershipModel.FK_Users_UserCategories" FromRole="MS_UserCategories" ToRole="MS_Users" />
+        </EntityType>
+        <EntityType Name="MS_UserEducations">
+          <Key>
+            <PropertyRef Name="EducationID" />
+          </Key>
+          <Property Name="EducationID" Type="Int64" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InstituteName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Stream" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="EducationQualificationTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MS_EducationQualificationTypes" Relationship="MembershipModel.FK_UserEducations_EducationQualificationTypes" FromRole="MS_UserEducations" ToRole="MS_EducationQualificationTypes" />
+          <NavigationProperty Name="MS_Users" Relationship="MembershipModel.FK_UserEducations_Users" FromRole="MS_UserEducations" ToRole="MS_Users" />
+        </EntityType>
+        <EntityType Name="MS_Users">
+          <Key>
+            <PropertyRef Name="Username" />
+          </Key>
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProfilePic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityQuestion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityAnswer" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UserRole" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserCategoryID" Type="Int32" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MS_UserAdresses" Relationship="MembershipModel.FK_UserAdresses_Users" FromRole="MS_Users" ToRole="MS_UserAdresses" />
+          <NavigationProperty Name="MS_UserCategories" Relationship="MembershipModel.FK_Users_UserCategories" FromRole="MS_Users" ToRole="MS_UserCategories" />
+          <NavigationProperty Name="MS_UserEducations" Relationship="MembershipModel.FK_UserEducations_Users" FromRole="MS_Users" ToRole="MS_UserEducations" />
+          <NavigationProperty Name="MS_UsersData" Relationship="MembershipModel.FK_UsersData_Users" FromRole="MS_Users" ToRole="MS_UsersData" />
+          <NavigationProperty Name="MS_UserWorks" Relationship="MembershipModel.FK_UserWorks_Users" FromRole="MS_Users" ToRole="MS_UserWorks" />
+        </EntityType>
+        <EntityType Name="MS_UsersData">
+          <Key>
+            <PropertyRef Name="UserDataID" />
+          </Key>
+          <Property Name="UserDataID" Type="Int64" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UsersDataCategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserData" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MS_Users" Relationship="MembershipModel.FK_UsersData_Users" FromRole="MS_UsersData" ToRole="MS_Users" />
+        </EntityType>
+        <EntityType Name="MS_UserWorks">
+          <Key>
+            <PropertyRef Name="WorkID" />
+          </Key>
+          <Property Name="WorkID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Organization" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WorkHere" Type="Boolean" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Hide" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MS_Users" Relationship="MembershipModel.FK_UserWorks_Users" FromRole="MS_UserWorks" ToRole="MS_Users" />
+        </EntityType>
+        <Association Name="FK_UserEducations_EducationQualificationTypes">
+          <End Type="MembershipModel.MS_EducationQualificationTypes" Role="MS_EducationQualificationTypes" Multiplicity="1" />
+          <End Type="MembershipModel.MS_UserEducations" Role="MS_UserEducations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_EducationQualificationTypes">
+              <PropertyRef Name="EducationQualificationTypeID" />
+            </Principal>
+            <Dependent Role="MS_UserEducations">
+              <PropertyRef Name="EducationQualificationTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAdresses_Users">
+          <End Type="MembershipModel.MS_Users" Role="MS_Users" Multiplicity="1" />
+          <End Type="MembershipModel.MS_UserAdresses" Role="MS_UserAdresses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UserAdresses">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserCategories">
+          <End Type="MembershipModel.MS_UserCategories" Role="MS_UserCategories" Multiplicity="0..1" />
+          <End Type="MembershipModel.MS_Users" Role="MS_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_UserCategories">
+              <PropertyRef Name="UserCategoryID" />
+            </Principal>
+            <Dependent Role="MS_Users">
+              <PropertyRef Name="UserCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserEducations_Users">
+          <End Type="MembershipModel.MS_Users" Role="MS_Users" Multiplicity="1" />
+          <End Type="MembershipModel.MS_UserEducations" Role="MS_UserEducations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UserEducations">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersData_Users">
+          <End Type="MembershipModel.MS_Users" Role="MS_Users" Multiplicity="1" />
+          <End Type="MembershipModel.MS_UsersData" Role="MS_UsersData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UsersData">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserWorks_Users">
+          <End Type="MembershipModel.MS_Users" Role="MS_Users" Multiplicity="1" />
+          <End Type="MembershipModel.MS_UserWorks" Role="MS_UserWorks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Users">
+              <PropertyRef Name="Username" />
+            </Principal>
+            <Dependent Role="MS_UserWorks">
+              <PropertyRef Name="Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MembershipModelStoreContainer" CdmEntityContainer="MembershipEntities">
+          <EntitySetMapping Name="MS_EducationQualificationTypes">
+            <EntityTypeMapping TypeName="MembershipModel.MS_EducationQualificationTypes">
+              <MappingFragment StoreEntitySet="MS_EducationQualificationTypes">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="EducationQualificationTypeID" ColumnName="EducationQualificationTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_UserAdresses">
+            <EntityTypeMapping TypeName="MembershipModel.MS_UserAdresses">
+              <MappingFragment StoreEntitySet="MS_UserAdresses">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+                <ScalarProperty Name="AddressCategory" ColumnName="AddressCategory" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_UserCategories">
+            <EntityTypeMapping TypeName="MembershipModel.MS_UserCategories">
+              <MappingFragment StoreEntitySet="MS_UserCategories">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="UserCategoryID" ColumnName="UserCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_UserEducations">
+            <EntityTypeMapping TypeName="MembershipModel.MS_UserEducations">
+              <MappingFragment StoreEntitySet="MS_UserEducations">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="EducationQualificationTypeID" ColumnName="EducationQualificationTypeID" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Stream" ColumnName="Stream" />
+                <ScalarProperty Name="InstituteName" ColumnName="InstituteName" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="EducationID" ColumnName="EducationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_Users">
+            <EntityTypeMapping TypeName="MembershipModel.MS_Users">
+              <MappingFragment StoreEntitySet="MS_Users">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="UserCategoryID" ColumnName="UserCategoryID" />
+                <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="SecurityAnswer" ColumnName="SecurityAnswer" />
+                <ScalarProperty Name="SecurityQuestion" ColumnName="SecurityQuestion" />
+                <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_UsersData">
+            <EntityTypeMapping TypeName="MembershipModel.MS_UsersData">
+              <MappingFragment StoreEntitySet="MS_UsersData">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="UserData" ColumnName="UserData" />
+                <ScalarProperty Name="UsersDataCategory" ColumnName="UsersDataCategory" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="UserDataID" ColumnName="UserDataID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_UserWorks">
+            <EntityTypeMapping TypeName="MembershipModel.MS_UserWorks">
+              <MappingFragment StoreEntitySet="MS_UserWorks">
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="WorkHere" ColumnName="WorkHere" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Organization" ColumnName="Organization" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

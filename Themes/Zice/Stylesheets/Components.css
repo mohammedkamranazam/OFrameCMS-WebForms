@@ -1,0 +1,5250 @@
+﻿
+.Black {
+    color: black;
+}
+
+.Blue {
+    color: blue;
+}
+
+.Green {
+    color: green;
+}
+
+.White {
+    color: white;
+}
+
+.Orange {
+    color: orange;
+}
+
+.Yellow {
+    color: yellow;
+}
+
+.Red {
+    color: red;
+}
+
+.Fast {
+    -ms-animation: blink 300ms linear infinite;
+    -o-animation: blink 300ms linear infinite;
+    -moz-animation: blink 300ms linear infinite;
+    -webkit-animation: blink 300ms linear infinite;
+    animation: blink 300ms linear infinite;
+}
+
+.Regular {
+    -ms-animation: blink 750ms linear infinite;
+    -o-animation: blink 750ms linear infinite;
+    -moz-animation: blink 750ms linear infinite;
+    -webkit-animation: blink 750ms linear infinite;
+    animation: blink 750ms linear infinite;
+}
+
+.Slow {
+    -ms-animation: blink 1500ms linear infinite;
+    -o-animation: blink 1500ms linear infinite;
+    -moz-animation: blink 1500ms linear infinite;
+    -webkit-animation: blink 1500ms linear infinite;
+    animation: blink 1500ms linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*---------------Product Colors Component Style---------------------------*/
+
+h6.ProductColorTitle {
+    font-family: Verdana;
+    font-size: 12px;
+    color: black;
+    line-height: 20px;
+}
+
+    h6.ProductColorTitle span {
+        font-family: Verdana;
+        font-size: 10px;
+        color: black;
+        line-height: 20px;
+    }
+
+a.ProductColor {
+    display: inline-block;
+    float: left;
+    margin: 5px;
+    border: 2px solid #cccccc;
+    font-family: Verdana;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    max-width: 30px;
+    max-height: 30px;
+    min-height: 15px;
+    min-width: 15px;
+}
+
+    a.ProductColor .SpanTip {
+        display: none;
+    }
+
+    a.ProductColor:hover .SpanTip {
+        display: inline-block;
+        position: absolute;
+        margin: 30px 0 0 -20px;
+        padding: 3px;
+        color: #fff;
+        z-index: 9999;
+        background: #333333;
+        border: 1px dashed #ffffff;
+        border: 1px dashed rgba(255,255,255,0.4);
+        line-height: 15px;
+        text-align: justify;
+        border-radius: 2px;
+        font-family: verdana;
+        font-size: 10px;
+        opacity: 1;
+        box-shadow: 0 0 0 3px #333333;
+    }
+
+    a.ProductColor img {
+        max-width: 30px;
+        max-height: 30px;
+        min-height: 15px;
+        min-width: 15px;
+    }
+
+    a.ProductColor:hover {
+        border: 2px solid #333333;
+    }
+
+a.ProductColorSelected {
+    border: 2px solid #008bc9;
+}
+
+    a.ProductColorSelected:hover {
+        border: 2px solid #008bc9;
+    }
+
+/*-------------------------Product Sizes Component Style-------------------------------------------*/
+
+h6.ProductSizeTitle {
+    font-family: Verdana;
+    font-size: 12px;
+    color: black;
+    line-height: 20px;
+}
+
+    h6.ProductSizeTitle span {
+        font-family: Verdana;
+        font-size: 10px;
+        color: black;
+        line-height: 20px;
+    }
+
+a.ProductSize {
+    display: inline-block;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid #eeeeee;
+    font-family: Verdana;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+}
+
+    a.ProductSize:hover {
+        border: 2px solid #333333;
+    }
+
+a.ProductSizeSelected {
+    border: 2px solid #008bc9;
+}
+
+    a.ProductSizeSelected:hover {
+        border: 2px solid #008bc9;
+    }
+
+/*----------Product Sections-----------------------------------------------------------------*/
+
+.ProductSections li.Section {
+    border: 1px solid #eeeeee;
+}
+
+    .ProductSections li.Section:hover {
+        border-color: #bbbbbb;
+    }
+
+.ProductSections li.Selected {
+    border-color: #730236;
+    border-color: rgba(115,2,54,0.4);
+    box-shadow: #730236 0 0 5px;
+    box-shadow: rgba(115,2,54,0.5) 0 0 5px;
+}
+
+.ProductSections li.Section a.SectionTitle {
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: Verdana;
+    line-height: 15px;
+    display: block;
+    padding: 3px 5px 3px 5px;
+    background: #730236;
+    color: white;
+}
+
+    .ProductSections li.Section a.SectionTitle:hover {
+        background: #252324;
+    }
+
+/*--------Product Categories--------------------------------------------------------------------*/
+
+.ProductCategories li.Category {
+    padding: 2px;
+    border: 1px solid #eeeeee;
+    box-shadow: #000000 0 0 5px;
+    box-shadow: rgba(0,0,0,0.2) 0 0 5px;
+}
+
+    .ProductCategories li.Category:hover {
+        border-color: #bbbbbb;
+    }
+
+.ProductCategories li.Selected {
+    border-color: #008bc9;
+    border-color: rgba(0,139,201,0.4);
+    background: #222222;
+}
+
+.ProductCategories li.Category a.CategoryTitle {
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: Verdana;
+    line-height: 15px;
+    display: block;
+    padding: 3px 5px 3px 5px;
+    background: #008bc9;
+    color: white;
+}
+
+    .ProductCategories li.Category a.CategoryTitle:hover {
+        background: #252324;
+    }
+
+/*--------------Product SubCategories-------------------------------------------*/
+
+.ProductSubCategories {
+    list-style-type: none;
+}
+
+    .ProductSubCategories li.SubCategory {
+        background: #80a020;
+    }
+
+        .ProductSubCategories li.SubCategory:hover {
+            background: #252324;
+        }
+
+    .ProductSubCategories li.Selected {
+        background: #2a2a2a;
+        border: none;
+        box-shadow: none;
+        /* border-color: rgba(42, 42, 42, 0.4);*/
+        /* box-shadow: rgba(42, 42, 42, 0.8) 0 0 7px;*/
+    }
+
+    .ProductSubCategories li.SubCategory a.SubCategoryTitle {
+        line-height: 20px;
+        padding: 0 5px 0 5px;
+        border-left: 10px solid transparent;
+        border-bottom: 1px solid #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        display: block;
+        font-family: Verdana;
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+    }
+
+/*------------------Products-------------------------------------------------------------*/
+
+.Products {
+}
+
+    .Products tr td {
+        vertical-align: top;
+    }
+
+.ProductsSearchBox {
+    height: 30px;
+    width: 1000px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.SearchTextField {
+    height: 26px;
+    line-height: 26px;
+    font-family: Verdana;
+    font-size: 15px;
+    border: 1px solid #cccccc;
+    width: 700px;
+    margin: 0;
+}
+
+.SearchDropDown {
+    height: 28px;
+    width: 230px;
+    line-height: 26px;
+    font-family: Verdana;
+    font-size: 15px;
+    margin: 0 0 0 10px;
+}
+
+.SearchButton {
+    background-position: center center;
+    line-height: 26px;
+    float: right;
+    width: 30px;
+    margin: 0 0 0 0;
+    border: none;
+    background-color: #008bc9;
+    background-image: url('/Themes/Zice/Graphics/search.png');
+    background-repeat: no-repeat;
+}
+
+    .SearchButton:hover {
+        background-color: #80a020;
+    }
+
+.EmptyProducts {
+    text-align: center;
+    padding: 10px;
+}
+
+.Products .LoadMoreButton {
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    background: #dddddd;
+    margin-top: 20px;
+    color: #333333;
+    border: none;
+    border-top: 2px solid #aaaaaa;
+    font-family: Verdana;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+    .Products .LoadMoreButton:hover {
+        background: #008bc9;
+        border-top: 2px solid #333333;
+        color: white;
+    }
+
+.Products .LoadMoreButtonDisabled {
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    background: #eeeeee;
+    margin-top: 20px;
+    color: #666666;
+    border: none;
+    border-top: 2px solid #aaaaaa;
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.Products {
+}
+
+.Product {
+    width: 220px;
+    margin: 5px;
+    background: #ffffff;
+    border: 2px solid transparent;
+    float: left;
+}
+
+    .Product:hover {
+        border: 2px solid #008bc9;
+    }
+
+    .Product img.ThumbnailImage {
+        width: 195px;
+        height: 195px;
+        display: block;
+        margin: 25px 10px 0 10px;
+    }
+
+    .Product a.Title {
+        font-family: Verdana;
+        font-size: 11px;
+        line-height: 15px;
+        width: 210px;
+        background: #008bc9;
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+        overflow: hidden;
+        padding: 3px 5px 3px 5px;
+        text-transform: capitalize;
+    }
+
+        .Product a.Title:hover {
+            background: #333333;
+        }
+
+    .Product span.OriginalPrice {
+        font-weight: bold;
+        font-family: Verdana;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 0 5px 0 5px;
+    }
+
+    .Product span.OriginalPriceStriked {
+        font-style: italic;
+        text-decoration: line-through;
+        font-weight: normal;
+        font-family: Verdana;
+        color: #999999;
+        font-size: 11px;
+        line-height: 20px;
+        padding: 0 5px 0 5px;
+    }
+
+    .Product span.DiscountPrice {
+        font-weight: bold;
+        font-family: Verdana;
+        font-size: 12px;
+        line-height: 20px;
+        color: black;
+        padding: 0 5px 0 0;
+    }
+
+    .Product span.DiscountBadge {
+        display: inline-block;
+        line-height: 20px;
+        padding: 0 5px 0 5px;
+        font-family: Verdana;
+        font-size: 12px;
+        background: #000000;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        position: absolute;
+    }
+
+        .Product span.DiscountBadge:hover {
+            background: #000000;
+            background: rgba(0,0,0,1);
+        }
+
+    .Product div.AvailabilityType {
+        font-family: Verdana;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 15px;
+        padding: 0 5px 0 5px;
+    }
+
+    .Product span.OutOfStock {
+        display: block;
+        font-family: Verdana;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 0 5px 0 5px;
+        color: red;
+    }
+
+    .Product div.BadgeDiv {
+        position: absolute;
+        margin-top: -43px;
+    }
+
+    .Product img.SpecialOffer {
+        width: 35px;
+        height: 35px;
+        float: right;
+        margin: 28px 5px 5px 180px;
+        position: absolute;
+    }
+
+    .Product img.HotItem {
+        width: 35px;
+        height: 35px;
+        float: left;
+        margin: 5px;
+        position: absolute;
+    }
+
+    .Product img.NewArrival {
+        width: 35px;
+        height: 35px;
+        float: left;
+        margin: 5px 5px 5px 180px;
+        position: absolute;
+    }
+    /*-------------------------------------------------------------*/
+    .Product h6.ProductColorTitle {
+        font-family: Verdana;
+        font-size: 10px;
+        color: black;
+        line-height: 10px;
+    }
+
+        .Product h6.ProductColorTitle span {
+            font-family: Verdana;
+            font-size: 8px;
+            color: black;
+            line-height: 20px;
+        }
+
+    .Product a.ProductColor {
+        display: inline-block;
+        float: left;
+        margin: 5px;
+        border: 1px solid #cccccc;
+        font-family: Verdana;
+        font-size: 10px;
+        text-decoration: none;
+        color: black;
+        width: 15px;
+        height: 15px;
+    }
+
+        .Product a.ProductColor img {
+            width: 15px;
+            height: 15px;
+        }
+
+        .Product a.ProductColor:hover {
+            border: 1px solid #333333;
+        }
+
+    .Product a.ProductColorSelected {
+        border: 1px solid #008bc9;
+    }
+
+        .Product a.ProductColorSelected:hover {
+            border: 1px solid #008bc9;
+        }
+
+    /*-------------------------------------------------------------*/
+
+    .Product div.FewDetails {
+        clear: both;
+    }
+
+    .Product div.Rating {
+        display: block;
+        height: 21px;
+        padding-left: 5px;
+    }
+
+    .Product .EmptyStarRating {
+        background-image: url('/Themes/Zice/Graphics/emptyStar.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .Product .FilledStarRating {
+        background-image: url('/Themes/Zice/Graphics/filledStar.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .Product .StarRating {
+        height: 15px;
+        width: 15px;
+        margin: 3px;
+        float: left;
+    }
+
+    .Product .WaitingStarRating {
+        background: orange;
+    }
+
+    .Product div.ProductMouseOver {
+        text-align: center;
+        display: none;
+        background: #333333;
+        z-index: 999999;
+        width: 220px;
+    }
+
+    .Product:hover div.ProductMouseOver {
+        text-align: center;
+        display: block;
+        position: absolute;
+    }
+
+    .Product a.MoreInfo {
+        display: inline-block;
+        padding: 3px 10px 3px 10px;
+        text-decoration: none;
+        font-family: Verdana;
+        font-size: 12px;
+        background: #008bc9;
+        margin: 4px 5px 4px 5px;
+        color: White;
+    }
+
+        .Product a.MoreInfo:hover {
+            background: #ffffff;
+            color: #008bc9;
+        }
+
+    .Product a.AddToCart {
+        display: inline-block;
+        padding: 3px 10px 3px 10px;
+        text-decoration: none;
+        font-family: Verdana;
+        font-size: 12px;
+        background: #008bc9;
+        margin: 4px 5px 4px 5px;
+        color: White;
+    }
+
+        .Product a.AddToCart:hover {
+            background: #ffffff;
+            color: #008bc9;
+        }
+
+    .Product span.ReviewsCount {
+        font-family: Verdana;
+        font-size: 10px;
+        line-height: 21px;
+        padding-left: 5px;
+        display: inline-block;
+    }
+
+    .Product .Highlights {
+        margin: 0;
+    }
+
+        .Product .Highlights span {
+            background-position: left center;
+            font-family: Verdana;
+            font-size: 11px;
+            color: #000000;
+            line-height: 15px;
+            display: block;
+            margin: 2px;
+            padding-left: 15px;
+            background-image: url('/Themes/Zice/Graphics/dot.png');
+            background-repeat: no-repeat;
+        }
+
+
+
+/*--------Product Details---------------------------------------------------------------------*/
+
+.ProductDetailsDiv .LeftDiv {
+    width: 300px;
+    float: left;
+}
+
+.ProductDetailsDiv .RightDiv {
+    width: 600px;
+    float: right;
+    border: 1px solid #eeeeee;
+    padding: 5px 0 5px 0;
+}
+
+
+.ProductDetailsDiv .ProductIcons {
+    margin-top: 10px;
+}
+
+    .ProductDetailsDiv .ProductIcons ul {
+        list-style-type: none;
+    }
+
+        .ProductDetailsDiv .ProductIcons ul li {
+            float: left;
+            display: inline-block;
+            margin: 6px;
+        }
+
+            .ProductDetailsDiv .ProductIcons ul li img {
+                width: 30.8px;
+                height: 30.8px;
+            }
+
+.ProductDetailsDiv .ProductImages {
+}
+
+    .ProductDetailsDiv .ProductImages img.BigThumbImage {
+        width: 300px;
+        height: 300px;
+        box-shadow: 0 0 15px 3px #000000;
+        box-shadow: 0 0 15px 3px rgba(0,0,0,0.5);
+        margin-bottom: 15px;
+    }
+
+    .ProductDetailsDiv .ProductImages ul.SmallThumbImages {
+        list-style-type: none;
+    }
+
+        .ProductDetailsDiv .ProductImages ul.SmallThumbImages li {
+            float: left;
+            display: inline-block;
+            margin: 2px;
+        }
+
+            .ProductDetailsDiv .ProductImages ul.SmallThumbImages li a {
+                border: 1px solid #000000;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                display: block;
+            }
+
+                .ProductDetailsDiv .ProductImages ul.SmallThumbImages li a:hover {
+                    border: 1px solid #008bc9;
+                }
+
+                .ProductDetailsDiv .ProductImages ul.SmallThumbImages li a.active {
+                    border: 1px solid #008bc9;
+                }
+
+                .ProductDetailsDiv .ProductImages ul.SmallThumbImages li a img {
+                    width: 54px;
+                    height: 54px;
+                    cursor: pointer;
+                }
+
+
+.ProductDetailsDiv div.BadgeDiv {
+    position: absolute;
+    margin-top: -50px;
+}
+
+.ProductDetailsDiv img.HotItem {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 5px 5px 5px 15px;
+}
+
+.ProductDetailsDiv img.NewArrival {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 5px 5px 5px 25px;
+}
+
+.ProductDetailsDiv span.OutOfStock {
+    display: block;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 5px;
+    color: red;
+    text-align: right;
+}
+
+.ProductDetailsDiv span.InStock {
+    display: block;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 5px;
+    color: green;
+    text-align: right;
+}
+
+.ProductDetailsDiv h1.Title {
+    font-family: Verdana;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 0 10px 0 5px;
+    border: none;
+}
+
+.ProductDetailsDiv h3.SubTitle {
+    font-family: Verdana;
+    font-size: 15px;
+    padding: 0 10px 0 10px;
+    line-height: 30px;
+}
+
+.ProductDetailsDiv .Highlights {
+    margin: 5px 10px 5px 10px;
+    width: 100%;
+}
+
+    .ProductDetailsDiv .Highlights span {
+        width: 42%;
+        float: left;
+        background-position: left center;
+        font-family: Verdana;
+        font-size: 12px;
+        color: #008bc9;
+        line-height: 30px;
+        display: inline-block;
+        margin: 3px 3px 3px 10px;
+        padding-left: 30px;
+        background-image: url('/Themes/Zice/Graphics/highlight.png');
+        background-repeat: no-repeat;
+    }
+
+.ProductDetailsDiv .ColorsDiv {
+    margin: 5px 10px 5px 10px;
+}
+
+.ProductDetailsDiv .SizesDiv {
+    margin: 5px 10px 5px 10px;
+}
+
+.ProductDetailsDiv .StatisticsDiv {
+    border: 1px solid #eeeeee;
+    height: 30px;
+    margin: 5px 10px 5px 10px;
+}
+
+.ProductDetailsDiv span.Rating {
+    height: 30px;
+    float: left;
+    border-right: 1px solid #eeeeee;
+    padding: 0 10px 0 10px;
+}
+
+.ProductDetailsDiv .EmptyStarRating {
+    background-image: url('/Themes/Zice/Graphics/emptyStar.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ProductDetailsDiv .FilledStarRating {
+    background-image: url('/Themes/Zice/Graphics/filledStar.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ProductDetailsDiv .StarRating {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    float: left;
+}
+
+.ProductDetailsDiv .WaitingStarRating {
+    background: orange;
+}
+
+.ProductDetailsDiv span.Likes {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    padding: 0 10px 0 10px;
+    font-family: Verdana;
+    font-size: 12px;
+    border-right: 1px solid #eeeeee;
+}
+
+.ProductDetailsDiv span.Reviews {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    padding: 0 10px 0 10px;
+    font-family: Verdana;
+    font-size: 12px;
+    border-right: 1px solid #eeeeee;
+}
+
+.ProductDetailsDiv span.Socials {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    padding: 0 10px 0 10px;
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.ProductDetailsDiv .DataDiv {
+    padding: 0 10px 10px 10px;
+}
+
+.ProductDetailsDiv .LeftDataDiv {
+    float: left;
+    width: 285px;
+}
+
+.ProductDetailsDiv .RightDataDiv {
+    float: right;
+    width: 285px;
+}
+
+.ProductDetailsDiv .PriceDiv {
+    border: 1px solid #eeeeee;
+    padding: 5px 5px 5px 5px;
+}
+
+.ProductDetailsDiv .PriceDescription {
+    font-family: Verdana;
+    font-size: 11px;
+    color: black;
+    text-align: justify;
+    padding-top: 5px;
+}
+
+.ProductDetailsDiv .AvailabilityDiv {
+    border: 1px solid #eeeeee;
+    padding: 5px 5px 5px 5px;
+    margin-top: 5px;
+}
+
+.ProductDetailsDiv .AvailabilityTypeDiv {
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.ProductDetailsDiv .AvailabilityDescriptionDiv {
+    font-family: Verdana;
+    font-size: 11px;
+    color: black;
+    text-align: justify;
+}
+
+.ProductDetailsDiv .DiscountDiv {
+    text-align: right;
+}
+
+.ProductDetailsDiv .SpecialOfferDiv {
+    margin-top: 5px;
+    font-family: Verdana;
+    text-align: justify;
+    font-size: 11px;
+    color: #333333;
+    border: 1px solid #eeeeee;
+    padding: 5px;
+}
+
+.ProductDetailsDiv .SpecialOfferBadge {
+    background-position: center center;
+    width: 50px;
+    height: 50px;
+    margin: -50px 0 0 -10px;
+    position: absolute;
+    background-image: url('/Themes/Zice/Graphics/offer.png');
+    background-repeat: no-repeat;
+}
+
+.ProductDetailsDiv .DetailsDiv {
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: Verdana;
+    font-size: 11px;
+    color: #333333;
+    text-align: justify;
+}
+
+.ProductDetailsDiv span.OriginalPrice {
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: red;
+    display: inline-block;
+}
+
+.ProductDetailsDiv span.OriginalPriceStriked {
+    font-weight: normal;
+    font-family: Verdana;
+    font-size: 14px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    font-style: italic;
+    text-decoration: line-through;
+    color: #666666;
+}
+
+.ProductDetailsDiv span.DiscountPrice {
+    font-weight: bold;
+    font-family: Verdana;
+    display: inline-block;
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: red;
+}
+
+.ProductDetailsDiv span.DiscountBadge {
+    font-family: Verdana;
+    font-size: 15px;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 2px dashed #1C344C;
+    background: #91C46C;
+    box-shadow: 0 0 0 3px #91C46C;
+}
+
+    .ProductDetailsDiv span.DiscountBadge:hover {
+        border: 2px dashed #307360;
+        background: #1C344C;
+        box-shadow: 0 0 0 5px #1C344C;
+    }
+
+.ProductDetailsDiv .DescriptionDiv {
+    margin-top: 20px;
+    border: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+.ProductDetailsDiv .ReviewsDiv {
+    margin-top: 20px;
+    border: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+    .ProductDetailsDiv .ReviewsDiv h3 {
+        font-family: Verdana;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0 10px 5px 10px;
+        border-bottom: 2px dashed #008bc9;
+        color: #333333;
+        display: inline-block;
+    }
+
+/*--------Albums Gallery--------------------------------------------------------------*/
+
+.AlbumsComponent {
+    margin: 10px auto;
+    width: 1060px;
+}
+
+
+
+.AlbumsGallery {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border: 1px solid #000000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 1px #000000;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+
+    .AlbumsGallery:hover {
+        border-color: #008bc9;
+        box-shadow: 0 0 10px 3px #008bc9;
+        box-shadow: 0 0 10px 3px rgba(0, 139, 201, 0.3);
+    }
+
+    .AlbumsGallery img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        z-index: 1;
+    }
+
+    .AlbumsGallery div.Description {
+        display: none;
+        background: black;
+        -ms-opacity: 0.8;
+        opacity: 0.8;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        margin-top: -200px;
+        overflow: hidden;
+    }
+
+    .AlbumsGallery:hover div.Description {
+        display: block;
+    }
+
+    .AlbumsGallery div.Description p {
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        line-height: 15px;
+        text-transform: capitalize;
+        padding: 5px;
+    }
+
+    .AlbumsGallery div.Description span.Title {
+        margin: 0;
+        display: block;
+        line-height: 20px;
+        height: 20px;
+        padding: 0 5px 0 5px;
+        color: White;
+        background: #333333;
+        opacity: 1;
+        font-family: Verdana;
+        font-size: 10px;
+        overflow: hidden;
+        width: 190px;
+        bottom: 20px;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+        position: absolute;
+    }
+
+    .AlbumsGallery div.Description span.DateCount {
+        margin: 0;
+        display: block;
+        line-height: 20px;
+        height: 20px;
+        padding: 0 5px 0 5px;
+        color: White;
+        background: #333333;
+        opacity: 1;
+        font-family: Verdana;
+        font-size: 10px;
+        overflow: hidden;
+        width: 190px;
+        bottom: 0;
+        position: absolute;
+    }
+
+        .AlbumsGallery div.Description span.DateCount span.Date {
+            float: left;
+        }
+
+        .AlbumsGallery div.Description span.DateCount span.Count {
+            float: right;
+        }
+
+/*------Photos Gallery----------------------------------------------------------------*/
+
+.PhotosGallery {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+    .PhotosGallery a {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin: 0;
+        float: left;
+        padding: 0;
+    }
+
+        .PhotosGallery a img {
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+            .PhotosGallery a img:hover {
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+.AlbumPics {
+    margin: 20px auto;
+    width: 100%;
+}
+
+    .AlbumPics .Pager {
+        font-family: Verdana;
+        font-size: 12px;
+        line-height: 30px;
+        padding: 0 20px 0 20px;
+        clear: both;
+    }
+
+        .AlbumPics .Pager .ButtonCssClass {
+            padding: 5px;
+            border-radius: 3px;
+            background: #333333;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+        }
+
+            .AlbumPics .Pager .ButtonCssClass:hover {
+                background: #111111;
+                cursor: pointer;
+            }
+
+        .AlbumPics .Pager .CurrentPageLabelCssClass {
+            padding: 5px;
+            border-radius: 3px;
+            background: #008bc9;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+            cursor: no-drop;
+        }
+
+        .AlbumPics .Pager .NumericButtonCssClass, .Posts .Pager .NextPreviousButtonCssClass {
+            padding: 5px;
+            border-radius: 3px;
+            background: #333333;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+            .AlbumPics .Pager .NumericButtonCssClass:hover, .Posts .Pager .NextPreviousButtonCssClass:hover {
+                background: #111111;
+            }
+
+/*---------------------------------------------------------------------------*/
+
+
+
+/*#region PopUpStyle*/
+
+.AddToCartButton {
+    margin: 5px;
+    height: 30px;
+    line-height: 30px;
+    background: #007ACC;
+    border: none;
+    padding: 0 20px 0 20px;
+    color: white;
+    font-family: Verdana;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+    .AddToCartButton:hover {
+        background: #1C1C1C;
+        color: white;
+    }
+
+.ShowCartPopUpButton {
+    margin: 5px;
+    display: block;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    background: #007ACC;
+    border: none;
+    padding: 0 20px 0 20px;
+    color: white;
+    font-family: Verdana;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+}
+
+    .ShowCartPopUpButton:hover {
+        background: #1C1C1C;
+        color: white;
+    }
+
+/*#endregion*/
+
+/*#region CartPopUP Styles*/
+
+.CartPopUp {
+    background: white;
+    border: 1px solid #007ACC;
+    box-shadow: 0 0 20px 1px #007acc;
+    box-shadow: 0 0 20px 1px rgba(0, 122, 204, 0.5);
+    max-height: 602px;
+    width: 1000px;
+}
+
+    .CartPopUp .Title {
+        display: block;
+        border-bottom: 2px solid #686868;
+        background: #1C1C1C;
+        width: 1000px;
+        height: 40px;
+    }
+
+        .CartPopUp .Title .MessageLabel {
+            line-height: 40px;
+            padding: 0 10px 0 10px;
+            font-family: Verdana;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+    .CartPopUp .CloseButton {
+        float: right;
+        height: 28px;
+        width: 28px;
+        margin: 5px;
+        color: #cccccc;
+        background: #1C1C1C;
+        border: 1px solid transparent;
+        font-family: Verdana;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+        .CartPopUp .CloseButton:hover {
+            background: #444444;
+            border: 1px solid #007ACC;
+            color: #ffffff;
+        }
+
+    .CartPopUp .CartGridComponent .CartGridPanel {
+        max-height: 333px;
+        overflow: auto;
+    }
+
+/*#endregion*/
+
+/*#region CartGridComponent Styles*/
+
+.CartGridComponent {
+    width: 1000px;
+}
+
+    .CartGridComponent .Footer {
+        display: block;
+        border-top: 1px solid #686868;
+        background: #1C1C1C;
+        width: 1000px;
+        height: 40px;
+    }
+
+        .CartGridComponent .Footer .CartSubTotalAmountLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 10px 0 10px;
+            float: right;
+            color: orange;
+        }
+
+        .CartGridComponent .Footer .CartSubTotalAmountTextLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            padding: 0 0 0 10px;
+            float: right;
+            color: white;
+        }
+
+        .CartGridComponent .Footer .CartDiscountAmountLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 10px 0 10px;
+            float: right;
+            color: green;
+        }
+
+        .CartGridComponent .Footer .CartDiscountAmountTextLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            padding: 0 0 0 10px;
+            float: right;
+            color: white;
+        }
+
+        .CartGridComponent .Footer .CartPromoCodeDiscountAmountLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 10px 0 10px;
+            float: right;
+            color: green;
+        }
+
+        .CartGridComponent .Footer .CartPromoCodeDiscountAmountTextLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            padding: 0 0 0 10px;
+            float: right;
+            color: white;
+        }
+
+        .CartGridComponent .Footer .CartTotalAmountLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 10px 0 10px;
+            float: right;
+            color: orangered;
+        }
+
+        .CartGridComponent .Footer .CartTotalAmountTextLabel {
+            line-height: 40px;
+            font-family: Verdana;
+            font-size: 16px;
+            padding: 0 0 0 10px;
+            float: right;
+            color: white;
+        }
+
+        .CartGridComponent .Footer .CheckOutLink {
+            margin: 5px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            background: #007ACC;
+            border: none;
+            padding: 0 20px 0 20px;
+            color: white;
+            font-family: Verdana;
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            .CartGridComponent .Footer .CheckOutLink:hover {
+                background: #ffffff;
+                color: #007ACC;
+            }
+
+        .CartGridComponent .Footer .CheckOutLinkDisabled {
+            margin: 5px;
+            height: 30px;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 30px;
+            background: #aaaaaa;
+            border: none;
+            border-radius: 0;
+            padding: 0 20px 0 20px;
+            color: #444444;
+            font-family: Verdana;
+            font-size: 13px;
+            cursor: default;
+        }
+
+        .CartGridComponent .Footer .CartRefreshButton {
+            float: right;
+            height: 28px;
+            width: 28px;
+            margin: 5px;
+            color: #cccccc;
+            background: #1C1C1C;
+            border: 1px solid transparent;
+            font-family: Verdana;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            background-position: center center;
+            background-image: url('/Themes/Zice/Graphics/refresh-white.png');
+            background-repeat: no-repeat;
+        }
+
+            .CartGridComponent .Footer .CartRefreshButton:hover {
+                background-color: #444444;
+                background-position: center center;
+                background-image: url('/Themes/Zice/Graphics/refresh-white.png');
+                background-repeat: no-repeat;
+                border: 1px solid #007ACC;
+                color: #ffffff;
+            }
+
+    .CartGridComponent .CartGridPanel {
+    }
+
+        .CartGridComponent .CartGridPanel .CartGridView {
+        }
+
+            .CartGridComponent .CartGridPanel .CartGridView div.EmtyCartPlaceHolder {
+                height: 200px;
+                width: 1000px;
+                text-align: center;
+            }
+
+                .CartGridComponent .CartGridPanel .CartGridView div.EmtyCartPlaceHolder a {
+                    margin: 0 auto;
+                    display: block;
+                    width: 200px;
+                    height: 200px;
+                    background-position: center center;
+                    background-image: url('/Themes/Zice/Graphics/cartEmptyIcon.png');
+                    background-repeat: no-repeat;
+                }
+
+            /*#endregion*/
+
+            /*#region CartGridStyles*/
+
+            .CartGridComponent .CartGridPanel .CartGridView .RowHeaderGap {
+                height: 26px;
+                width: 99%;
+                padding: 0 5px 0 5px;
+                display: block;
+            }
+
+    .CartGridComponent .RowHeader {
+        height: 25px;
+        background: #1C1C1C;
+        padding: 0 5px 0 5px;
+        width: 99%;
+        display: block;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0,0,0,0);
+    }
+
+        .CartGridComponent .RowHeader div {
+            float: left;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 11px;
+            line-height: 25px;
+            font-weight: bold;
+            color: white;
+            border-right: 1px solid #000000;
+            border-right: 1px solid rgba(0, 0, 0, 0);
+        }
+
+            .CartGridComponent .RowHeader div.ImageHeader {
+                width: 100px;
+                margin-right: 10px;
+            }
+
+            .CartGridComponent .RowHeader div.TitleHeader {
+                width: 200px;
+                padding-right: 10px;
+            }
+
+            .CartGridComponent .RowHeader div.ItemNumberHeader {
+                width: 150px;
+            }
+
+            .CartGridComponent .RowHeader div.QuantityHeader {
+                width: 150px;
+            }
+
+            .CartGridComponent .RowHeader div.OriginalPriceHeader {
+                width: 150px;
+            }
+
+            .CartGridComponent .RowHeader div.DiscountPriceHeader {
+                width: 150px;
+            }
+
+            .CartGridComponent .RowHeader div.ToolsHeader {
+                width: 30px;
+                border: none;
+            }
+
+    .CartGridComponent .CartGridPanel .CartGridView .Row {
+        height: 100px;
+        width: 973px;
+        display: block;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+        padding: 5px 5px 5px 5px;
+    }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row div {
+            border-right: 1px solid #008bc9;
+            border-right: 1px solid rgba(0, 139, 201, 0.80);
+            float: left;
+            height: 100px;
+            text-align: center;
+            font-family: Verdana;
+            font-size: 12px;
+        }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row img.ProductImage {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row div.ProductTitle {
+            width: 200px;
+            text-align: justify;
+            padding: 0 10px 0 0;
+        }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.ProductTitle span {
+                font-size: 11px;
+                color: #000000;
+                font-family: Verdana;
+                font-weight: bold;
+                display: block;
+            }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.ProductTitle small {
+                font-size: 10px;
+                color: #555555;
+                font-family: Verdana;
+                margin-top: 5px;
+                display: block;
+            }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row div.ItemNumber {
+            width: 150px;
+            color: black;
+        }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.ItemNumber span.ItemNumber {
+                font-family: Verdana;
+                font-size: 10px;
+                display: block;
+                line-height: 20px;
+            }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.ItemNumber span.Color {
+                font-family: Verdana;
+                font-size: 10px;
+                display: block;
+                line-height: 20px;
+            }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.ItemNumber span.Size {
+                font-family: Verdana;
+                font-size: 10px;
+                display: block;
+                line-height: 20px;
+            }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity {
+            width: 150px;
+        }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.Text {
+                display: block;
+                font-family: Verdana;
+                font-size: 12px;
+                line-height: 25px;
+                margin-top: 38px;
+                text-align: center;
+                color: black;
+            }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.Message {
+                width: 140px;
+                display: block;
+                padding: 0 5px 0 5px;
+                text-align: center;
+            }
+
+                .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.Message .Error {
+                    color: red;
+                    font-size: 10px;
+                    text-transform: lowercase;
+                }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.UpdateTools {
+                display: block;
+                height: 20px;
+                margin: 2px 0 0 0;
+                padding: 0;
+                text-align: center;
+            }
+
+                .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.UpdateTools .EditButton {
+                    background-position: center center;
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                    background-image: url('/Themes/Zice/Graphics/edit-white.png');
+                    background-repeat: no-repeat;
+                }
+
+                    .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.UpdateTools .EditButton:hover {
+                        background-image: url('/Themes/Zice/Graphics/edit-black.png');
+                    }
+
+                .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.UpdateTools .UpdateButton {
+                    background-position: center center;
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                    background-image: url('/Themes/Zice/Graphics/update-white.png');
+                    background-repeat: no-repeat;
+                }
+
+                    .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.UpdateTools .UpdateButton:hover {
+                        background-image: url('/Themes/Zice/Graphics/update-black.png');
+                    }
+
+                .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.UpdateTools .CancelButton {
+                    background-position: center center;
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                    background-image: url('/Themes/Zice/Graphics/cancel-white.png');
+                    background-repeat: no-repeat;
+                }
+
+                    .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.UpdateTools .CancelButton:hover {
+                        background-image: url('/Themes/Zice/Graphics/cancel-black.png');
+                    }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.Field {
+                display: block;
+                margin-top: 38px;
+                height: 25px;
+            }
+
+                .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.Field .ChangeQuantityTextBox {
+                    height: 20px;
+                    width: 110px;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    line-height: 20px;
+                    margin: 0 20px 0 20px;
+                    text-align: center;
+                    border: 1px solid black;
+                    background: #eeeeee;
+                }
+
+                    .CartGridComponent .CartGridPanel .CartGridView .Row div.Quantity span.Field .ChangeQuantityTextBox:focus {
+                        border-color: #007ACC;
+                        background: #ffffff;
+                    }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row div.DiscountPrice {
+            width: 150px;
+            line-height: 100px;
+            color: black;
+        }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row div.OriginalPrice {
+            width: 150px;
+            line-height: 100px;
+            color: black;
+        }
+
+        .CartGridComponent .CartGridPanel .CartGridView .Row div.Tools {
+            width: 30px;
+            border: none;
+            margin-left: 5px;
+        }
+
+            .CartGridComponent .CartGridPanel .CartGridView .Row div.Tools .DeleteButton {
+                margin-top: 30px;
+                background-position: center center;
+                display: inline-block;
+                padding: 12px;
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+                background-image: url('/Themes/Zice/Graphics/removeItem-black.png');
+                background-repeat: no-repeat;
+            }
+
+                .CartGridComponent .CartGridPanel .CartGridView .Row div.Tools .DeleteButton:hover {
+                    background-image: url('/Themes/Zice/Graphics/removeItem-red.png');
+                }
+
+/*#endregion*/
+
+/*#region Alert Message*/
+
+
+.alertMessage {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 25px 15px 45px;
+    width: auto;
+    cursor: pointer;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    background-color: #C2E3F0;
+    color: #34667A;
+    text-shadow: 1px 1px 1px #C8EBFB;
+    text-transform: uppercase;
+    background-image: url(/Themes/Zice/Graphics/info.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border-radius: 3px;
+}
+
+    .alertMessage span {
+        margin-right: 10px;
+        padding: 5px 0;
+    }
+
+    .alertMessage.error {
+        background-color: #fc4a48;
+        color: #5A0000;
+        -webkit-text-shadow: 1px 1px 1px #E64040;
+        text-shadow: 1px 1px 1px #E64040;
+        background-image: url(/Themes/Zice/Graphics/error.png);
+        border: 1px #a93a25 solid;
+    }
+
+        .alertMessage.error span {
+            margin-right: 10px;
+            padding: 5px 0;
+        }
+
+    .alertMessage.success {
+        background-color: #9bc652;
+        color: #324e03;
+        -webkit-text-shadow: 1px 1px 1px #5c9201;
+        text-shadow: 1px 1px 1px #5c9201;
+        background-image: url(/Themes/Zice/Graphics/checkmark2.png);
+        border: 1px solid #69a44d;
+    }
+
+        .alertMessage.success span {
+            margin-right: 10px;
+            padding: 5px 0;
+        }
+
+    .alertMessage.warning {
+        background-color: #fcdb72;
+        color: #987402;
+        -webkit-text-shadow: 1px 1px 1px #e7b104;
+        text-shadow: 1px 1px 1px #e7b104;
+        background-image: url(/Themes/Zice/Graphics/help.png);
+    }
+
+        .alertMessage.warning span {
+            margin-right: 10px;
+            padding: 5px 0;
+        }
+
+.alertMessageCloseButton {
+    margin-top: 15px;
+    padding: 2px 10px 2px 10px;
+    background-color: #4D90FE;
+    border: 1px solid #3079ED;
+    border-radius: 2px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+    cursor: default;
+    font-size: 11px;
+    font-family: Verdana;
+    text-align: center;
+    text-decoration: none;
+    background-image: linear-gradient( top,#4d90fe,#4787ed);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/*#endregion*/
+
+/*#region ModalPop Up*/
+.ModalBackground {
+    background: black;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+.ModalPopup {
+    background: white;
+    display: inline-block;
+    border: 1px solid #000000;
+    max-width: 500px;
+    min-width: 200px;
+    box-shadow: 0 0 20px #000000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+    .ModalPopup p {
+        text-align: center;
+        margin: 0;
+        padding: 10px 0 10px 0;
+        display: block;
+    }
+
+.PopupTitle {
+    display: block;
+    background: #333;
+    color: White;
+    font-family: Verdana;
+    font-size: 14px;
+    padding-left: 15px;
+    line-height: 30px;
+}
+
+.PopupMessage {
+    display: block;
+    background: #ffffff;
+    color: black;
+    font-family: Verdana;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    padding: 15px 15px 5px 15px;
+}
+
+/*#endregion*/
+
+.barborder {
+    width: 100px;
+}
+
+.bar {
+    width: 100px;
+}
+
+.style1 {
+    background: red;
+}
+
+.style2 {
+    background: yellow;
+}
+
+.style3 {
+    background: green;
+}
+
+.style4 {
+    background: blue;
+}
+
+#TooltipStyle {
+    position: absolute;
+    margin: 30px 0 0 -20px;
+    padding: 3px;
+    color: #fff;
+    display: none;
+    z-index: 9999999;
+    background: #333333;
+    border: 1px dashed #ffffff;
+    border: 1px dashed rgba(255,255,255,0.4);
+    line-height: 15px;
+    text-align: justify;
+    border-radius: 2px;
+    font-family: verdana;
+    font-size: 10px;
+    opacity: 1;
+    box-shadow: 0 0 0 3px #333333;
+    max-width: 300px;
+}
+
+.ManageImage {
+    max-width: 300px;
+    width: 90%;
+    margin: 25px auto;
+}
+
+.ajax__html_editor_extender_container {
+    margin-bottom: 15px;
+}
+
+/*#region Events Component*/
+
+.EventListDiv {
+    padding: 0;
+    width: 910px;
+    margin: 0 auto;
+}
+
+    .EventListDiv .EventListItemDiv {
+        width: 910px;
+        height: 150px;
+        background: white;
+        margin: 10px 0 10px 0;
+        border: 1px solid #000000;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px 2px #000000;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+    }
+
+        .EventListDiv .EventListItemDiv:hover {
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.4);
+            box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.4);
+        }
+
+        .EventListDiv .EventListItemDiv div.EventListItemContent {
+            height: 120px;
+        }
+
+            .EventListDiv .EventListItemDiv div.EventListItemContent a {
+                display: block;
+            }
+
+            .EventListDiv .EventListItemDiv div.EventListItemContent img.EventItemImage {
+                float: left;
+                width: 120px;
+                height: 120px;
+            }
+
+            .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv {
+                float: right;
+                height: 120px;
+                width: 780px;
+            }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h1.Title {
+                    display: block;
+                    line-height: 20px;
+                    font-size: 17px;
+                    font-family: Verdana;
+                    border: none;
+                    padding: 0 10px 0 0;
+                    overflow: hidden;
+                    text-align: left;
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                    .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h1.Title a {
+                        color: #008bc9;
+                        text-decoration: underline;
+                    }
+
+                        .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h1.Title a:hover {
+                            color: #333333;
+                        }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv h3.SubTitle {
+                    display: block;
+                    line-height: 20px;
+                    font-size: 14px;
+                    font-family: Verdana;
+                    color: #333333;
+                    padding: 0 10px 0 0;
+                    overflow: hidden;
+                    text-align: left;
+                    font-weight: normal;
+                    margin: 0;
+                }
+
+                .EventListDiv .EventListItemDiv div.EventListItemContent div.DescriptionDiv p.ShortDescription {
+                    padding: 10px;
+                    margin: 0;
+                    font-family: Verdana;
+                    text-align: justify;
+                    font-size: 11px;
+                    line-height: 15px;
+                    color: black;
+                }
+
+        .EventListDiv .EventListItemDiv div.Schedule {
+            background: #333333;
+            color: White;
+            line-height: 30px;
+            height: 30px;
+            display: block;
+        }
+
+            .EventListDiv .EventListItemDiv div.Schedule span.ScheduleSpan {
+                float: left;
+                font-family: Verdana;
+                font-size: 11px;
+                padding: 0 20px 0 20px;
+            }
+
+            .EventListDiv .EventListItemDiv div.Schedule a.ReadMoreAnchor {
+                display: block;
+                float: right;
+                background: #000000;
+                color: white;
+                padding: 0 20px 0 20px;
+                font-family: Verdana;
+                font-size: 11px;
+                text-decoration: none;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule a.ReadMoreAnchor:hover {
+                    background: #008bc9;
+                }
+
+            .EventListDiv .EventListItemDiv div.Schedule div.PastEvents {
+                background-position: center center;
+                display: block;
+                float: right;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/pastEvent.png');
+                background-repeat: no-repeat;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.PastEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.PastEvents a {
+                    padding: 15px;
+                }
+
+            .EventListDiv .EventListItemDiv div.Schedule div.UpComingEvents {
+                background-position: center center;
+                display: block;
+                float: right;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/upComingEvent.png');
+                background-repeat: no-repeat;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.UpComingEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.UpComingEvents a {
+                    padding: 15px;
+                }
+
+            .EventListDiv .EventListItemDiv div.Schedule div.ContinuingEvents {
+                background-position: center center;
+                display: block;
+                float: right;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/onGoingEvent.png');
+                background-repeat: no-repeat;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.ContinuingEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.ContinuingEvents a {
+                    padding: 15px;
+                }
+
+            .EventListDiv .EventListItemDiv div.Schedule div.NormalEvents {
+                display: none;
+                float: right;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.NormalEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.NormalEvents a {
+                    padding: 15px;
+                }
+
+            .EventListDiv .EventListItemDiv div.Schedule div.RegistrationRequired {
+                background-position: center center;
+                display: block;
+                float: right;
+                background: #222222;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/registration.png');
+                background-repeat: no-repeat;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.RegistrationRequired:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.RegistrationRequired a {
+                    padding: 15px;
+                }
+
+            .EventListDiv .EventListItemDiv div.Schedule div.RegistrationNotRequired {
+                background-position: center center;
+                display: block;
+                float: right;
+                background: #222222;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/noRegistration.png');
+                background-repeat: no-repeat;
+            }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.RegistrationNotRequired:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventListDiv .EventListItemDiv div.Schedule div.RegistrationNotRequired a {
+                    padding: 15px;
+                }
+
+    .EventListDiv .LoadMoreButton {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #333333;
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+        .EventListDiv .LoadMoreButton:hover {
+            background: #008bc9;
+            color: white;
+            box-shadow: 0 0 3px 2px #008bc9;
+            box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+        }
+
+    .EventListDiv .LoadMoreButtonDisabled {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #cccccc;
+        color: #666666;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+
+.EmptyEvents {
+    text-align: center;
+    padding: 10px;
+}
+
+    .EmptyEvents .EmptyEventsImage {
+    }
+
+/*#endregion */
+
+/*#region Event Details Component*/
+
+.EventDetailsDiv {
+    width: 990px;
+    margin: 0 auto;
+    border: 5px solid #008bc9;
+}
+
+    .EventDetailsDiv a.FancyBox {
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin: 10px;
+    }
+
+    .EventDetailsDiv .EventContent {
+        height: 150px;
+        width: 800px;
+        margin: 10px;
+        float: right;
+    }
+
+        .EventDetailsDiv .EventContent h1 {
+            font-family: Verdana;
+            border: none;
+            font-size: 20px;
+            line-height: 25px;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .EventDetailsDiv .EventContent h2 {
+            font-family: Verdana;
+            border: none;
+            font-size: 15px;
+            line-height: 25px;
+            padding: 0;
+            font-weight: bold;
+            margin: 10px 0 0 0;
+            color: black;
+        }
+
+        .EventDetailsDiv .EventContent p {
+            font-family: Verdana;
+            margin: 0 0 0 0;
+            padding: 10px;
+            color: black;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: justify;
+        }
+
+    .EventDetailsDiv .InfoDiv {
+        width: 850px;
+        height: 185px;
+        margin: 20px auto;
+    }
+
+        .EventDetailsDiv .InfoDiv .BlockTitle {
+            display: block;
+            margin: 5px;
+            line-height: 30px;
+            padding: 0 0 0 40px;
+            font-family: Verdana;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .EventDetailsDiv .InfoDiv .When {
+            background-image: url('/Themes/Zice/Graphics/EventsComponent/when.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+
+        .EventDetailsDiv .InfoDiv .Where {
+            background-image: url('/Themes/Zice/Graphics/EventsComponent/where.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+
+        .EventDetailsDiv .InfoDiv .AreYouThere {
+            background-image: url('/Themes/Zice/Graphics/EventsComponent/areyouthere.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+
+        .EventDetailsDiv .InfoDiv .ScheduleDiv {
+            width: 198px;
+            float: left;
+            height: 183px;
+            margin: 0 25px 0 0;
+            background: #eeeeee;
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 3px 2px #000000;
+            box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+            border-radius: 3px;
+        }
+
+            .EventDetailsDiv .InfoDiv .ScheduleDiv .StartsOnDateSpan {
+                display: block;
+                margin: 5px;
+                line-height: 30px;
+                padding: 0 0 0 10px;
+                font-family: Verdana;
+                font-size: 12px;
+            }
+
+            .EventDetailsDiv .InfoDiv .ScheduleDiv .StartsOnTimeSpan {
+                display: block;
+                margin: 5px;
+                line-height: 30px;
+                padding: 0 0 0 10px;
+                font-family: Verdana;
+                font-size: 12px;
+            }
+
+            .EventDetailsDiv .InfoDiv .ScheduleDiv .EndsOnDateSpan {
+                display: block;
+                margin: 5px;
+                line-height: 30px;
+                padding: 0 0 0 10px;
+                font-family: Verdana;
+                font-size: 12px;
+            }
+
+            .EventDetailsDiv .InfoDiv .ScheduleDiv .EndsOnTimeSpan {
+                display: block;
+                margin: 5px;
+                line-height: 30px;
+                padding: 0 0 0 10px;
+                font-family: Verdana;
+                font-size: 12px;
+            }
+
+        .EventDetailsDiv .InfoDiv .LocationDiv {
+            width: 318px;
+            float: left;
+            height: 183px;
+            margin: 0 25px 0 0;
+            background: #eeeeee;
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 3px 2px #000000;
+            box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+            border-radius: 3px;
+        }
+
+            .EventDetailsDiv .InfoDiv .LocationDiv p {
+                font-family: Verdana;
+                font-size: 12px;
+                text-align: justify;
+                padding: 0 15px 0 15px;
+                line-height: 22px;
+            }
+
+        .EventDetailsDiv .InfoDiv .RegistrationDiv {
+            width: 278px;
+            float: left;
+            height: 183px;
+            margin: 0 0 0 0;
+            background: #eeeeee;
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 3px 2px #000000;
+            box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+            border-radius: 3px;
+        }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv .RegistrationLink {
+                display: block;
+                padding: 10px;
+                margin: 20px;
+                color: white;
+                text-align: center;
+                font-family: Verdana;
+                font-size: 12px;
+                background: #008bc9;
+                box-shadow: 0 0 3px 2px #000000;
+                box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+                border: 3px;
+                cursor: pointer;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv .RegistrationLink:hover {
+                    background: #333333;
+                }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv .EventIconDiv {
+                height: 30px;
+                margin-top: 10px;
+            }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv div.PastEvents {
+                background-position: center center;
+                display: block;
+                float: left;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/pastEvent.png');
+                background-repeat: no-repeat;
+                margin-left: 100px;
+                border-radius: 5px;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.PastEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.PastEvents a {
+                    padding: 15px;
+                }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv div.UpComingEvents {
+                background-position: center center;
+                display: block;
+                float: left;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/upComingEvent.png');
+                background-repeat: no-repeat;
+                margin-left: 100px;
+                border-radius: 5px;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.UpComingEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.UpComingEvents a {
+                    padding: 15px;
+                }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv div.ContinuingEvents {
+                background-position: center center;
+                display: block;
+                float: left;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/onGoingEvent.png');
+                background-repeat: no-repeat;
+                margin-left: 100px;
+                border-radius: 5px;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.ContinuingEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.ContinuingEvents a {
+                    padding: 15px;
+                }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv div.NormalEvents {
+                display: none;
+                float: left;
+                background: #111111;
+                color: white;
+                width: 30px;
+                height: 30px;
+                margin-left: 100px;
+                border-radius: 5px;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.NormalEvents:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.NormalEvents a {
+                    padding: 15px;
+                }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv div.RegistrationRequired {
+                background-position: center center;
+                display: block;
+                float: left;
+                background: #222222;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/registration.png');
+                background-repeat: no-repeat;
+                margin-left: 20px;
+                border-radius: 5px;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.RegistrationRequired:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.RegistrationRequired a {
+                    padding: 15px;
+                }
+
+            .EventDetailsDiv .InfoDiv .RegistrationDiv div.RegistrationNotRequired {
+                background-position: center center;
+                display: block;
+                float: left;
+                background: #222222;
+                color: white;
+                width: 30px;
+                height: 30px;
+                background-image: url('/Themes/Zice/Graphics/EventsComponent/noRegistration.png');
+                background-repeat: no-repeat;
+                margin-left: 20px;
+                border-radius: 5px;
+            }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.RegistrationNotRequired:hover {
+                    background-color: #008bc9;
+                }
+
+                .EventDetailsDiv .InfoDiv .RegistrationDiv div.RegistrationNotRequired a {
+                    padding: 15px;
+                }
+
+    .EventDetailsDiv .EventRichDescription {
+        padding: 20px;
+    }
+
+/*#endregion*/
+
+/*#region Posts*/
+.Posts {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+    .Posts .Post {
+        padding: 10px;
+        border: 1px solid #eeeeee;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+        margin: 20px 10px 20px 10px;
+        border-radius: 5px;
+    }
+
+        .Posts .Post h1.PostTitle {
+            font-family: Verdana;
+            font-size: 20px;
+            border: none;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            line-height: 30px;
+        }
+
+        .Posts .Post h3.PostSubTitle {
+            font-family: Verdana;
+            font-size: 15px;
+            border: none;
+            text-decoration: none;
+            color: black;
+            margin: 0 0 10px 0;
+            padding: 0;
+            line-height: 20px;
+        }
+
+        .Posts .Post .InfoDiv {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px 0 20px;
+            font-family: Verdana;
+            font-size: 12px;
+            border-top: 2px solid #008bc9;
+        }
+
+            .Posts .Post .InfoDiv .AddedOn {
+                display: block;
+                float: left;
+            }
+
+            .Posts .Post .InfoDiv .Username {
+                display: block;
+                float: right;
+            }
+
+        .Posts .Post div.PostContent {
+            padding: 10px;
+        }
+
+        .Posts .Post .ReadMoreDiv {
+            height: 30px;
+            margin-top: 20px;
+        }
+
+            .Posts .Post .ReadMoreDiv .ReadMoreAnchor {
+                line-height: 30px;
+                display: block;
+                float: right;
+                padding: 0 20px 0 20px;
+                background: black;
+                text-decoration: none;
+                font-family: Verdana;
+                font-size: 12px;
+                color: white;
+            }
+
+                .Posts .Post .ReadMoreDiv .ReadMoreAnchor:hover {
+                    background: #008bc9;
+                }
+
+    .Posts .Pager {
+        font-family: Verdana;
+        font-size: 12px;
+        line-height: 30px;
+        padding: 0 20px 0 20px;
+    }
+
+        .Posts .Pager .ButtonCssClass {
+            padding: 5px;
+            border-radius: 3px;
+            background: #333333;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+        }
+
+            .Posts .Pager .ButtonCssClass:hover {
+                background: #111111;
+                cursor: pointer;
+            }
+
+        .Posts .Pager .CurrentPageLabelCssClass {
+            padding: 5px;
+            border-radius: 3px;
+            background: #008bc9;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+            cursor: no-drop;
+        }
+
+        .Posts .Pager .NumericButtonCssClass, .Posts .Pager .NextPreviousButtonCssClass {
+            padding: 5px;
+            border-radius: 3px;
+            background: #333333;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+            .Posts .Pager .NumericButtonCssClass:hover, .Posts .Pager .NextPreviousButtonCssClass:hover {
+                background: #111111;
+            }
+/*#endregion*/
+
+/*#region Posts*/
+
+.PostDetails {
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 0 3px 2px #000000;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+    margin: 20px 10px 20px 10px;
+    border-radius: 5px;
+}
+
+    .PostDetails h1.PostTitle {
+        font-family: Verdana;
+        font-size: 20px;
+        border: none;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        line-height: 30px;
+    }
+
+    .PostDetails h3.PostSubTitle {
+        font-family: Verdana;
+        font-size: 15px;
+        border: none;
+        text-decoration: none;
+        color: black;
+        margin: 0 0 10px 0;
+        padding: 0;
+        line-height: 20px;
+    }
+
+    .PostDetails .InfoDiv {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 20px 0 20px;
+        font-family: Verdana;
+        font-size: 12px;
+        border-top: 2px solid #008bc9;
+    }
+
+        .PostDetails .InfoDiv .AddedOn {
+            display: block;
+            float: left;
+        }
+
+        .PostDetails .InfoDiv .Username {
+            display: block;
+            float: right;
+        }
+
+    .PostDetails div.PostContent {
+        padding: 10px;
+    }
+
+/*#endregion*/
+
+/*#region Header Menu*/
+.HeaderMenuSections {
+}
+
+    .HeaderMenuSections a {
+        display: block;
+        padding: 5px;
+        font-family: Verdana;
+        font-size: 12px;
+        margin: 5px;
+    }
+
+        .HeaderMenuSections a:hover {
+            background: #333333;
+            color: white;
+        }
+
+    .HeaderMenuSections li {
+        background: #aaaaaa;
+        float: left;
+        margin: 5px;
+    }
+
+.HeaderMenuCategories {
+}
+
+    .HeaderMenuCategories li {
+        background: #eeeeee;
+        float: left;
+        margin: 5px;
+    }
+
+.HeaderMenuSubCategories {
+}
+
+    .HeaderMenuSubCategories li {
+        background: #cccccc;
+        float: left;
+        margin: 5px;
+    }
+/*#endregion*/
+
+/*#region ModulesSelectionPopUpComponent*/
+.ComponentPopUpButton {
+    display: inline-block;
+    padding: 4px 15px 4px 15px;
+    text-decoration: none;
+    font-family: Verdana;
+    font-size: 12px;
+    color: white;
+    background: #111111;
+    margin-top: 10px;
+}
+
+    .ComponentPopUpButton:hover {
+        background: #008bc9;
+        color: white;
+    }
+
+.PopUp {
+    background: white;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 20px 1px #000000;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+    .PopUp div.TopNav {
+        height: 30px;
+        background: #333333;
+    }
+
+        .PopUp div.TopNav span.Title {
+            font-family: Verdana;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 0 10px 0 10px;
+            line-height: 30px;
+        }
+
+        .PopUp div.TopNav .CloseButton {
+            height: 28px;
+            width: 28px;
+            color: #999999;
+            background: transparent;
+            border: 1px solid transparent;
+            font-family: Verdana;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 999999;
+            float: right;
+        }
+
+            .PopUp div.TopNav .CloseButton:hover {
+                background: transparent;
+                border: 1px solid transparent;
+                color: #ffffff;
+            }
+/*#endregion*/
+
+.ManageHeaderMenu li span.EditDiv {
+    background: white;
+    border-radius: 6px;
+    float: left;
+    padding: 3px;
+    font-family: Verdana;
+    font-size: 10px;
+    margin-top: 3px;
+    margin-right: 2px;
+    margin-left: 3px;
+    cursor: default;
+}
+
+    .ManageHeaderMenu li span.EditDiv a.LinkEditStyle {
+        font-family: Verdana;
+        font-size: 10px;
+        padding: 5px 10px 5px 10px;
+        border-radius: 3px;
+        color: #ffffff;
+        background: #555555;
+        display: none;
+    }
+
+        .ManageHeaderMenu li span.EditDiv a.LinkEditStyle:hover {
+            background: orange;
+        }
+
+    .ManageHeaderMenu li span.EditDiv:hover a.LinkEditStyle {
+        display: block;
+        position: absolute;
+        margin-top: -17px;
+        margin-left: 7px;
+        z-index: 99999;
+    }
+
+.ManageHeaderMenu {
+    height: 25px;
+    background: #333333;
+    padding: 0 10px 0 10px;
+}
+
+    .ManageHeaderMenu li {
+        list-style-type: none;
+        float: left;
+        margin-right: 10px;
+        background: #333333;
+    }
+
+        .ManageHeaderMenu li:hover {
+            background: #008bc9;
+        }
+
+        .ManageHeaderMenu li a {
+            display: inline-block;
+            float: left;
+            padding: 5px 10px 5px 0;
+            font-family: Verdana;
+            font-size: 12px;
+            color: white;
+        }
+
+            .ManageHeaderMenu li a:hover {
+                background: #008bc9;
+                color: white;
+            }
+
+        .ManageHeaderMenu li ul {
+            display: none;
+        }
+
+        .ManageHeaderMenu li:hover ul {
+            display: block;
+            position: absolute;
+            padding-top: 10px;
+            margin-top: 24px;
+            z-index: 9999;
+        }
+
+            .ManageHeaderMenu li:hover ul li {
+                float: none;
+                margin: 0;
+                background: #333333;
+                width: 200px;
+            }
+
+                .ManageHeaderMenu li:hover ul li a {
+                    display: block;
+                    float: none;
+                    padding: 5px 10px 5px 0;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    color: white;
+                }
+
+                    .ManageHeaderMenu li:hover ul li a:hover {
+                        background: #008bc9;
+                        color: white;
+                    }
+
+
+                .ManageHeaderMenu li:hover ul li ul {
+                    display: none;
+                }
+
+        .ManageHeaderMenu li ul li:hover ul {
+            display: block;
+            position: absolute;
+            margin-left: 200px;
+            padding-top: 0;
+            margin-top: -24px;
+            padding-left: 10px;
+            z-index: 9999;
+        }
+
+
+
+
+/*#region SHARE BUTTON*/
+#ShareSocial {
+    width: 65px;
+    height: 65px;
+    display: block;
+    border-radius: 75px;
+    border: 5px solid #008bc9;
+    margin: 10px;
+    background-color: #333333;
+    background: url('/Themes/Zice/Graphics/SocialShare.png') no-repeat center center;
+    position: absolute;
+    z-index: 999999;
+}
+
+.smedia {
+    position: absolute;
+    -webkit-transition: left 0.5s cubic-bezier(0.1,0.8,0.9,1), opacity 1s linear;
+    -moz-transition: left 0.5s cubic-bezier(0.1,0.8,0.9,1),opacity 1s linear;
+    -o-transition: left 0.5s cubic-bezier(0.1,0.8,0.9,1), opacity 1s linear;
+    transition: left 0.5s cubic-bezier(0.1,0.8,0.9,1), opacity 1s linear;
+    display: inline;
+    opacity: 0;
+    width: 46px;
+    height: 46px;
+    z-index: 100;
+    margin: 10px 0 0 7px;
+    text-indent: -9999px;
+    background: no-repeat;
+    left: 3px;
+}
+
+#ShareSocial:hover .smedia {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    margin: 10px 0 0 20px;
+    position: absolute;
+}
+
+    #ShareSocial:hover .smedia:nth-child(1) {
+        position: absolute;
+        left: 55px;
+        opacity: 0.9;
+    }
+
+        #ShareSocial:hover .smedia:nth-child(1):hover {
+            opacity: 1;
+        }
+
+    #ShareSocial:hover .smedia:nth-child(2) {
+        position: absolute;
+        left: 100px;
+    }
+
+    #ShareSocial:hover .smedia:nth-child(3) {
+        position: absolute;
+        left: 145px;
+    }
+
+    #ShareSocial:hover .smedia:nth-child(4) {
+        position: absolute;
+        left: 200px;
+    }
+
+    #ShareSocial:hover .smedia:nth-child(5) {
+        position: absolute;
+        left: 245px;
+    }
+
+    #ShareSocial:hover .smedia:nth-child(6) {
+        position: absolute;
+        left: 290px;
+    }
+
+.smedia.facebook {
+    background: url('/Themes/Zice/Graphics/SocialFacebook.png') no-repeat center center;
+}
+
+.smedia.twitter {
+    background: url('/Themes/Zice/Graphics/SocialTwitter.png') no-repeat center center;
+}
+
+
+.smedia.googleplus {
+    background: url('/Themes/Zice/Graphics/SocialPlus.png') no-repeat center center;
+}
+
+/*#endregion*/
+
+/*#region VIDEO CATEGORY COMPONENT */
+.VideoCategoryPanel {
+    width: 100%;
+}
+
+    .VideoCategoryPanel .VideoSetBlock {
+        width: 220px;
+        height: 240px;
+        float: left;
+        margin: 10px;
+        box-shadow: 0 0 5px 2px #000000;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+    }
+
+        .VideoCategoryPanel .VideoSetBlock a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .VideoCategoryPanel .VideoSetBlock h2 {
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            overflow: hidden;
+            padding: 0 5px 0 5px;
+            background: #333333;
+            font-family: Verdana;
+            font-size: 12px;
+            color: white;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .VideoCategoryPanel .VideoSetBlock img {
+            height: 220px;
+            width: 220px;
+        }
+
+        .VideoCategoryPanel .VideoSetBlock div.Description {
+            height: 220px;
+            width: 220px;
+            background: #333333;
+            position: absolute;
+            margin-top: -220px;
+            opacity: 0;
+        }
+
+
+        .VideoCategoryPanel .VideoSetBlock:hover div.Description {
+            opacity: 0.8;
+            overflow: hidden;
+        }
+
+        .VideoCategoryPanel .VideoSetBlock:hover h2 {
+            background: #008bc9;
+        }
+
+        .VideoCategoryPanel .VideoSetBlock div.Description p {
+            font-family: Verdana;
+            font-size: 11px;
+            color: white;
+            text-align: justify;
+            line-height: 14px;
+            padding: 5px;
+            height: 179px;
+            overflow: hidden;
+        }
+/*#endregion*/
+
+/*#region VIDEO Categories COMPONENT*/
+.VideoCategoriesListDiv {
+}
+
+    .VideoCategoriesListDiv .VideoCategoriesItemDiv {
+        float: left;
+        width: 220px;
+        height: 220px;
+        margin: 10px;
+    }
+
+        .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent {
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+            height: 220px;
+        }
+
+            .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .DescriptionDiv {
+                height: 199px;
+            }
+
+                .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .DescriptionDiv h1.Title {
+                    display: block;
+                    background: #333333;
+                    border-bottom: 2px solid #008bc9;
+                    padding: 0;
+                    height: 20px;
+                    overflow: hidden;
+                }
+
+                    .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .DescriptionDiv h1.Title:hover {
+                        background: #008bc9;
+                        border-bottom-color: #333333;
+                    }
+
+                    .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .DescriptionDiv h1.Title a {
+                        font-family: Verdana;
+                        display: block;
+                        padding: 0 5px 0 5px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        line-height: 20px;
+                        color: #eeeeee;
+                    }
+
+                    .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .DescriptionDiv h1.Title:hover a {
+                        color: #ffffff;
+                    }
+
+                .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .DescriptionDiv p.Description {
+                    font-family: Verdana;
+                    font-size: 11px;
+                    color: black;
+                    text-align: justify;
+                    line-height: 14px;
+                    padding: 5px;
+                    height: 150px;
+                    overflow: hidden;
+                    background: url(/Themes/Zice/Graphics/GalleryComponent/videoBG.png) no-repeat center center;
+                }
+
+            .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .InfoDiv {
+                display: block;
+                background: #000000;
+                background: rgba(0,0,0,0.3);
+                border-top: 1px solid #008bc9;
+            }
+
+                .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .InfoDiv span.VideoCount {
+                    font-family: Verdana;
+                    font-size: 10px;
+                    color: black;
+                    line-height: 20px;
+                    padding: 0 5px 0 5px;
+                    float: left;
+                }
+
+                .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .InfoDiv a.OpenVideocategory {
+                    float: right;
+                    display: inline-block;
+                    padding: 0 10px 0 10px;
+                    font-family: Verdana;
+                    text-decoration: none;
+                    color: white;
+                    background: #008bc9;
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+
+                    .VideoCategoriesListDiv .VideoCategoriesItemDiv .VideoCategoriesListItemContent .InfoDiv a.OpenVideocategory:hover {
+                        background: #4800ff;
+                    }
+
+    .VideoCategoriesListDiv .LoadMoreButton {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #333333;
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+        .VideoCategoriesListDiv .LoadMoreButton:hover {
+            background: #008bc9;
+            color: white;
+            box-shadow: 0 0 3px 2px #008bc9;
+            box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+        }
+
+    .VideoCategoriesListDiv .LoadMoreButtonDisabled {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #cccccc;
+        color: #666666;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+
+.EmptyVideoCategories {
+    text-align: center;
+    padding: 10px;
+}
+
+    .EmptyVideoCategories .EmptyVideoCategoriesImage {
+    }
+/*#endregion*/
+
+/*#region VIDEO SECTIONS COMPONENT*/
+.VideoSectionsListDiv {
+}
+
+    .VideoSectionsListDiv .VideoSectionsItemDiv {
+        float: left;
+        width: 220px;
+        height: 220px;
+        margin: 10px;
+    }
+
+        .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent {
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+            height: 220px;
+        }
+
+            .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .DescriptionDiv {
+                height: 199px;
+            }
+
+                .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .DescriptionDiv h2.Title {
+                    display: block;
+                    background: #333333;
+                    border-bottom: 2px solid #008bc9;
+                    padding: 0;
+                    height: 20px;
+                    overflow: hidden;
+                }
+
+                    .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .DescriptionDiv h2.Title:hover {
+                        background: #008bc9;
+                        border-bottom-color: #333333;
+                    }
+
+                    .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .DescriptionDiv h2.Title a {
+                        font-family: Verdana;
+                        display: block;
+                        padding: 0 5px 0 5px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        line-height: 20px;
+                        color: #eeeeee;
+                    }
+
+                    .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .DescriptionDiv h2.Title:hover a {
+                        color: #ffffff;
+                    }
+
+                .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .DescriptionDiv p.Description {
+                    font-family: Verdana;
+                    font-size: 11px;
+                    color: black;
+                    text-align: justify;
+                    line-height: 14px;
+                    padding: 5px;
+                    height: 150px;
+                    overflow: hidden;
+                    background: url(/Themes/Zice/Graphics/GalleryComponent/videoBG.png) no-repeat center center;
+                }
+
+            .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .InfoDiv {
+                display: block;
+                background: #000000;
+                background: rgba(0,0,0,0.3);
+                border-top: 1px solid #008bc9;
+            }
+
+                .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .InfoDiv span.VideoCount {
+                    font-family: Verdana;
+                    font-size: 10px;
+                    color: black;
+                    line-height: 20px;
+                    padding: 0 5px 0 5px;
+                    float: left;
+                }
+
+                .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .InfoDiv a.OpenVideocategory {
+                    float: right;
+                    display: inline-block;
+                    padding: 0 10px 0 10px;
+                    font-family: Verdana;
+                    text-decoration: none;
+                    color: white;
+                    background: #008bc9;
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+
+                    .VideoSectionsListDiv .VideoSectionsItemDiv .VideoSectionsListItemContent .InfoDiv a.OpenVideocategory:hover {
+                        background: #4800ff;
+                    }
+
+    .VideoSectionsListDiv .LoadMoreButton {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #333333;
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+        .VideoSectionsListDiv .LoadMoreButton:hover {
+            background: #008bc9;
+            color: white;
+            box-shadow: 0 0 3px 2px #008bc9;
+            box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+        }
+
+    .VideoSectionsListDiv .LoadMoreButtonDisabled {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #cccccc;
+        color: #666666;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+
+.EmptyVideoSections {
+    padding: 10px;
+    text-align: center;
+}
+
+    .EmptyVideoSections .EmptyVideoSectionsImage {
+    }
+/*#endregion*/
+
+/*#region VIDEO SET COMPONENT */
+.VideoSetPanel {
+    width: 100%;
+}
+
+    .VideoSetPanel tr {
+        float: left;
+        display: table-cell;
+    }
+
+    .VideoSetPanel td {
+        float: left;
+        display: table-cell;
+    }
+
+    .VideoSetPanel .VideoSetItemDiv {
+        height: 240px;
+        width: 220px;
+        float: left;
+        margin: 10px;
+        box-shadow: 0 0 5px 2px #000000;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+    }
+
+        .VideoSetPanel .VideoSetItemDiv a {
+            display: block;
+            text-decoration: none;
+        }
+
+            .VideoSetPanel .VideoSetItemDiv a h2 {
+                display: block;
+                line-height: 20px;
+                padding: 0 5px 0 5px;
+                background: #333333;
+                font-family: Verdana;
+                font-size: 12px;
+                color: white;
+                font-weight: normal;
+                height: 20px;
+                overflow: hidden;
+                margin: 0;
+            }
+
+            .VideoSetPanel .VideoSetItemDiv a img {
+                height: 220px;
+                width: 220px;
+            }
+
+            .VideoSetPanel .VideoSetItemDiv a div.Description {
+                height: 220px;
+                width: 220px;
+                background: #333333;
+                position: absolute;
+                margin-top: -220px;
+                opacity: 0;
+            }
+
+
+        .VideoSetPanel .VideoSetItemDiv:hover a div.Description {
+            opacity: 0.8;
+            overflow: hidden;
+        }
+
+        .VideoSetPanel .VideoSetItemDiv:hover a h2 {
+            background: #008bc9;
+        }
+
+        .VideoSetPanel .VideoSetItemDiv a div.Description p {
+            font-family: Verdana;
+            font-size: 11px;
+            color: white;
+            text-align: justify;
+            line-height: 13px;
+            padding: 5px;
+            height: 179px;
+            overflow: hidden;
+        }
+
+    .VideoSetPanel .LoadMoreButton {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #333333;
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+        .VideoSetPanel .LoadMoreButton:hover {
+            background: #008bc9;
+            color: white;
+            box-shadow: 0 0 3px 2px #008bc9;
+            box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+        }
+
+    .VideoSetPanel .LoadMoreButtonDisabled {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #cccccc;
+        color: #666666;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+
+.EmptyVideoSet {
+    text-align: center;
+    padding: 10px;
+}
+
+    .EmptyVideoSet .EmptyVideoSetImage {
+    }
+/*#endregion*/
+
+/*#region VIDEO COMPONENT */
+
+.Video {
+    width: 1000px;
+    min-height: 500px;
+    margin-top: 10px;
+}
+
+    .Video .VideoDiv {
+        width: 702px;
+        min-height: 350px;
+        float: left;
+    }
+
+    .Video .RelatedVideosDiv {
+        width: 252px;
+        float: right;
+        min-height: 250px;
+        border: 1px solid transparent;
+    }
+
+    .Video .VideoDiv h2.MainTitle {
+        line-height: 25px;
+        font-family: Verdana;
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        display: block;
+    }
+
+    .Video .VideoDiv .EmbedVideo {
+        width: 100%;
+        min-height: 300px;
+        border: 1px solid #000000;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px 2px #000000;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+        margin: 15px 0 15px 0;
+    }
+
+        .Video .VideoDiv .EmbedVideo video {
+            width: 700px;
+            margin: 0;
+        }
+
+    .Video .VideoDiv .Description {
+        border: 1px solid #000000;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+        .Video .VideoDiv .Description p {
+            font-family: Verdana;
+            font-size: 11px;
+            line-height: 15px;
+            text-align: justify;
+            padding: 5px;
+        }
+
+        .Video .VideoDiv .Description .Info {
+            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            height: 30px;
+            display: block;
+        }
+
+            .Video .VideoDiv .Description .Info span.TakenOn {
+                border-right: 1px solid #000000;
+                border-right: 1px solid rgba(0,0,0,0.1);
+                height: 30px;
+                display: inline-block;
+                float: left;
+                font-family: Verdana;
+                font-size: 12px;
+                line-height: 30px;
+                padding: 0 10px 0 10px;
+            }
+
+            .Video .VideoDiv .Description .Info span.LikesCount {
+                border-right: 1px solid #000000;
+                border-right: 1px solid rgba(0,0,0,0.1);
+                height: 30px;
+                display: inline-block;
+                float: left;
+                font-family: Verdana;
+                font-size: 12px;
+                line-height: 30px;
+                padding: 0 10px 0 10px;
+            }
+
+            .Video .VideoDiv .Description .Info span.DislikesCount {
+                height: 30px;
+                display: inline-block;
+                float: left;
+                font-family: Verdana;
+                font-size: 12px;
+                line-height: 30px;
+                padding: 0 10px 0 10px;
+            }
+
+            .Video .VideoDiv .Description .Info span.Share {
+                height: 30px;
+                display: inline-block;
+                float: left;
+                padding: 0 10px 0 10px;
+            }
+
+                .Video .VideoDiv .Description .Info span.Share a.btn {
+                    margin-top: 1px;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    text-decoration: none;
+                    background-color: transparent;
+                }
+
+                    .Video .VideoDiv .Description .Info span.Share a.btn i {
+                        margin-right: 5px;
+                    }
+
+    .Video .RelatedVideosDiv h2.MainTitle {
+        line-height: 25px;
+        font-family: Verdana;
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        display: block;
+    }
+
+    .Video .RelatedVideosDiv .RelatedVideosPanel {
+    }
+
+        .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv {
+            min-height: 250px;
+            width: 250px;
+            margin: 15px 0 15px 0;
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+        }
+
+            .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv a {
+                display: block;
+                text-decoration: none;
+            }
+
+                .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv a h2 {
+                    display: block;
+                    line-height: 14px;
+                    padding: 3px 5px 3px 5px;
+                    background: #333333;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    color: white;
+                    font-weight: normal;
+                }
+
+                .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv a img {
+                    height: 250px;
+                    width: 250px;
+                }
+
+                .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv a div.Description {
+                    height: 250px;
+                    width: 250px;
+                    background: #333333;
+                    position: absolute;
+                    margin-top: -250px;
+                    opacity: 0;
+                }
+
+            .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv:hover a div.Description {
+                opacity: 0.8;
+                overflow: hidden;
+            }
+
+            .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv:hover a h2 {
+                background: #008bc9;
+            }
+
+            .Video .RelatedVideosDiv .RelatedVideosPanel .RelatedVideosItemDiv a div.Description p {
+                font-family: Verdana;
+                font-size: 11px;
+                color: white;
+                text-align: justify;
+                line-height: 13px;
+                padding: 5px;
+            }
+
+        .Video .RelatedVideosDiv .RelatedVideosPanel .LoadMoreButton {
+            width: 100%;
+            line-height: 18px;
+            border: none;
+            box-shadow: 0 0 3px 2px #000000;
+            box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            background: #333333;
+            color: white;
+            font-family: Verdana;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+            .Video .RelatedVideosDiv .RelatedVideosPanel .LoadMoreButton:hover {
+                background: #008bc9;
+                color: white;
+                box-shadow: 0 0 3px 2px #008bc9;
+                box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+            }
+
+        .Video .RelatedVideosDiv .RelatedVideosPanel .LoadMoreButtonDisabled {
+            width: 100%;
+            line-height: 18px;
+            border: none;
+            box-shadow: 0 0 3px 2px #000000;
+            box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            background: #cccccc;
+            color: #666666;
+            font-family: Verdana;
+            font-size: 10px;
+            cursor: no-drop;
+        }
+
+/*#endregion*/
+
+/*#region Audio CATEGORY COMPONENT */
+.AudioCategoryPanel {
+    width: 100%;
+}
+
+    .AudioCategoryPanel .AudioSetBlock {
+        width: 220px;
+        height: 240px;
+        float: left;
+        margin: 10px;
+        box-shadow: 0 0 5px 2px #000000;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+    }
+
+        .AudioCategoryPanel .AudioSetBlock a {
+            display: block;
+            text-decoration: none;
+            width: 220px;
+            height: 240px;
+        }
+
+        .AudioCategoryPanel .AudioSetBlock h2 {
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            overflow: hidden;
+            padding: 0 5px 0 5px;
+            background: #333333;
+            font-family: Verdana;
+            font-size: 12px;
+            color: white;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .AudioCategoryPanel .AudioSetBlock div.Description {
+            height: 220px;
+            width: 220px;
+            overflow: hidden;
+        }
+
+        .AudioCategoryPanel .AudioSetBlock:hover h2 {
+            background: #008bc9;
+        }
+
+        .AudioCategoryPanel .AudioSetBlock div.Description p {
+            font-family: Verdana;
+            font-size: 11px;
+            color: black;
+            text-align: justify;
+            line-height: 14px;
+            padding: 5px;
+            height: 179px;
+            overflow: hidden;
+            background: url('/Themes/Zice/Graphics/GalleryComponent/audioBG.png') no-repeat center center;
+        }
+/*#endregion*/
+
+/*#region Audio CATEGORIES COMPONENT*/
+
+.AudioCategoriesListDiv {
+}
+
+    .AudioCategoriesListDiv .AudioCategoriesItemDiv {
+        float: left;
+        width: 220px;
+        height: 220px;
+        margin: 10px;
+    }
+
+        .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent {
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+            height: 220px;
+        }
+
+            .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .DescriptionDiv {
+                height: 199px;
+            }
+
+                .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .DescriptionDiv h1.Title {
+                    display: block;
+                    background: #333333;
+                    border-bottom: 2px solid #008bc9;
+                    padding: 0;
+                    height: 20px;
+                    overflow: hidden;
+                }
+
+                    .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .DescriptionDiv h1.Title:hover {
+                        background: #008bc9;
+                        border-bottom-color: #333333;
+                    }
+
+                    .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .DescriptionDiv h1.Title a {
+                        font-family: Verdana;
+                        display: block;
+                        padding: 0 5px 0 5px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        line-height: 20px;
+                        color: #eeeeee;
+                    }
+
+                    .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .DescriptionDiv h1.Title:hover a {
+                        color: #ffffff;
+                    }
+
+                .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .DescriptionDiv p.Description {
+                    font-family: Verdana;
+                    font-size: 11px;
+                    color: black;
+                    text-align: justify;
+                    line-height: 14px;
+                    padding: 5px;
+                    height: 150px;
+                    overflow: hidden;
+                    background: url(/Themes/Zice/Graphics/GalleryComponent/AudioBG.png) no-repeat center center;
+                }
+
+            .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .InfoDiv {
+                display: block;
+                background: #000000;
+                background: rgba(0,0,0,0.3);
+                border-top: 1px solid #008bc9;
+            }
+
+                .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .InfoDiv span.AudioCount {
+                    font-family: Verdana;
+                    font-size: 10px;
+                    color: black;
+                    line-height: 20px;
+                    padding: 0 5px 0 5px;
+                    float: left;
+                }
+
+                .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .InfoDiv a.OpenAudiocategory {
+                    float: right;
+                    display: inline-block;
+                    padding: 0 10px 0 10px;
+                    font-family: Verdana;
+                    text-decoration: none;
+                    color: white;
+                    background: #008bc9;
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+
+                    .AudioCategoriesListDiv .AudioCategoriesItemDiv .AudioCategoriesListItemContent .InfoDiv a.OpenAudiocategory:hover {
+                        background: #4800ff;
+                    }
+
+    .AudioCategoriesListDiv .LoadMoreButton {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #333333;
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+        .AudioCategoriesListDiv .LoadMoreButton:hover {
+            background: #008bc9;
+            color: white;
+            box-shadow: 0 0 3px 2px #008bc9;
+            box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+        }
+
+    .AudioCategoriesListDiv .LoadMoreButtonDisabled {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #cccccc;
+        color: #666666;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+
+.EmptyAudioCategories {
+    text-align: center;
+    padding: 10px;
+}
+
+    .EmptyAudioCategories .EmptyAudioCategoriesImage {
+    }
+
+/*#endregion*/
+
+/*#region Audio SECTIONS COMPONENT*/
+.AudioSectionsListDiv {
+}
+
+    .AudioSectionsListDiv .AudioSectionsItemDiv {
+        float: left;
+        width: 220px;
+        height: 220px;
+        margin: 10px;
+    }
+
+        .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent {
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+            height: 220px;
+        }
+
+            .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .DescriptionDiv {
+                height: 199px;
+            }
+
+                .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .DescriptionDiv h1.Title {
+                    display: block;
+                    background: #333333;
+                    border-bottom: 2px solid #008bc9;
+                    padding: 0;
+                    height: 20px;
+                    overflow: hidden;
+                }
+
+                    .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .DescriptionDiv h1.Title:hover {
+                        background: #008bc9;
+                        border-bottom-color: #333333;
+                    }
+
+                    .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .DescriptionDiv h1.Title a {
+                        font-family: Verdana;
+                        display: block;
+                        padding: 0 5px 0 5px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        line-height: 20px;
+                        color: #eeeeee;
+                    }
+
+                    .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .DescriptionDiv h1.Title:hover a {
+                        color: #ffffff;
+                    }
+
+                .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .DescriptionDiv p.Description {
+                    font-family: Verdana;
+                    font-size: 11px;
+                    color: black;
+                    text-align: justify;
+                    line-height: 14px;
+                    padding: 5px;
+                    height: 150px;
+                    overflow: hidden;
+                    background: url(/Themes/Zice/Graphics/GalleryComponent/AudioBG.png) no-repeat center center;
+                }
+
+            .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .InfoDiv {
+                display: block;
+                background: #000000;
+                background: rgba(0,0,0,0.3);
+                border-top: 1px solid #008bc9;
+            }
+
+                .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .InfoDiv span.AudioCount {
+                    font-family: Verdana;
+                    font-size: 10px;
+                    color: black;
+                    line-height: 20px;
+                    padding: 0 5px 0 5px;
+                    float: left;
+                }
+
+                .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .InfoDiv a.OpenAudiocategory {
+                    float: right;
+                    display: inline-block;
+                    padding: 0 10px 0 10px;
+                    font-family: Verdana;
+                    text-decoration: none;
+                    color: white;
+                    background: #008bc9;
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+
+                    .AudioSectionsListDiv .AudioSectionsItemDiv .AudioSectionsListItemContent .InfoDiv a.OpenAudiocategory:hover {
+                        background: #4800ff;
+                    }
+
+    .AudioSectionsListDiv .LoadMoreButton {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #333333;
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+        .AudioSectionsListDiv .LoadMoreButton:hover {
+            background: #008bc9;
+            color: white;
+            box-shadow: 0 0 3px 2px #008bc9;
+            box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+        }
+
+    .AudioSectionsListDiv .LoadMoreButtonDisabled {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #cccccc;
+        color: #666666;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+
+.EmptyAudioSections {
+    padding: 10px;
+    text-align: center;
+}
+
+    .EmptyAudioSections .EmptyAudioSectionsImage {
+    }
+/*#endregion*/
+
+/*#region Audio SET COMPONENT */
+.AudioSetPanel {
+}
+
+    .AudioSetPanel .AudioSetItemDiv {
+        height: 200px;
+        width: 200px;
+        float: left;
+        margin: 5px;
+        border: 1px solid #000000;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px 2px #000000;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+    }
+
+        .AudioSetPanel .AudioSetItemDiv a {
+            display: block;
+            text-decoration: none;
+            height: 200px;
+            width: 200px;
+        }
+
+            .AudioSetPanel .AudioSetItemDiv a h2 {
+                display: block;
+                line-height: 15px;
+                height: 14px;
+                padding: 3px 5px 3px 5px;
+                background: #333333;
+                font-family: Verdana;
+                font-size: 12px;
+                color: white;
+                font-weight: normal;
+                overflow: hidden;
+            }
+
+            .AudioSetPanel .AudioSetItemDiv a div.Description {
+                height: 180px;
+                width: 200px;
+                overflow: hidden;
+            }
+
+        .AudioSetPanel .AudioSetItemDiv:hover a h2 {
+            background: #008bc9;
+        }
+
+        .AudioSetPanel .AudioSetItemDiv a div.Description p {
+            font-family: Verdana;
+            font-size: 11px;
+            color: black;
+            text-align: justify;
+            line-height: 13px;
+            padding: 5px;
+            overflow: hidden;
+            height: 150px;
+            background: url(/Themes/Zice/Graphics/GalleryComponent/audioBG.png) no-repeat center center;
+        }
+
+    .AudioSetPanel .LoadMoreButton {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #333333;
+        color: white;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+        .AudioSetPanel .LoadMoreButton:hover {
+            background: #008bc9;
+            color: white;
+            box-shadow: 0 0 3px 2px #008bc9;
+            box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+        }
+
+    .AudioSetPanel .LoadMoreButtonDisabled {
+        width: 100%;
+        line-height: 18px;
+        border: none;
+        box-shadow: 0 0 3px 2px #000000;
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        background: #cccccc;
+        color: #666666;
+        font-family: Verdana;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+
+.EmptyAudioSet {
+    text-align: center;
+    padding: 10px;
+}
+
+    .EmptyAudioSet .EmptyAudioSetImage {
+    }
+/*#endregion*/
+
+/*#region AUDIO COMPONENT */
+
+.Audio {
+    width: 1000px;
+    min-height: 500px;
+    margin-top: 10px;
+}
+
+    .Audio .AudioDiv {
+        width: 702px;
+        float: left;
+    }
+
+    .Audio .RelatedAudiosDiv {
+        width: 250px;
+        float: right;
+        min-height: 250px;
+        border: 1px solid transparent;
+    }
+
+    .Audio .AudioDiv h1.MainTitle {
+        line-height: 25px;
+        font-family: Verdana;
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        display: block;
+    }
+
+    .Audio .AudioDiv .EmbedAudio audio {
+        width: 100%;
+        margin: 0;
+    }
+
+    .Audio .AudioDiv .EmbedAudio {
+        width: 100%;
+        max-height: 120px;
+        border: 1px solid #000000;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px 2px #000000;
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+        margin: 15px 0 15px 0;
+    }
+
+    .Audio .AudioDiv .Description {
+        border: 1px solid #000000;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+        .Audio .AudioDiv .Description p {
+            font-family: Verdana;
+            font-size: 11px;
+            line-height: 15px;
+            text-align: justify;
+            padding: 5px;
+        }
+
+        .Audio .AudioDiv .Description .Info {
+            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            height: 30px;
+            display: block;
+        }
+
+            .Audio .AudioDiv .Description .Info span.TakenOn {
+                border-right: 1px solid #000000;
+                border-right: 1px solid rgba(0,0,0,0.1);
+                height: 30px;
+                display: inline-block;
+                float: left;
+                font-family: Verdana;
+                font-size: 12px;
+                line-height: 30px;
+                padding: 0 10px 0 10px;
+            }
+
+            .Audio .AudioDiv .Description .Info span.LikesCount {
+                border-right: 1px solid #000000;
+                border-right: 1px solid rgba(0,0,0,0.1);
+                height: 30px;
+                display: inline-block;
+                float: left;
+                font-family: Verdana;
+                font-size: 12px;
+                line-height: 30px;
+                padding: 0 10px 0 10px;
+            }
+
+            .Audio .AudioDiv .Description .Info span.DislikesCount {
+                height: 30px;
+                display: inline-block;
+                float: left;
+                font-family: Verdana;
+                font-size: 12px;
+                line-height: 30px;
+                padding: 0 10px 0 10px;
+            }
+
+            .Audio .AudioDiv .Description .Info span.Share {
+                height: 30px;
+                display: inline-block;
+                float: left;
+                padding: 0 10px 0 10px;
+            }
+
+                .Audio .AudioDiv .Description .Info span.Share a.btn {
+                    margin-top: 1px;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    text-decoration: none;
+                    background-color: transparent;
+                }
+
+                    .Audio .AudioDiv .Description .Info span.Share a.btn i {
+                        margin-right: 5px;
+                    }
+
+    .Audio .RelatedAudiosDiv h2.MainTitle {
+        line-height: 25px;
+        font-family: Verdana;
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        display: block;
+    }
+
+    .Audio .RelatedAudiosDiv .RelatedAudiosPanel {
+    }
+
+        .Audio .RelatedAudiosDiv .RelatedAudiosPanel .RelatedAudiosItemDiv {
+            width: 250px;
+            height: auto;
+            margin: 15px 0 15px 0;
+            border: 1px solid #000000;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 0 5px 2px #000000;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+        }
+
+            .Audio .RelatedAudiosDiv .RelatedAudiosPanel .RelatedAudiosItemDiv a {
+                display: block;
+                text-decoration: none;
+                width: 250px;
+                height: auto;
+            }
+
+                .Audio .RelatedAudiosDiv .RelatedAudiosPanel .RelatedAudiosItemDiv a h2 {
+                    display: block;
+                    line-height: 15px;
+                    height: 14px;
+                    overflow: hidden;
+                    padding: 3px 5px 3px 5px;
+                    background: #333333;
+                    font-family: Verdana;
+                    font-size: 12px;
+                    color: white;
+                    font-weight: normal;
+                }
+
+                .Audio .RelatedAudiosDiv .RelatedAudiosPanel .RelatedAudiosItemDiv a div.Description {
+                    width: 250px;
+                    height: auto;
+                    overflow: hidden;
+                }
+
+            .Audio .RelatedAudiosDiv .RelatedAudiosPanel .RelatedAudiosItemDiv:hover a h2 {
+                background: #008bc9;
+            }
+
+            .Audio .RelatedAudiosDiv .RelatedAudiosPanel .RelatedAudiosItemDiv a div.Description p {
+                font-family: Verdana;
+                font-size: 11px;
+                color: black;
+                text-align: justify;
+                line-height: 14px;
+                padding: 5px;
+                overflow: hidden;
+                background: url(/Themes/Zice/Graphics/GalleryComponent/audioBG.png) no-repeat center center;
+            }
+
+        .Audio .RelatedAudiosDiv .RelatedAudiosPanel .LoadMoreButton {
+            width: 100%;
+            line-height: 18px;
+            border: none;
+            box-shadow: 0 0 3px 2px #000000;
+            box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            background: #333333;
+            color: white;
+            font-family: Verdana;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+            .Audio .RelatedAudiosDiv .RelatedAudiosPanel .LoadMoreButton:hover {
+                background: #008bc9;
+                color: white;
+                box-shadow: 0 0 3px 2px #008bc9;
+                box-shadow: 0 0 3px 2px rgba(0, 139, 201, 0.4);
+            }
+
+        .Audio .RelatedAudiosDiv .RelatedAudiosPanel .LoadMoreButtonDisabled {
+            width: 100%;
+            line-height: 18px;
+            border: none;
+            box-shadow: 0 0 3px 2px #000000;
+            box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            background: #cccccc;
+            color: #666666;
+            font-family: Verdana;
+            font-size: 10px;
+            cursor: no-drop;
+        }
+
+/*#endregion*/
+
+/*#region subscribe form*/
+.SubscribeForm {
+    border: 1px solid #000000;
+    border: 1px solid rgba(0,0,0,0.1);
+    width: 200px;
+    margin: 10px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+    .SubscribeForm input[type=text] {
+        width: 80%;
+        margin: 0 5% 2% 5%;
+        line-height: 30px;
+        height: 30px;
+        padding: 0 5% 0 5%;
+    }
+
+    .SubscribeForm input.uibutton {
+        width: 90%;
+    }
+
+    .SubscribeForm div.alertMessage {
+        margin: 5%;
+    }
+
+    .SubscribeForm .Error {
+        display: block;
+        font-family: Verdana;
+        font-size: 11px;
+        line-height: 14px;
+        color: white;
+        background: #8f0c0c;
+        width: 90%;
+        margin: -2% 5% 2% 5%;
+        border: 1px solid #000000;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+/*#endregion*/
+
+/*#region PostSubCategoryList Component*/
+#accordian {
+    background: #eeeeee;
+    width: 180px;
+    margin-top: 10px;
+    color: black;
+}
+
+    #accordian h3 {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 5px 10px 5px 20px;
+        cursor: pointer;
+        background-color: #eeeeee;
+        font-family: verdana;
+        font-weight: bold;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        background: url('/Themes/Zice/Graphics/dot.png') no-repeat left center;
+    }
+
+        #accordian h3:hover {
+            background-color: #008bc9;
+        }
+
+
+    #accordian li {
+        list-style-type: none;
+    }
+
+    #accordian ul ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 11px;
+        font-family: verdana;
+        line-height: 13px;
+        display: block;
+        padding: 5px 15px 5px 10px;
+        background: #dddddd;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+        #accordian ul ul li a:hover {
+            background: #008bc9;
+        }
+
+    #accordian ul ul {
+        display: none;
+    }
+
+    #accordian li.active ul {
+        display: block;
+    }
+/*#endregion*/
+
+/*#region PostSectionsListComponent*/
+
+.PostSectionsListComponent {
+    width: 100%;
+    border: 1px solid #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+    .PostSectionsListComponent li {
+        display: block;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+        .PostSectionsListComponent li a {
+            display: block;
+            line-height: 15px;
+            font-family: verdana;
+            font-size: 12px;
+            text-decoration: none;
+            padding: 2px 5px 2px 10px;
+            color: black;
+            background-color: #eeeeee;
+        }
+
+            .PostSectionsListComponent li a:hover {
+                background-color: #008bc9;
+            }
+
+/*#endregion*/
+
+/*#region PostCategoriesListComponent*/
+
+.GoBackSpan {
+    background: url('/Themes/Zice/Graphics/leftArrow.png') no-repeat center center;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    float: left;
+    padding-right: 5px;
+}
+
+.PostCategoriesListComponent {
+    width: 100%;
+    border: 1px solid #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+    .PostCategoriesListComponent li {
+        display: block;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+        .PostCategoriesListComponent li a {
+            display: block;
+            line-height: 15px;
+            font-family: verdana;
+            font-size: 12px;
+            text-decoration: none;
+            padding: 2px 5px 2px 10px;
+            color: black;
+            background-color: #eeeeee;
+        }
+
+            .PostCategoriesListComponent li a:hover {
+                background-color: #008bc9;
+            }
+
+/*#endregion*/
+
+/*#region PostSubCategoriesListComponent*/
+
+.PostSubCategoriesListComponent {
+    width: 100%;
+    border: 1px solid #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+    .PostSubCategoriesListComponent li {
+        display: block;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+        .PostSubCategoriesListComponent li a {
+            display: block;
+            line-height: 15px;
+            font-family: verdana;
+            font-size: 12px;
+            text-decoration: none;
+            padding: 2px 5px 2px 10px;
+            color: black;
+            background-color: #eeeeee;
+        }
+
+            .PostSubCategoriesListComponent li a:hover {
+                background-color: #008bc9;
+            }
+
+/*#endregion*/
+
+/*#region PostsListComponent*/
+
+.PostsListComponent {
+    width: 100%;
+    border: 1px solid #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+    .PostsListComponent li {
+        display: block;
+        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+        .PostsListComponent li a {
+            display: block;
+            line-height: 15px;
+            font-family: verdana;
+            font-size: 12px;
+            text-decoration: none;
+            padding: 2px 5px 2px 10px;
+            color: black;
+            background-color: #eeeeee;
+        }
+
+            .PostsListComponent li a:hover {
+                background-color: #008bc9;
+            }
+
+/*#endregion*/
+
+/*#region DRIVES*/
+
+.DrivesFolders {
+    display: block;
+}
+
+    .DrivesFolders li {
+        display: block;
+    }
+
+        .DrivesFolders li a {
+            display: block;
+            line-height: 15px;
+            text-decoration: none;
+            font-family: Verdana;
+            color: black;
+            font-size: 11px;
+            background: #eeeeee;
+            padding: 5px 5px 5px 5px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+            .DrivesFolders li a:hover {
+                background: #008bc9;
+            }
+
+.Drive {
+    width: 190px;
+    height: 245px;
+    float: left;
+    margin: 5px;
+}
+
+    .Drive span.Title {
+        display: block;
+        background: #333;
+        color: White;
+        line-height: 14px;
+        height: 42px;
+        font-family: Verdana;
+        font-size: 11px;
+        padding: 4px 5px 4px 5px;
+        overflow: hidden;
+    }
+
+    .Drive:hover span.Title {
+        background: #111111;
+    }
+
+    .Drive a {
+        display: block;
+        height: 190px;
+        width: 190px;
+    }
+
+        .Drive a img {
+            height: 100%;
+            width: 100%;
+        }
+
+/*#endregion*/
+
+/*#region FOLDER STYLE*/
+
+.FolderStyle {
+    width: 150px;
+    height: 230px;
+    float: left;
+    margin: 5px;
+}
+
+    .FolderStyle input {
+        height: 148px;
+        width: 148px;
+        margin: 0px;
+        border: none;
+        background: rgba(0,0,0,0.3);
+        word-wrap: break-word;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+
+        .FolderStyle input:hover {
+            border-color: orange;
+        }
+
+    .FolderStyle a {
+        display: block;
+        line-height: 15px;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 10px;
+        color: white;
+        background: #333333;
+        margin: 0px;
+        text-decoration: none;
+    }
+
+        .FolderStyle a:hover {
+            background: #111111;
+        }
+
+    .FolderStyle span {
+        display: block;
+        font-family: Verdana;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 2px 2px 2px 2px;
+        overflow: hidden;
+    }
+
+        .FolderStyle span.Info {
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            padding: 0px;
+            margin: 0px;
+            border-radius: 7px;
+            background: #008bc9;
+            font-family: Verdana;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            cursor: default;
+        }
+
+            .FolderStyle span.Info:hover {
+                background: #333;
+            }
+
+/*#endregion*/
+
+.Toolbar {
+    height: 30px;
+    background: #cccccc;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    font-family: Verdana;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0px 10px 0px 10px;
+}
+
+    .Toolbar span {
+        padding: 0px 10px 0px 10px;
+        display: block;
+        float: left;
+    }
+
+    .Toolbar select {
+        height: 28px;
+        padding: 1px;
+    }
+
+/*#region FOLDER*/
+
+.Folder {
+    width: 190px;
+    height: 245px;
+    float: left;
+    margin: 5px;
+}
+
+    .Folder span.Title {
+        display: block;
+        background: #555555;
+        color: White;
+        line-height: 14px;
+        height: 42px;
+        font-family: Verdana;
+        font-size: 11px;
+        padding: 4px 5px 4px 5px;
+        overflow: hidden;
+    }
+
+    .Folder:hover span.Title {
+        background: #222222;
+    }
+
+    .Folder .FolderToolbar {
+        display: block;
+        height: 30px;
+        width: 190px;
+        position: absolute;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    .Folder:hover .FolderToolbar {
+        opacity: 1;
+    }
+
+    .Folder .FolderToolbar a.Link {
+        display: block;
+        float: left;
+        width: 100%;
+        background: #222222;
+        font-family: Verdana;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        height: 30px;
+        font-size: 10px;
+        text-decoration: none;
+    }
+
+        .Folder .FolderToolbar a.Link:first-child {
+            background: #DB9839;
+        }
+
+        .Folder .FolderToolbar a.Link:last-child {
+            background: #DB6739;
+        }
+
+        .Folder .FolderToolbar a.Link:hover {
+            background: #111111;
+        }
+
+    .Folder a {
+        display: block;
+        height: 190px;
+        width: 190px;
+    }
+
+        .Folder a img {
+            height: 100%;
+            width: 100%;
+        }
+
+/*#endregion*/
+
+/*#region FILE*/
+
+.File {
+    width: 190px;
+    height: 245px;
+    float: left;
+    margin: 5px;
+}
+
+    .File span.Title {
+        display: block;
+        background: #555555;
+        color: White;
+        line-height: 14px;
+        height: 42px;
+        font-family: Verdana;
+        font-size: 11px;
+        padding: 4px 5px 4px 5px;
+        overflow: hidden;
+    }
+
+    .File:hover span.Title {
+        background: #222222;
+    }
+
+    .File .FileToolbar {
+        display: block;
+        height: 30px;
+        width: 190px;
+        position: absolute;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    .File:hover .FileToolbar {
+        opacity: 1;
+    }
+
+    .File .FileToolbar a.Link {
+        display: block;
+        float: left;
+        width: 50%;
+        background: #222222;
+        font-family: Verdana;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        height: 30px;
+        font-size: 10px;
+        text-decoration: none;
+    }
+
+        .File .FileToolbar a.Link:first-child {
+            background: #DB9839;
+        }
+
+        .File .FileToolbar a.Link:last-child {
+            background: #DB6739;
+        }
+
+        .File .FileToolbar a.Link:hover {
+            background: #111111;
+        }
+
+    .File a {
+        display: block;
+        height: 190px;
+        width: 190px;
+    }
+
+        .File a img {
+            height: 100%;
+            width: 100%;
+        }
+
+/*#endregion*/
+
+/*#region POST CATEGORY STYLE*/
+
+.PostCategoryStyle {
+    width: 150px;
+    height: 230px;
+    float: left;
+    margin: 5px;
+}
+
+    .PostCategoryStyle input {
+        height: 148px;
+        width: 148px;
+        margin: 0px;
+        border: none;
+        background: rgba(0,0,0,0.3);
+        word-wrap: break-word;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+
+        .PostCategoryStyle input:hover {
+            border-color: orange;
+        }
+
+    .PostCategoryStyle a {
+        display: block;
+        line-height: 15px;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 10px;
+        color: white;
+        background: #333333;
+        margin: 0px;
+        text-decoration: none;
+    }
+
+        .PostCategoryStyle a:hover {
+            background: #111111;
+        }
+
+    .PostCategoryStyle span {
+        display: block;
+        font-family: Verdana;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 2px 2px 2px 2px;
+        overflow: hidden;
+    }
+
+        .PostCategoryStyle span.Info {
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            padding: 0px;
+            margin: 0px;
+            border-radius: 7px;
+            background: #008bc9;
+            font-family: Verdana;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            cursor: default;
+        }
+
+            .PostCategoryStyle span.Info:hover {
+                background: #333;
+            }
+
+/*#endregion*/
+
+/*#region VIDEO CATEGORY STYLE*/
+
+
+.VideoCategoryStyle {
+    width: 150px;
+    height: 230px;
+    float: left;
+    margin: 5px;
+}
+
+    .VideoCategoryStyle input {
+        height: 148px;
+        width: 148px;
+        margin: 0px;
+        border: none;
+        background: rgba(0,0,0,0.3);
+        word-wrap: break-word;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+
+        .VideoCategoryStyle input:hover {
+            border-color: orange;
+        }
+
+    .VideoCategoryStyle a {
+        display: block;
+        line-height: 15px;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 10px;
+        color: white;
+        background: #333333;
+        margin: 0px;
+        text-decoration: none;
+    }
+
+        .VideoCategoryStyle a:hover {
+            background: #111111;
+        }
+
+    .VideoCategoryStyle span {
+        display: block;
+        font-family: Verdana;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 2px 2px 2px 2px;
+        overflow: hidden;
+    }
+
+        .VideoCategoryStyle span.Info {
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            padding: 0px;
+            margin: 0px;
+            border-radius: 7px;
+            background: #008bc9;
+            font-family: Verdana;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            cursor: default;
+        }
+
+            .VideoCategoryStyle span.Info:hover {
+                background: #333;
+            }
+
+/*#endregion*/
+
+
+/*#region AUDIO CATEGORY STYLE*/
+.AudioCategoryStyle {
+    width: 150px;
+    height: 230px;
+    float: left;
+    margin: 5px;
+}
+
+    .AudioCategoryStyle input {
+        height: 148px;
+        width: 148px;
+        margin: 0px;
+        border: none;
+        background: rgba(0,0,0,0.3);
+        word-wrap: break-word;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+
+        .AudioCategoryStyle input:hover {
+            border-color: orange;
+        }
+
+    .AudioCategoryStyle a {
+        display: block;
+        line-height: 15px;
+        text-align: center;
+        font-family: Verdana;
+        font-size: 10px;
+        color: white;
+        background: #333333;
+        margin: 0px;
+        text-decoration: none;
+    }
+
+        .AudioCategoryStyle a:hover {
+            background: #111111;
+        }
+
+    .AudioCategoryStyle span {
+        display: block;
+        font-family: Verdana;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 2px 2px 2px 2px;
+        overflow: hidden;
+    }
+
+        .AudioCategoryStyle span.Info {
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            padding: 0px;
+            margin: 0px;
+            border-radius: 7px;
+            background: #008bc9;
+            font-family: Verdana;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            cursor: default;
+        }
+
+            .AudioCategoryStyle span.Info:hover {
+                background: #333;
+            }
+
+/*#endregion*/
+
+.CategorySelectorStatusBar {
+    background: #cccccc;
+    color: #333333;
+    font-family: Verdana;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 3px 10px 3px 10px;
+}
+
+fieldset.CategorySelector {
+    padding: 5px 0px 0px 0px;
+}
+
+    fieldset.CategorySelector legend {
+        margin-left: 10px;
+    }
